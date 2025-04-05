@@ -302,6 +302,33 @@
             });
         });
 
+        // SUB CATEGORY FORM  MODAL
+        $(document).on('click', '.sub_category_modal', function (e) {
+            e.preventDefault();
+
+            let subCategoryURL = $(this).attr('href');
+
+            $.ajax({
+                type: "GET",
+                url: subCategoryURL,
+                success: function (response) {
+                    dialog = bootbox.dialog({
+                        title: 'sub category form',
+                        message: "<div class='sub_category_content'></div>",
+                        size: 'large',
+                        centerVertical: true,
+                    });
+
+                    $('.sub_category_content').html(response);
+
+                    $('.js-example-basic-single').select2({
+                            dropdownParent: $('.bootbox') // Required for proper dropdown inside modals
+                        });
+                }
+            });
+        });
+
+
 
        // SUB CATEGORY FORM 
         $(document).on('click', '.sub_category_edit', function (e) {
