@@ -9,7 +9,7 @@
     <label for="category_img">select an image</label>
     <input name="category_img" id="category_img" type="file" accept=".png,.jpg,.webp,jpeg"
         class="form-control p-3 mb-1">
-    <span class="category_img_err text-danger"></span> 
+    <span class="category_img_err text-danger"></span> <br>
 
     <div class="img my-2">
         <img style="width:200px;" class="category_img_preview " src="" alt="">

@@ -9,11 +9,19 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     //index
-    public function index(Request $request){
-        $perPage = $request->input('per_page', 5); // Default 10 items per page
-        $categories = Category::latest()->paginate($perPage);
+    public function index(Request $request)
+    {
+        $perPage = $request->input('per_page', 5);
+    
+        // Get only parent categories (main)
+        $categories = Category::whereNull('parent_id') // Main categories only
+                              ->with('subcategories')   // Eager load subcategories
+                              ->latest()
+                              ->paginate($perPage);
+    
         return view('category.index', compact('categories'));
     }
+    
     
 
     //CATEGORY CREATE 
@@ -86,6 +94,58 @@ class CategoryController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'category deleted!'
+        ]);
+    }
+
+
+    //SUB-CATEGORY 
+    public function subCategory(){
+        $subCategories = Category::select('id','category_title','parent_id')->whereNotNull('category_title')->get();
+        return view('category.sub_category_form', compact('subCategories'));
+    }
+
+    //SUB CATEGORY STORE 
+    public function subCategoryStore(Request $request){
+        $request->validate([
+            'parent_id' => 'required',
+            'sub_category_name' => 'required',
+        ]);
+
+        $subCategory = new Category();
+        $subCategory->parent_id = $request->parent_id;
+        $subCategory->sub_category_title = $request->sub_category_name;
+        $subCategory->save();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'sub category inserted successfully!'
+        ]);
+    }
+
+
+    // SUB CATEGORY EDIT 
+    public function subCategoryEdit($id){
+        $subCategory = Category::find($id);
+        $categories = Category::whereNull('parent_id') // Main categories only
+        ->latest()->get();
+        return view('category.sub_category_edit',compact('subCategory','categories') ); 
+    }
+
+    //SUB CATEGORY UPDATE 
+    public function subCategoryUpdate(Request $request, $id){
+        $request->validate([
+            'parent_id' => 'required',
+            'sub_category_name' => 'required',
+        ]);
+
+        $subCategory = Category::find($id);
+        $subCategory->parent_id = $request->parent_id;
+        $subCategory->sub_category_title = $request->sub_category_name;
+        $subCategory->save();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'sub category inserted successfully!'
         ]);
     }
 }
