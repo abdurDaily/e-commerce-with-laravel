@@ -132,11 +132,21 @@
             </li>
 
             <li class="">
-                <a href="invoice.html" aria-expanded="false">
+                <a href="{{ route('backend.category.index') }}" aria-expanded="false">
                     <div class="icon_menu">
                         <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt="">
                     </div>
-                    <span>Invoice</span>
+                    <span>Category</span>
+                </a>
+            </li>
+
+
+            <li class="">
+                <a href="{{ route('backend.product.index') }}" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt="">
+                    </div>
+                    <span>Product</span>
                 </a>
             </li>
 

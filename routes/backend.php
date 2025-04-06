@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\category\CategoryController;
+use App\Http\Controllers\backend\product\ProductController;
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,14 @@ Route::prefix('category')->name('category.')->group(function () {
     Route::get('/sub-category-edit/{id}', [CategoryController::class, 'subCategoryEdit'])->name('sub.category.edit');
     Route::put('/sub-category-update/{id}', [CategoryController::class, 'subCategoryUpdate'])->name('sub.category.update');
 });
+
+
+// PRODUCT 
+Route::prefix('product')->name('product.')->group(function () {
+    Route::get('/', [ProductController::class, 'index'])->name('index');
+    Route::get('/product', [ProductController::class, 'product'])->name('product');
+   
+});
+
+
 
