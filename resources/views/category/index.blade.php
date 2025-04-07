@@ -263,7 +263,7 @@
             let row = $(this).closest('tr'); // Get the row to remove
 
             bootbox.confirm({
-                message: "Are you sure you want to delete this category?",
+                message: "<h4>Are you sure you want to delete this category?</h4>",
                 buttons: {
                     confirm: { label: 'Yes', className: 'btn-success' },
                     cancel: { label: 'No', className: 'btn-danger' }

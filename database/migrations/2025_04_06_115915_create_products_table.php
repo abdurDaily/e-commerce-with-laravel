@@ -35,8 +35,6 @@ return new class extends Migration
             // Features and content
             $table->json('product_features')->nullable();
             $table->text('product_details')->nullable();
-            $table->text('product_qsn')->nullable();
-            $table->text('product_review')->nullable();
             
             $table->timestamps();
             

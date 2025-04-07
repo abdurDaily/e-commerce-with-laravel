@@ -1,4 +1,4 @@
-<form id="productForm" action="" method="POST" enctype="multipart/form-data" class="p-4">
+<form id="productForm" action="{{ route('backend.product.product.store') }}" method="POST" enctype="multipart/form-data" class="p-4">
     @csrf
 
     <div class="row">
@@ -60,6 +60,7 @@
                     <option value="{{ $subCategory->id }}">{{ $subCategory->sub_category_title ?? $subCategory->category_title }}</option>
                 @endforeach --}}
             </select>
+            <span class="text-danger product_category_err"></span>
         </div>
 
         <!-- Key Features -->
@@ -74,10 +75,17 @@
             <button type="button" id="add-feature" class="btn btn-primary mt-2">Add New</button>
         </div>
 
+        <div class="col-xl-12">
+            <label for="product_details">product details</label>
+            <textarea class="form-control" placeholder="product details...." name="product_details" id="product_details" cols="30" rows="5"></textarea>
+        </div>
+
 
         <div class="col-xl-12">
             <label for="product_img">select a product image</label>
-            <input type="file" class="form-control p-3" id="product_img">
+            {{-- <input type="file" class="form-control p-3" id="product_img"> --}}
+            <input type="file" name="product_img" class="form-control p-3" id="product_img">
+            <span class="text-danger product_img_err"></span>
         </div>
         <!-- Submit -->
         <div class="col-xl-12 mt-4">
