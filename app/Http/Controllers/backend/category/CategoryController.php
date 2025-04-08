@@ -44,9 +44,9 @@ class CategoryController extends Controller
             $file = $request->file('category_img');
             $extension = $file->getClientOriginalExtension();
             $fileName = time() . '.' . $extension;
-            $file->move('storage/students/', $fileName);
+            $file->move('storage/category/', $fileName);
         }
-        $categoryData->category_img = env('APP_URL') . 'storage/students/' . $fileName;
+        $categoryData->category_img = env('APP_URL') . 'storage/category/' . $fileName;
         $categoryData->save();
 
         return response()->json([

@@ -56,9 +56,9 @@
             <label for="category_id">Select Category</label>
             <select class="form-control js-example-basic-single w-100" name="category_id">
                 <option value="" disabled selected>Select category</option>
-                {{-- @foreach ($subCategories as $subCategory)
+                @foreach ($subCategoris as $subCategory)
                     <option value="{{ $subCategory->id }}">{{ $subCategory->sub_category_title ?? $subCategory->category_title }}</option>
-                @endforeach --}}
+                @endforeach
             </select>
             <span class="text-danger product_category_err"></span>
         </div>

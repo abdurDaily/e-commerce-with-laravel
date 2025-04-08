@@ -11,48 +11,62 @@ use App\Http\Controllers\Controller;
 class ProductController extends Controller
 {
     //INDEX 
-    public function index(){
-        $categories = Category::whereNotNull('sub_category_title')->get();
-        return view('product.index');
+    public function index()
+    {
+        $products = Product::with('category')->latest()->simplePaginate(5);
+        return view('product.index', compact('products'));
     }
+
 
     //PRODUCT INSERT FORM 
     public function product(){
-        return view('product.product_form');
+        $subCategoris = Category::select('id', 'sub_category_title')->whereNotNull('sub_category_title')->get();
+
+        return view('product.product_form', compact('subCategoris'));
     }
 
     // STORE 
-    public function productStore(Request $request){
+    public function productStore(Request $request)
+    {
+        // Validate inputs
         $request->validate([
-            'product_title' => 'required',
-            'product_img' => 'required',
-            'product_price' => 'required',
-            'category_id' => 'required',
+            'product_title' => 'required|string|max:255',
+            'product_img' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'product_price' => 'required|numeric',
+            'category_id' => 'required|integer',
         ]);
-
+    
+        // Create new product instance
         $productStore = new Product();
+    
         $productStore->product_title = $request->product_title;
         $productStore->product_slug = Str::slug($request->product_title);
-        $productStore->product_code = Str::random(10);
+        $productStore->product_code = Str::upper(Str::random(10));
         $productStore->product_price = $request->product_price;
-        $productStore->discount_price = $request->product_discount_price;
-        $productStore->product_stock = $request->product_stock;
-        $productStore->product_status = $request->product_status;
+        $productStore->discount_price = $request->product_discount_price ?? null;
+        $productStore->product_stock = $request->product_stock ?? 1;
+        $productStore->product_status = $request->product_status ?? 1;
         $productStore->category_id = $request->category_id;
-        $productStore->product_features = $request->product_features;
-        $productStore->product_details = $request->product_details;
-        $productStore->product_details = $request->product_details;
-
+        $productStore->product_details = $request->product_details ?? null;
+    
+        // Encode features array to JSON if present
+        if ($request->has('product_features')) {
+            $productStore->product_features = json_encode($request->product_features);
+        }
+    
+        // Handle image upload
         if ($request->hasFile('product_img')) {
             $file = $request->file('product_img');
-            $filename = time() . '_' . $file->getClientOriginalName();
-            $path = $file->storeAs('storage/products/', $filename, 'public');
-            $productStore->product_img = $path;
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move(public_path('storage/product'), $fileName);
+            $productStore->product_img = asset('storage/product/' . $fileName);
         }
-
-        
+    
+        // Save product
         $productStore->save();
-
+    
+        // Return success response
         return response()->json([
             'status' => 200,
             'message' => 'Product Inserted Successfully!',
