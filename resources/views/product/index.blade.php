@@ -10,7 +10,7 @@
                 color: white !important;
                 z-index: 100 !important;
             }
-            
+
 
             .toast-warning {
                 background-color: #ff0000bc !important;
@@ -115,18 +115,18 @@
 
 
                         <td>{{ $product->product_details }}</td>
-                        <td class="text-center"> 
-                           
+                        <td class="text-center">
+
                             &nbsp;&nbsp;
 
-                            <a href="" class="sub_category_edit d-inline-block mb-4" style="line-height: 0; color:#26184d;">
+                            <a href="" class="sub_category_edit d-inline-block mb-4"
+                                style="line-height: 0; color:#26184d;">
                                 <iconify-icon icon="mingcute:pen-line" width="18" height="18"></iconify-icon>
                             </a>
 
                             &nbsp;&nbsp;
 
-                            <a href=""
-                                class="text-danger delete_category">
+                            <a href="{{ route('backend.product.product.delete', $product->id) }}" class="text-danger delete_product">
                                 <iconify-icon icon="tdesign:delete" width="20" height="20"></iconify-icon>
                             </a>
                         </td>
@@ -264,6 +264,61 @@
                 $(this).removeClass('is-invalid');
                 $('.product_category_err').text('');
             });
+
+
+            //PRODUCT IMAGE PREVIEW 
+            $(document).on('change', '.product_img', function(e) {
+                e.preventDefault();
+
+                let file = this.files[0];
+                let reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#product_img_preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(file);
+            });
+
+
+            //DELETE PRODUCT 
+            $(document).on('click', '.delete_product', function(e) {
+                e.preventDefault();
+
+                let productDeleteURL = $(this).attr('href');
+                let row = $(this).closest('tr');
+
+                bootbox.confirm({
+                    message: "<h4>are you really want to delete this product item?</h4>",
+                    buttons: {
+                        confirm: {
+                            label: 'Yes',
+                            className: 'btn-success'
+                        },
+                        cancel: {
+                            label: 'No',
+                            className: 'btn-danger'
+                        }
+                    },
+                    callback: function (result) {
+                       if(result){
+                        $.ajax({
+                            type: "DELETE",
+                            url: productDeleteURL,
+                            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                            success: function (response) {
+                                if(response.status){
+                                    row.remove();
+                                    toastr.success('This product has been deletede!', 'Delete')
+                                }
+                            },
+                            error: function (xhr) {
+                                toastr.warning('something went wrong , Error!')
+                            }
+                        });
+                       }
+                    }
+                });
+            })
 
         });
     </script>

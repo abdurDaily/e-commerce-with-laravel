@@ -72,4 +72,13 @@ class ProductController extends Controller
             'message' => 'Product Inserted Successfully!',
         ]);
     }
+
+    // DELETE PRODUCT 
+    public function productDelete($id){
+        $product = Product::find($id)->delete();
+        return response()->json([
+            'status' => 200,
+            'message' => 'Product Deleted Successfully!',
+        ]);
+    }
 }

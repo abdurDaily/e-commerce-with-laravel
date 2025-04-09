@@ -84,11 +84,12 @@
         <div class="col-xl-12">
             <label for="product_img">select a product image</label>
             {{-- <input type="file" class="form-control p-3" id="product_img"> --}}
-            <input type="file" name="product_img" class="form-control p-3" id="product_img">
+            <input type="file" name="product_img" class="form-control p-3 product_img" id="product_img">
+            <img style="width: 200px; margin-top:20px;" id="product_img_preview" src="" alt="">
             <span class="text-danger product_img_err"></span>
         </div>
         <!-- Submit -->
-        <div class="col-xl-12 mt-4">
+        <div class="col-xl-12 mt-2">
             <button class="btn btn-primary" type="submit">Submit</button>
             <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Cancel</button>
         </div>

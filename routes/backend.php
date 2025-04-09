@@ -25,6 +25,7 @@ Route::prefix('product')->name('product.')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('index');
     Route::get('/product', [ProductController::class, 'product'])->name('product');
     Route::post('/product-store', [ProductController::class, 'productStore'])->name('product.store');
+    Route::delete('/product-delete/{id}', [ProductController::class, 'productDelete'])->name('product.delete');
 });
 
 
