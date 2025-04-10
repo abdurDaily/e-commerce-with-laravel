@@ -60,7 +60,7 @@
         <div class="header d-flex justify-content-between align-items-center bg-light py-3 px-4">
             <h4 class="m-0">Product Records:</h4>
             <div class="btn-collection">
-                <a id="product_modal" href="{{ route('backend.product.product') }}" class="btn btn-primary">Add Product</a>
+                <a  href="{{ route('backend.product.product') }}" class="btn btn-primary product_modal">Add Product</a>
 
             </div>
         </div>
@@ -119,7 +119,7 @@
 
                             &nbsp;&nbsp;
 
-                            <a href="" class="sub_category_edit d-inline-block mb-4"
+                            <a  href="{{ route('backend.product.product.edit', $product->id) }}"  class="d-inline-block mb-4 edit_product"
                                 style="line-height: 0; color:#26184d;">
                                 <iconify-icon icon="mingcute:pen-line" width="18" height="18"></iconify-icon>
                             </a>
@@ -156,7 +156,7 @@
             let dialog = '';
 
             // FOR SHOW MODAL
-            $(document).on('click', '#product_modal', function(e) {
+            $(document).on('click', '.product_modal', function(e) {
                 e.preventDefault();
 
                 let categoryURL = $(this).attr('href');
@@ -319,6 +319,36 @@
                     }
                 });
             })
+
+
+
+            //PRODUCT EDIT 
+           //PRODUCT EDIT 
+$(document).on('click', '.edit_product', function(e) {
+    e.preventDefault();
+
+    let editProductUrl = $(this).attr('href');
+
+    $.ajax({
+        type: "GET",
+        url: editProductUrl,
+        success: function(response) {
+            dialog = bootbox.dialog({
+                title: 'Add a new product.',
+                message: "<div class='modal_content'></div>",
+                size: 'large',
+                centerVertical: true,
+            });
+
+            $('.modal_content').html(response);
+
+            // Re-initialize Select2
+            $('.js-example-basic-single').select2({
+                dropdownParent: $('.bootbox')
+            });
+        }
+    });
+}
 
         });
     </script>

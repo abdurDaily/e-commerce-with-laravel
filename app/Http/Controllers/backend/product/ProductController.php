@@ -81,4 +81,12 @@ class ProductController extends Controller
             'message' => 'Product Deleted Successfully!',
         ]);
     }
+
+
+    //PRODUCT EDIT 
+    public function productEdit($id){
+        $edit_product = Product::find($id);
+        // dd($edit_product);
+        return view('product.product_edit', compact('edit_product'));
+    }
 }
