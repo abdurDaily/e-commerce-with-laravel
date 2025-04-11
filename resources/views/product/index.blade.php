@@ -60,7 +60,7 @@
         <div class="header d-flex justify-content-between align-items-center bg-light py-3 px-4">
             <h4 class="m-0">Product Records:</h4>
             <div class="btn-collection">
-                <a  href="{{ route('backend.product.product') }}" class="btn btn-primary product_modal">Add Product</a>
+                <a href="{{ route('backend.product.product') }}" class="btn btn-primary product_modal">Add Product</a>
 
             </div>
         </div>
@@ -119,14 +119,15 @@
 
                             &nbsp;&nbsp;
 
-                            <a href="{{ route('backend.product.product.edit', $product->id) }}"  class="d-inline-block mb-4 product_modal"
-                                style="line-height: 0; color:#26184d;">
+                            <a href="{{ route('backend.product.product.edit', $product->id) }}"
+                                class="d-inline-block mb-4 product_modal" style="line-height: 0; color:#26184d;">
                                 <iconify-icon icon="mingcute:pen-line" width="18" height="18"></iconify-icon>
                             </a>
 
                             &nbsp;&nbsp;
 
-                            <a href="{{ route('backend.product.product.delete', $product->id) }}" class="text-danger delete_product">
+                            <a href="{{ route('backend.product.product.delete', $product->id) }}"
+                                class="text-danger delete_product">
                                 <iconify-icon icon="tdesign:delete" width="20" height="20"></iconify-icon>
                             </a>
                         </td>
@@ -155,7 +156,7 @@
         $(document).ready(function() {
             let dialog = '';
 
-         
+
 
             // FOR SHOW MODAL
             $(document).on('click', '.product_modal', function(e) {
@@ -301,29 +302,34 @@
                             className: 'btn-danger'
                         }
                     },
-                    callback: function (result) {
-                       if(result){
-                        $.ajax({
-                            type: "DELETE",
-                            url: productDeleteURL,
-                            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-                            success: function (response) {
-                                if(response.status){
-                                    row.remove();
-                                    toastr.success('This product has been deletede!', 'Delete')
+                    callback: function(result) {
+                        if (result) {
+                            $.ajax({
+                                type: "DELETE",
+                                url: productDeleteURL,
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr(
+                                        'content')
+                                },
+                                success: function(response) {
+                                    if (response.status) {
+                                        row.remove();
+                                        toastr.success(
+                                            'This product has been deletede!',
+                                            'Delete')
+                                    }
+                                },
+                                error: function(xhr) {
+                                    toastr.warning('something went wrong , Error!')
                                 }
-                            },
-                            error: function (xhr) {
-                                toastr.warning('something went wrong , Error!')
-                            }
-                        });
-                       }
+                            });
+                        }
                     }
                 });
             })
 
-           // PRODUCT UPDATE 
-            $(document).on('submit', '#productEditForm', function (e) {
+            // PRODUCT UPDATE 
+            $(document).on('submit', '#productEditForm', function(e) {
                 e.preventDefault();
                 let categoryFormData = new FormData(this);
                 categoryFormData.append('_method', 'PUT');
@@ -331,16 +337,17 @@
                 let updateURL = $(this).attr('action'); // Get the form action URL correctly
 
                 $.ajax({
-                    type: "POST",  // Still using POST because Laravel detects PUT via _method
-                    url: updateURL, 
+                    type: "POST", // Still using POST because Laravel detects PUT via _method
+                    url: updateURL,
                     data: categoryFormData,
                     processData: false,
                     contentType: false,
-                    success: function (response) {
+                    success: function(response) {
                         if (response.status === 200) {
                             toastr.success('Product updated successfully!', 'Success');
                             dialog.modal('hide');
-                            $('.table-content').load(location.href + ' .table-content'); // Refresh table
+                            $('.table-content').load(location.href +
+                            ' .table-content'); // Refresh table
                         }
                     },
                     error: function(err) {
@@ -369,9 +376,20 @@
                 });
             });
 
+            // CATEGORY + SUBCATEGORY SEARCH
+            $(document).on('keyup', '#categorySearch', function() {
+                let searchValue = $(this).val().toLowerCase();
 
-            
-           
+                $('.table-content table tbody tr').filter(function() {
+                    $(this).toggle(
+                        $(this).text().toLowerCase().indexOf(searchValue) > -1
+                    );
+                });
+            });
+
+
+
+
         });
     </script>
 @endpush

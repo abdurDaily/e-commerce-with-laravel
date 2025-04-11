@@ -150,6 +150,15 @@
                 </a>
             </li>
 
+            <li class="">
+                <a href="" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt="">
+                    </div>
+                    <span>View Website</span>
+                </a>
+            </li>
+
         </ul>
     </nav>
     <!--/ sidebar  -->
