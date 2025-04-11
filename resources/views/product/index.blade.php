@@ -119,7 +119,7 @@
 
                             &nbsp;&nbsp;
 
-                            <a  href="{{ route('backend.product.product.edit', $product->id) }}"  class="d-inline-block mb-4 edit_product"
+                            <a href="{{ route('backend.product.product.edit', $product->id) }}"  class="d-inline-block mb-4 product_modal"
                                 style="line-height: 0; color:#26184d;">
                                 <iconify-icon icon="mingcute:pen-line" width="18" height="18"></iconify-icon>
                             </a>
@@ -154,6 +154,8 @@
     <script>
         $(document).ready(function() {
             let dialog = '';
+
+         
 
             // FOR SHOW MODAL
             $(document).on('click', '.product_modal', function(e) {
@@ -320,36 +322,56 @@
                 });
             })
 
+           // PRODUCT UPDATE 
+            $(document).on('submit', '#productEditForm', function (e) {
+                e.preventDefault();
+                let categoryFormData = new FormData(this);
+                categoryFormData.append('_method', 'PUT');
 
+                let updateURL = $(this).attr('action'); // Get the form action URL correctly
 
-            //PRODUCT EDIT 
-           //PRODUCT EDIT 
-$(document).on('click', '.edit_product', function(e) {
-    e.preventDefault();
+                $.ajax({
+                    type: "POST",  // Still using POST because Laravel detects PUT via _method
+                    url: updateURL, 
+                    data: categoryFormData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.status === 200) {
+                            toastr.success('Product updated successfully!', 'Success');
+                            dialog.modal('hide');
+                            $('.table-content').load(location.href + ' .table-content'); // Refresh table
+                        }
+                    },
+                    error: function(err) {
+                        const errors = err.responseJSON.errors;
 
-    let editProductUrl = $(this).attr('href');
+                        if (errors.product_title) {
+                            $('input[name="product_title"]').addClass('is-invalid');
+                            $('.product_title_err').text(errors.product_title[0]);
+                        }
 
-    $.ajax({
-        type: "GET",
-        url: editProductUrl,
-        success: function(response) {
-            dialog = bootbox.dialog({
-                title: 'Add a new product.',
-                message: "<div class='modal_content'></div>",
-                size: 'large',
-                centerVertical: true,
+                        if (errors.product_img) {
+                            $('input[name="product_img"]').addClass('is-invalid');
+                            $('.product_img_err').text(errors.product_img[0]);
+                        }
+
+                        if (errors.product_price) {
+                            $('input[name="product_price"]').addClass('is-invalid');
+                            $('.product_price_err').text(errors.product_price[0]);
+                        }
+
+                        if (errors.category_id) {
+                            $('select[name="category_id"]').addClass('is-invalid');
+                            $('.product_category_err').text(errors.category_id[0]);
+                        }
+                    }
+                });
             });
 
-            $('.modal_content').html(response);
 
-            // Re-initialize Select2
-            $('.js-example-basic-single').select2({
-                dropdownParent: $('.bootbox')
-            });
-        }
-    });
-}
-
+            
+           
         });
     </script>
 @endpush
