@@ -1,277 +1,3148 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+<head>
+    <meta charset="utf-8">
+    <title>Vineta - Multipurpose eCommerce</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+        content="Themesflat Vineta - A modern and versatile eCommerce template designed for various online stores, including fashion, furniture, electronics, and more. SEO-friendly, fast-loading, and highly customizable.">
 
-        <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <style>
-                /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */@layer theme{:root,:host{--font-sans:'Instrument Sans',ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-red-50:oklch(.971 .013 17.38);--color-red-100:oklch(.936 .032 17.717);--color-red-200:oklch(.885 .062 18.334);--color-red-300:oklch(.808 .114 19.571);--color-red-400:oklch(.704 .191 22.216);--color-red-500:oklch(.637 .237 25.331);--color-red-600:oklch(.577 .245 27.325);--color-red-700:oklch(.505 .213 27.518);--color-red-800:oklch(.444 .177 26.899);--color-red-900:oklch(.396 .141 25.723);--color-red-950:oklch(.258 .092 26.042);--color-orange-50:oklch(.98 .016 73.684);--color-orange-100:oklch(.954 .038 75.164);--color-orange-200:oklch(.901 .076 70.697);--color-orange-300:oklch(.837 .128 66.29);--color-orange-400:oklch(.75 .183 55.934);--color-orange-500:oklch(.705 .213 47.604);--color-orange-600:oklch(.646 .222 41.116);--color-orange-700:oklch(.553 .195 38.402);--color-orange-800:oklch(.47 .157 37.304);--color-orange-900:oklch(.408 .123 38.172);--color-orange-950:oklch(.266 .079 36.259);--color-amber-50:oklch(.987 .022 95.277);--color-amber-100:oklch(.962 .059 95.617);--color-amber-200:oklch(.924 .12 95.746);--color-amber-300:oklch(.879 .169 91.605);--color-amber-400:oklch(.828 .189 84.429);--color-amber-500:oklch(.769 .188 70.08);--color-amber-600:oklch(.666 .179 58.318);--color-amber-700:oklch(.555 .163 48.998);--color-amber-800:oklch(.473 .137 46.201);--color-amber-900:oklch(.414 .112 45.904);--color-amber-950:oklch(.279 .077 45.635);--color-yellow-50:oklch(.987 .026 102.212);--color-yellow-100:oklch(.973 .071 103.193);--color-yellow-200:oklch(.945 .129 101.54);--color-yellow-300:oklch(.905 .182 98.111);--color-yellow-400:oklch(.852 .199 91.936);--color-yellow-500:oklch(.795 .184 86.047);--color-yellow-600:oklch(.681 .162 75.834);--color-yellow-700:oklch(.554 .135 66.442);--color-yellow-800:oklch(.476 .114 61.907);--color-yellow-900:oklch(.421 .095 57.708);--color-yellow-950:oklch(.286 .066 53.813);--color-lime-50:oklch(.986 .031 120.757);--color-lime-100:oklch(.967 .067 122.328);--color-lime-200:oklch(.938 .127 124.321);--color-lime-300:oklch(.897 .196 126.665);--color-lime-400:oklch(.841 .238 128.85);--color-lime-500:oklch(.768 .233 130.85);--color-lime-600:oklch(.648 .2 131.684);--color-lime-700:oklch(.532 .157 131.589);--color-lime-800:oklch(.453 .124 130.933);--color-lime-900:oklch(.405 .101 131.063);--color-lime-950:oklch(.274 .072 132.109);--color-green-50:oklch(.982 .018 155.826);--color-green-100:oklch(.962 .044 156.743);--color-green-200:oklch(.925 .084 155.995);--color-green-300:oklch(.871 .15 154.449);--color-green-400:oklch(.792 .209 151.711);--color-green-500:oklch(.723 .219 149.579);--color-green-600:oklch(.627 .194 149.214);--color-green-700:oklch(.527 .154 150.069);--color-green-800:oklch(.448 .119 151.328);--color-green-900:oklch(.393 .095 152.535);--color-green-950:oklch(.266 .065 152.934);--color-emerald-50:oklch(.979 .021 166.113);--color-emerald-100:oklch(.95 .052 163.051);--color-emerald-200:oklch(.905 .093 164.15);--color-emerald-300:oklch(.845 .143 164.978);--color-emerald-400:oklch(.765 .177 163.223);--color-emerald-500:oklch(.696 .17 162.48);--color-emerald-600:oklch(.596 .145 163.225);--color-emerald-700:oklch(.508 .118 165.612);--color-emerald-800:oklch(.432 .095 166.913);--color-emerald-900:oklch(.378 .077 168.94);--color-emerald-950:oklch(.262 .051 172.552);--color-teal-50:oklch(.984 .014 180.72);--color-teal-100:oklch(.953 .051 180.801);--color-teal-200:oklch(.91 .096 180.426);--color-teal-300:oklch(.855 .138 181.071);--color-teal-400:oklch(.777 .152 181.912);--color-teal-500:oklch(.704 .14 182.503);--color-teal-600:oklch(.6 .118 184.704);--color-teal-700:oklch(.511 .096 186.391);--color-teal-800:oklch(.437 .078 188.216);--color-teal-900:oklch(.386 .063 188.416);--color-teal-950:oklch(.277 .046 192.524);--color-cyan-50:oklch(.984 .019 200.873);--color-cyan-100:oklch(.956 .045 203.388);--color-cyan-200:oklch(.917 .08 205.041);--color-cyan-300:oklch(.865 .127 207.078);--color-cyan-400:oklch(.789 .154 211.53);--color-cyan-500:oklch(.715 .143 215.221);--color-cyan-600:oklch(.609 .126 221.723);--color-cyan-700:oklch(.52 .105 223.128);--color-cyan-800:oklch(.45 .085 224.283);--color-cyan-900:oklch(.398 .07 227.392);--color-cyan-950:oklch(.302 .056 229.695);--color-sky-50:oklch(.977 .013 236.62);--color-sky-100:oklch(.951 .026 236.824);--color-sky-200:oklch(.901 .058 230.902);--color-sky-300:oklch(.828 .111 230.318);--color-sky-400:oklch(.746 .16 232.661);--color-sky-500:oklch(.685 .169 237.323);--color-sky-600:oklch(.588 .158 241.966);--color-sky-700:oklch(.5 .134 242.749);--color-sky-800:oklch(.443 .11 240.79);--color-sky-900:oklch(.391 .09 240.876);--color-sky-950:oklch(.293 .066 243.157);--color-blue-50:oklch(.97 .014 254.604);--color-blue-100:oklch(.932 .032 255.585);--color-blue-200:oklch(.882 .059 254.128);--color-blue-300:oklch(.809 .105 251.813);--color-blue-400:oklch(.707 .165 254.624);--color-blue-500:oklch(.623 .214 259.815);--color-blue-600:oklch(.546 .245 262.881);--color-blue-700:oklch(.488 .243 264.376);--color-blue-800:oklch(.424 .199 265.638);--color-blue-900:oklch(.379 .146 265.522);--color-blue-950:oklch(.282 .091 267.935);--color-indigo-50:oklch(.962 .018 272.314);--color-indigo-100:oklch(.93 .034 272.788);--color-indigo-200:oklch(.87 .065 274.039);--color-indigo-300:oklch(.785 .115 274.713);--color-indigo-400:oklch(.673 .182 276.935);--color-indigo-500:oklch(.585 .233 277.117);--color-indigo-600:oklch(.511 .262 276.966);--color-indigo-700:oklch(.457 .24 277.023);--color-indigo-800:oklch(.398 .195 277.366);--color-indigo-900:oklch(.359 .144 278.697);--color-indigo-950:oklch(.257 .09 281.288);--color-violet-50:oklch(.969 .016 293.756);--color-violet-100:oklch(.943 .029 294.588);--color-violet-200:oklch(.894 .057 293.283);--color-violet-300:oklch(.811 .111 293.571);--color-violet-400:oklch(.702 .183 293.541);--color-violet-500:oklch(.606 .25 292.717);--color-violet-600:oklch(.541 .281 293.009);--color-violet-700:oklch(.491 .27 292.581);--color-violet-800:oklch(.432 .232 292.759);--color-violet-900:oklch(.38 .189 293.745);--color-violet-950:oklch(.283 .141 291.089);--color-purple-50:oklch(.977 .014 308.299);--color-purple-100:oklch(.946 .033 307.174);--color-purple-200:oklch(.902 .063 306.703);--color-purple-300:oklch(.827 .119 306.383);--color-purple-400:oklch(.714 .203 305.504);--color-purple-500:oklch(.627 .265 303.9);--color-purple-600:oklch(.558 .288 302.321);--color-purple-700:oklch(.496 .265 301.924);--color-purple-800:oklch(.438 .218 303.724);--color-purple-900:oklch(.381 .176 304.987);--color-purple-950:oklch(.291 .149 302.717);--color-fuchsia-50:oklch(.977 .017 320.058);--color-fuchsia-100:oklch(.952 .037 318.852);--color-fuchsia-200:oklch(.903 .076 319.62);--color-fuchsia-300:oklch(.833 .145 321.434);--color-fuchsia-400:oklch(.74 .238 322.16);--color-fuchsia-500:oklch(.667 .295 322.15);--color-fuchsia-600:oklch(.591 .293 322.896);--color-fuchsia-700:oklch(.518 .253 323.949);--color-fuchsia-800:oklch(.452 .211 324.591);--color-fuchsia-900:oklch(.401 .17 325.612);--color-fuchsia-950:oklch(.293 .136 325.661);--color-pink-50:oklch(.971 .014 343.198);--color-pink-100:oklch(.948 .028 342.258);--color-pink-200:oklch(.899 .061 343.231);--color-pink-300:oklch(.823 .12 346.018);--color-pink-400:oklch(.718 .202 349.761);--color-pink-500:oklch(.656 .241 354.308);--color-pink-600:oklch(.592 .249 .584);--color-pink-700:oklch(.525 .223 3.958);--color-pink-800:oklch(.459 .187 3.815);--color-pink-900:oklch(.408 .153 2.432);--color-pink-950:oklch(.284 .109 3.907);--color-rose-50:oklch(.969 .015 12.422);--color-rose-100:oklch(.941 .03 12.58);--color-rose-200:oklch(.892 .058 10.001);--color-rose-300:oklch(.81 .117 11.638);--color-rose-400:oklch(.712 .194 13.428);--color-rose-500:oklch(.645 .246 16.439);--color-rose-600:oklch(.586 .253 17.585);--color-rose-700:oklch(.514 .222 16.935);--color-rose-800:oklch(.455 .188 13.697);--color-rose-900:oklch(.41 .159 10.272);--color-rose-950:oklch(.271 .105 12.094);--color-slate-50:oklch(.984 .003 247.858);--color-slate-100:oklch(.968 .007 247.896);--color-slate-200:oklch(.929 .013 255.508);--color-slate-300:oklch(.869 .022 252.894);--color-slate-400:oklch(.704 .04 256.788);--color-slate-500:oklch(.554 .046 257.417);--color-slate-600:oklch(.446 .043 257.281);--color-slate-700:oklch(.372 .044 257.287);--color-slate-800:oklch(.279 .041 260.031);--color-slate-900:oklch(.208 .042 265.755);--color-slate-950:oklch(.129 .042 264.695);--color-gray-50:oklch(.985 .002 247.839);--color-gray-100:oklch(.967 .003 264.542);--color-gray-200:oklch(.928 .006 264.531);--color-gray-300:oklch(.872 .01 258.338);--color-gray-400:oklch(.707 .022 261.325);--color-gray-500:oklch(.551 .027 264.364);--color-gray-600:oklch(.446 .03 256.802);--color-gray-700:oklch(.373 .034 259.733);--color-gray-800:oklch(.278 .033 256.848);--color-gray-900:oklch(.21 .034 264.665);--color-gray-950:oklch(.13 .028 261.692);--color-zinc-50:oklch(.985 0 0);--color-zinc-100:oklch(.967 .001 286.375);--color-zinc-200:oklch(.92 .004 286.32);--color-zinc-300:oklch(.871 .006 286.286);--color-zinc-400:oklch(.705 .015 286.067);--color-zinc-500:oklch(.552 .016 285.938);--color-zinc-600:oklch(.442 .017 285.786);--color-zinc-700:oklch(.37 .013 285.805);--color-zinc-800:oklch(.274 .006 286.033);--color-zinc-900:oklch(.21 .006 285.885);--color-zinc-950:oklch(.141 .005 285.823);--color-neutral-50:oklch(.985 0 0);--color-neutral-100:oklch(.97 0 0);--color-neutral-200:oklch(.922 0 0);--color-neutral-300:oklch(.87 0 0);--color-neutral-400:oklch(.708 0 0);--color-neutral-500:oklch(.556 0 0);--color-neutral-600:oklch(.439 0 0);--color-neutral-700:oklch(.371 0 0);--color-neutral-800:oklch(.269 0 0);--color-neutral-900:oklch(.205 0 0);--color-neutral-950:oklch(.145 0 0);--color-stone-50:oklch(.985 .001 106.423);--color-stone-100:oklch(.97 .001 106.424);--color-stone-200:oklch(.923 .003 48.717);--color-stone-300:oklch(.869 .005 56.366);--color-stone-400:oklch(.709 .01 56.259);--color-stone-500:oklch(.553 .013 58.071);--color-stone-600:oklch(.444 .011 73.639);--color-stone-700:oklch(.374 .01 67.558);--color-stone-800:oklch(.268 .007 34.298);--color-stone-900:oklch(.216 .006 56.043);--color-stone-950:oklch(.147 .004 49.25);--color-black:#000;--color-white:#fff;--spacing:.25rem;--breakpoint-sm:40rem;--breakpoint-md:48rem;--breakpoint-lg:64rem;--breakpoint-xl:80rem;--breakpoint-2xl:96rem;--container-3xs:16rem;--container-2xs:18rem;--container-xs:20rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-xl:36rem;--container-2xl:42rem;--container-3xl:48rem;--container-4xl:56rem;--container-5xl:64rem;--container-6xl:72rem;--container-7xl:80rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-base:1rem;--text-base--line-height: 1.5 ;--text-lg:1.125rem;--text-lg--line-height:calc(1.75/1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75/1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2/1.5);--text-3xl:1.875rem;--text-3xl--line-height: 1.2 ;--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5/2.25);--text-5xl:3rem;--text-5xl--line-height:1;--text-6xl:3.75rem;--text-6xl--line-height:1;--text-7xl:4.5rem;--text-7xl--line-height:1;--text-8xl:6rem;--text-8xl--line-height:1;--text-9xl:8rem;--text-9xl--line-height:1;--font-weight-thin:100;--font-weight-extralight:200;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--font-weight-black:900;--tracking-tighter:-.05em;--tracking-tight:-.025em;--tracking-normal:0em;--tracking-wide:.025em;--tracking-wider:.05em;--tracking-widest:.1em;--leading-tight:1.25;--leading-snug:1.375;--leading-normal:1.5;--leading-relaxed:1.625;--leading-loose:2;--radius-xs:.125rem;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--radius-3xl:1.5rem;--radius-4xl:2rem;--shadow-2xs:0 1px #0000000d;--shadow-xs:0 1px 2px 0 #0000000d;--shadow-sm:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--shadow-md:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--shadow-lg:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--shadow-xl:0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;--shadow-2xl:0 25px 50px -12px #00000040;--inset-shadow-2xs:inset 0 1px #0000000d;--inset-shadow-xs:inset 0 1px 1px #0000000d;--inset-shadow-sm:inset 0 2px 4px #0000000d;--drop-shadow-xs:0 1px 1px #0000000d;--drop-shadow-sm:0 1px 2px #00000026;--drop-shadow-md:0 3px 3px #0000001f;--drop-shadow-lg:0 4px 4px #00000026;--drop-shadow-xl:0 9px 7px #0000001a;--drop-shadow-2xl:0 25px 25px #00000026;--ease-in:cubic-bezier(.4,0,1,1);--ease-out:cubic-bezier(0,0,.2,1);--ease-in-out:cubic-bezier(.4,0,.2,1);--animate-spin:spin 1s linear infinite;--animate-ping:ping 1s cubic-bezier(0,0,.2,1)infinite;--animate-pulse:pulse 2s cubic-bezier(.4,0,.6,1)infinite;--animate-bounce:bounce 1s infinite;--blur-xs:4px;--blur-sm:8px;--blur-md:12px;--blur-lg:16px;--blur-xl:24px;--blur-2xl:40px;--blur-3xl:64px;--perspective-dramatic:100px;--perspective-near:300px;--perspective-normal:500px;--perspective-midrange:800px;--perspective-distant:1200px;--aspect-video:16/9;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-font-feature-settings:var(--font-sans--font-feature-settings);--default-font-variation-settings:var(--font-sans--font-variation-settings);--default-mono-font-family:var(--font-mono);--default-mono-font-feature-settings:var(--font-mono--font-feature-settings);--default-mono-font-variation-settings:var(--font-mono--font-variation-settings)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}body{line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1;color:color-mix(in oklab,currentColor 50%,transparent)}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.absolute{position:absolute}.relative{position:relative}.static{position:static}.inset-0{inset:calc(var(--spacing)*0)}.-mt-\[4\.9rem\]{margin-top:-4.9rem}.-mb-px{margin-bottom:-1px}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.mb-6{margin-bottom:calc(var(--spacing)*6)}.-ml-8{margin-left:calc(var(--spacing)*-8)}.flex{display:flex}.hidden{display:none}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.aspect-\[335\/376\]{aspect-ratio:335/376}.h-1{height:calc(var(--spacing)*1)}.h-1\.5{height:calc(var(--spacing)*1.5)}.h-2{height:calc(var(--spacing)*2)}.h-2\.5{height:calc(var(--spacing)*2.5)}.h-3{height:calc(var(--spacing)*3)}.h-3\.5{height:calc(var(--spacing)*3.5)}.h-14{height:calc(var(--spacing)*14)}.h-14\.5{height:calc(var(--spacing)*14.5)}.min-h-screen{min-height:100vh}.w-1{width:calc(var(--spacing)*1)}.w-1\.5{width:calc(var(--spacing)*1.5)}.w-2{width:calc(var(--spacing)*2)}.w-2\.5{width:calc(var(--spacing)*2.5)}.w-3{width:calc(var(--spacing)*3)}.w-3\.5{width:calc(var(--spacing)*3.5)}.w-\[448px\]{width:448px}.w-full{width:100%}.max-w-\[335px\]{max-width:335px}.max-w-none{max-width:none}.flex-1{flex:1}.shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.transform{transform:var(--tw-rotate-x)var(--tw-rotate-y)var(--tw-rotate-z)var(--tw-skew-x)var(--tw-skew-y)}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.items-center{align-items:center}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}:where(.space-x-1>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*1)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:3.40282e38px}.rounded-sm{border-radius:var(--radius-sm)}.rounded-t-lg{border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg)}.rounded-br-lg{border-bottom-right-radius:var(--radius-lg)}.rounded-bl-lg{border-bottom-left-radius:var(--radius-lg)}.border{border-style:var(--tw-border-style);border-width:1px}.border-\[\#19140035\]{border-color:#19140035}.border-\[\#e3e3e0\]{border-color:#e3e3e0}.border-black{border-color:var(--color-black)}.border-transparent{border-color:#0000}.bg-\[\#1b1b18\]{background-color:#1b1b18}.bg-\[\#FDFDFC\]{background-color:#fdfdfc}.bg-\[\#dbdbd7\]{background-color:#dbdbd7}.bg-\[\#fff2f2\]{background-color:#fff2f2}.bg-white{background-color:var(--color-white)}.p-6{padding:calc(var(--spacing)*6)}.px-5{padding-inline:calc(var(--spacing)*5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.pb-12{padding-bottom:calc(var(--spacing)*12)}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-\[13px\]{font-size:13px}.leading-\[20px\]{--tw-leading:20px;line-height:20px}.leading-normal{--tw-leading:var(--leading-normal);line-height:var(--leading-normal)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.text-\[\#1b1b18\]{color:#1b1b18}.text-\[\#706f6c\]{color:#706f6c}.text-\[\#F53003\],.text-\[\#f53003\]{color:#f53003}.text-white{color:var(--color-white)}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}.opacity-100{opacity:1}.shadow-\[0px_0px_1px_0px_rgba\(0\,0\,0\,0\.03\)\,0px_1px_2px_0px_rgba\(0\,0\,0\,0\.06\)\]{--tw-shadow:0px 0px 1px 0px var(--tw-shadow-color,#00000008),0px 1px 2px 0px var(--tw-shadow-color,#0000000f);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\[inset_0px_0px_0px_1px_rgba\(26\,26\,0\,0\.16\)\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#1a1a0029);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.\!filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)!important}.filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.delay-300{transition-delay:.3s}.duration-750{--tw-duration:.75s;transition-duration:.75s}.not-has-\[nav\]\:hidden:not(:has(:is(nav))){display:none}.before\:absolute:before{content:var(--tw-content);position:absolute}.before\:top-0:before{content:var(--tw-content);top:calc(var(--spacing)*0)}.before\:top-1\/2:before{content:var(--tw-content);top:50%}.before\:bottom-0:before{content:var(--tw-content);bottom:calc(var(--spacing)*0)}.before\:bottom-1\/2:before{content:var(--tw-content);bottom:50%}.before\:left-\[0\.4rem\]:before{content:var(--tw-content);left:.4rem}.before\:border-l:before{content:var(--tw-content);border-left-style:var(--tw-border-style);border-left-width:1px}.before\:border-\[\#e3e3e0\]:before{content:var(--tw-content);border-color:#e3e3e0}@media (hover:hover){.hover\:border-\[\#1915014a\]:hover{border-color:#1915014a}.hover\:border-\[\#19140035\]:hover{border-color:#19140035}.hover\:border-black:hover{border-color:var(--color-black)}.hover\:bg-black:hover{background-color:var(--color-black)}}@media (width>=64rem){.lg\:-mt-\[6\.6rem\]{margin-top:-6.6rem}.lg\:mb-0{margin-bottom:calc(var(--spacing)*0)}.lg\:mb-6{margin-bottom:calc(var(--spacing)*6)}.lg\:-ml-px{margin-left:-1px}.lg\:ml-0{margin-left:calc(var(--spacing)*0)}.lg\:block{display:block}.lg\:aspect-auto{aspect-ratio:auto}.lg\:w-\[438px\]{width:438px}.lg\:max-w-4xl{max-width:var(--container-4xl)}.lg\:grow{flex-grow:1}.lg\:flex-row{flex-direction:row}.lg\:justify-center{justify-content:center}.lg\:rounded-t-none{border-top-left-radius:0;border-top-right-radius:0}.lg\:rounded-tl-lg{border-top-left-radius:var(--radius-lg)}.lg\:rounded-r-lg{border-top-right-radius:var(--radius-lg);border-bottom-right-radius:var(--radius-lg)}.lg\:rounded-br-none{border-bottom-right-radius:0}.lg\:p-8{padding:calc(var(--spacing)*8)}.lg\:p-20{padding:calc(var(--spacing)*20)}}@media (prefers-color-scheme:dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:border-\[\#3E3E3A\]{border-color:#3e3e3a}.dark\:border-\[\#eeeeec\]{border-color:#eeeeec}.dark\:bg-\[\#0a0a0a\]{background-color:#0a0a0a}.dark\:bg-\[\#1D0002\]{background-color:#1d0002}.dark\:bg-\[\#3E3E3A\]{background-color:#3e3e3a}.dark\:bg-\[\#161615\]{background-color:#161615}.dark\:bg-\[\#eeeeec\]{background-color:#eeeeec}.dark\:text-\[\#1C1C1A\]{color:#1c1c1a}.dark\:text-\[\#A1A09A\]{color:#a1a09a}.dark\:text-\[\#EDEDEC\]{color:#ededec}.dark\:text-\[\#F61500\]{color:#f61500}.dark\:text-\[\#FF4433\]{color:#f43}.dark\:shadow-\[inset_0px_0px_0px_1px_\#fffaed2d\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#fffaed2d);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.dark\:before\:border-\[\#3E3E3A\]:before{content:var(--tw-content);border-color:#3e3e3a}@media (hover:hover){.dark\:hover\:border-\[\#3E3E3A\]:hover{border-color:#3e3e3a}.dark\:hover\:border-\[\#62605b\]:hover{border-color:#62605b}.dark\:hover\:border-white:hover{border-color:var(--color-white)}.dark\:hover\:bg-white:hover{background-color:var(--color-white)}}}@starting-style{.starting\:translate-y-4{--tw-translate-y:calc(var(--spacing)*4);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:translate-y-6{--tw-translate-y:calc(var(--spacing)*6);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:opacity-0{opacity:0}}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes ping{75%,to{opacity:0;transform:scale(2)}}@keyframes pulse{50%{opacity:.5}}@keyframes bounce{0%,to{animation-timing-function:cubic-bezier(.8,0,1,1);transform:translateY(-25%)}50%{animation-timing-function:cubic-bezier(0,0,.2,1);transform:none}}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false;initial-value:rotateX(0)}@property --tw-rotate-y{syntax:"*";inherits:false;initial-value:rotateY(0)}@property --tw-rotate-z{syntax:"*";inherits:false;initial-value:rotateZ(0)}@property --tw-skew-x{syntax:"*";inherits:false;initial-value:skewX(0)}@property --tw-skew-y{syntax:"*";inherits:false;initial-value:skewY(0)}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}
-            </style>
-        @endif
-    </head>
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-            @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
+    <!-- font -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/fonts/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/fonts/font-icons.css') }}">
+    <!-- css -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/styles.css') }}">
 
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
-        </header>
-        <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
-            <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-                <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
-                    <h1 class="mb-1 font-medium">Let's get started</h1>
-                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravel has an incredibly rich ecosystem. <br>We suggest starting with the following.</p>
-                    <ul class="flex flex-col mb-4 lg:mb-6">
-                        <li class="flex items-center gap-4 py-2 relative before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A] before:top-1/2 before:bottom-0 before:left-[0.4rem] before:absolute">
-                            <span class="relative py-1 bg-white dark:bg-[#161615]">
-                                <span class="flex items-center justify-center rounded-full bg-[#FDFDFC] dark:bg-[#161615] shadow-[0px_0px_1px_0px_rgba(0,0,0,0.03),0px_1px_2px_0px_rgba(0,0,0,0.06)] w-3.5 h-3.5 border dark:border-[#3E3E3A] border-[#e3e3e0]">
-                                    <span class="rounded-full bg-[#dbdbd7] dark:bg-[#3E3E3A] w-1.5 h-1.5"></span>
-                                </span>
-                            </span>
-                            <span>
-                                Read the
-                                <a href="https://laravel.com/docs" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Documentation</span>
-                                    <svg
-                                        width="10"
-                                        height="11"
-                                        viewBox="0 0 10 11"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="w-2.5 h-2.5"
-                                    >
-                                        <path
-                                            d="M7.70833 6.95834V2.79167H3.54167M2.5 8L7.5 3.00001"
-                                            stroke="currentColor"
-                                            stroke-linecap="square"
-                                        />
-                                    </svg>
-                                </a>
-                            </span>
-                        </li>
-                        <li class="flex items-center gap-4 py-2 relative before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A] before:bottom-1/2 before:top-0 before:left-[0.4rem] before:absolute">
-                            <span class="relative py-1 bg-white dark:bg-[#161615]">
-                                <span class="flex items-center justify-center rounded-full bg-[#FDFDFC] dark:bg-[#161615] shadow-[0px_0px_1px_0px_rgba(0,0,0,0.03),0px_1px_2px_0px_rgba(0,0,0,0.06)] w-3.5 h-3.5 border dark:border-[#3E3E3A] border-[#e3e3e0]">
-                                    <span class="rounded-full bg-[#dbdbd7] dark:bg-[#3E3E3A] w-1.5 h-1.5"></span>
-                                </span>
-                            </span>
-                            <span>
-                                Watch video tutorials at
-                                <a href="https://laracasts.com" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Laracasts</span>
-                                    <svg
-                                        width="10"
-                                        height="11"
-                                        viewBox="0 0 10 11"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="w-2.5 h-2.5"
-                                    >
-                                        <path
-                                            d="M7.70833 6.95834V2.79167H3.54167M2.5 8L7.5 3.00001"
-                                            stroke="currentColor"
-                                            stroke-linecap="square"
-                                        />
-                                    </svg>
-                                </a>
-                            </span>
-                        </li>
-                    </ul>
-                    <ul class="flex gap-3 text-sm leading-normal">
-                        <li>
-                            <a href="https://cloud.laravel.com" target="_blank" class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
-                                Deploy now
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/376] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden">
-                    {{-- Laravel Logo --}}
-                    <svg class="w-full text-[#F53003] dark:text-[#F61500] transition-all translate-y-0 opacity-100 max-w-none duration-750 starting:opacity-0 starting:translate-y-6" viewBox="0 0 438 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.2036 -3H0V102.197H49.5189V86.7187H17.2036V-3Z" fill="currentColor" />
-                        <path d="M110.256 41.6337C108.061 38.1275 104.945 35.3731 100.905 33.3681C96.8667 31.3647 92.8016 30.3618 88.7131 30.3618C83.4247 30.3618 78.5885 31.3389 74.201 33.2923C69.8111 35.2456 66.0474 37.928 62.9059 41.3333C59.7643 44.7401 57.3198 48.6726 55.5754 53.1293C53.8287 57.589 52.9572 62.274 52.9572 67.1813C52.9572 72.1925 53.8287 76.8995 55.5754 81.3069C57.3191 85.7173 59.7636 89.6241 62.9059 93.0293C66.0474 96.4361 69.8119 99.1155 74.201 101.069C78.5885 103.022 83.4247 103.999 88.7131 103.999C92.8016 103.999 96.8667 102.997 100.905 100.994C104.945 98.9911 108.061 96.2359 110.256 92.7282V102.195H126.563V32.1642H110.256V41.6337ZM108.76 75.7472C107.762 78.4531 106.366 80.8078 104.572 82.8112C102.776 84.8161 100.606 86.4183 98.0637 87.6206C95.5202 88.823 92.7004 89.4238 89.6103 89.4238C86.5178 89.4238 83.7252 88.823 81.2324 87.6206C78.7388 86.4183 76.5949 84.8161 74.7998 82.8112C73.004 80.8078 71.6319 78.4531 70.6856 75.7472C69.7356 73.0421 69.2644 70.1868 69.2644 67.1821C69.2644 64.1758 69.7356 61.3205 70.6856 58.6154C71.6319 55.9102 73.004 53.5571 74.7998 51.5522C76.5949 49.5495 78.738 47.9451 81.2324 46.7427C83.7252 45.5404 86.5178 44.9396 89.6103 44.9396C92.7012 44.9396 95.5202 45.5404 98.0637 46.7427C100.606 47.9451 102.776 49.5487 104.572 51.5522C106.367 53.5571 107.762 55.9102 108.76 58.6154C109.756 61.3205 110.256 64.1758 110.256 67.1821C110.256 70.1868 109.756 73.0421 108.76 75.7472Z" fill="currentColor" />
-                        <path d="M242.805 41.6337C240.611 38.1275 237.494 35.3731 233.455 33.3681C229.416 31.3647 225.351 30.3618 221.262 30.3618C215.974 30.3618 211.138 31.3389 206.75 33.2923C202.36 35.2456 198.597 37.928 195.455 41.3333C192.314 44.7401 189.869 48.6726 188.125 53.1293C186.378 57.589 185.507 62.274 185.507 67.1813C185.507 72.1925 186.378 76.8995 188.125 81.3069C189.868 85.7173 192.313 89.6241 195.455 93.0293C198.597 96.4361 202.361 99.1155 206.75 101.069C211.138 103.022 215.974 103.999 221.262 103.999C225.351 103.999 229.416 102.997 233.455 100.994C237.494 98.9911 240.611 96.2359 242.805 92.7282V102.195H259.112V32.1642H242.805V41.6337ZM241.31 75.7472C240.312 78.4531 238.916 80.8078 237.122 82.8112C235.326 84.8161 233.156 86.4183 230.614 87.6206C228.07 88.823 225.251 89.4238 222.16 89.4238C219.068 89.4238 216.275 88.823 213.782 87.6206C211.289 86.4183 209.145 84.8161 207.35 82.8112C205.554 80.8078 204.182 78.4531 203.236 75.7472C202.286 73.0421 201.814 70.1868 201.814 67.1821C201.814 64.1758 202.286 61.3205 203.236 58.6154C204.182 55.9102 205.554 53.5571 207.35 51.5522C209.145 49.5495 211.288 47.9451 213.782 46.7427C216.275 45.5404 219.068 44.9396 222.16 44.9396C225.251 44.9396 228.07 45.5404 230.614 46.7427C233.156 47.9451 235.326 49.5487 237.122 51.5522C238.917 53.5571 240.312 55.9102 241.31 58.6154C242.306 61.3205 242.806 64.1758 242.806 67.1821C242.805 70.1868 242.305 73.0421 241.31 75.7472Z" fill="currentColor" />
-                        <path d="M438 -3H421.694V102.197H438V-3Z" fill="currentColor" />
-                        <path d="M139.43 102.197H155.735V48.2834H183.712V32.1665H139.43V102.197Z" fill="currentColor" />
-                        <path d="M324.49 32.1665L303.995 85.794L283.498 32.1665H266.983L293.748 102.197H314.242L341.006 32.1665H324.49Z" fill="currentColor" />
-                        <path d="M376.571 30.3656C356.603 30.3656 340.797 46.8497 340.797 67.1828C340.797 89.6597 356.094 104 378.661 104C391.29 104 399.354 99.1488 409.206 88.5848L398.189 80.0226C398.183 80.031 389.874 90.9895 377.468 90.9895C363.048 90.9895 356.977 79.3111 356.977 73.269H411.075C413.917 50.1328 398.775 30.3656 376.571 30.3656ZM357.02 61.0967C357.145 59.7487 359.023 43.3761 376.442 43.3761C393.861 43.3761 395.978 59.7464 396.099 61.0967H357.02Z" fill="currentColor" />
-                    </svg>
+    
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="{{ asset('frontend/assets/images/logo/favicon.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('frontend/assets/images/logo/favicon.png') }}">
 
-                    {{-- Light Mode 12 SVG --}}
-                    <svg class="w-[448px] max-w-none relative -mt-[4.9rem] -ml-8 lg:ml-0 lg:-mt-[6.6rem] dark:hidden" viewBox="0 0 440 376" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M188.263 355.73L188.595 355.73C195.441 348.845 205.766 339.761 219.569 328.477C232.93 317.193 242.978 308.205 249.714 301.511C256.34 294.626 260.867 287.358 263.296 279.708C265.725 272.058 264.565 264.121 259.816 255.896C254.516 246.716 247.062 239.352 237.454 233.805C227.957 228.067 217.908 225.198 207.307 225.198C196.927 225.197 190.136 227.97 186.934 233.516C183.621 238.872 184.726 246.331 190.247 255.894L125.647 255.891C116.371 239.825 112.395 225.481 113.72 212.858C115.265 200.235 121.559 190.481 132.602 183.596C143.754 176.52 158.607 172.982 177.159 172.983C196.594 172.984 215.863 176.523 234.968 183.6C253.961 190.486 271.299 200.241 286.98 212.864C302.661 225.488 315.14 239.833 324.416 255.899C333.03 270.817 336.841 283.918 335.847 295.203C335.075 306.487 331.376 316.336 324.75 324.751C318.346 333.167 308.408 343.494 294.936 355.734L377.094 355.737L405.917 405.656L217.087 405.649L188.263 355.73Z" fill="black" />
-                            <path d="M9.11884 226.339L-13.7396 226.338L-42.7286 176.132L43.0733 176.135L175.595 405.649L112.651 405.647L9.11884 226.339Z" fill="black" />
-                            <path d="M188.263 355.73L188.595 355.73C195.441 348.845 205.766 339.761 219.569 328.477C232.93 317.193 242.978 308.205 249.714 301.511C256.34 294.626 260.867 287.358 263.296 279.708C265.725 272.058 264.565 264.121 259.816 255.896C254.516 246.716 247.062 239.352 237.454 233.805C227.957 228.067 217.908 225.198 207.307 225.198C196.927 225.197 190.136 227.97 186.934 233.516C183.621 238.872 184.726 246.331 190.247 255.894L125.647 255.891C116.371 239.825 112.395 225.481 113.72 212.858C115.265 200.235 121.559 190.481 132.602 183.596C143.754 176.52 158.607 172.982 177.159 172.983C196.594 172.984 215.863 176.523 234.968 183.6C253.961 190.486 271.299 200.241 286.98 212.864C302.661 225.488 315.14 239.833 324.416 255.899C333.03 270.817 336.841 283.918 335.847 295.203C335.075 306.487 331.376 316.336 324.75 324.751C318.346 333.167 308.408 343.494 294.936 355.734L377.094 355.737L405.917 405.656L217.087 405.649L188.263 355.73Z" stroke="#1B1B18" stroke-width="1" />
-                            <path d="M9.11884 226.339L-13.7396 226.338L-42.7286 176.132L43.0733 176.135L175.595 405.649L112.651 405.647L9.11884 226.339Z" stroke="#1B1B18" stroke-width="1" />
-                            <path d="M204.592 327.449L204.923 327.449C211.769 320.564 222.094 311.479 235.897 300.196C249.258 288.912 259.306 279.923 266.042 273.23C272.668 266.345 277.195 259.077 279.624 251.427C282.053 243.777 280.893 235.839 276.145 227.615C270.844 218.435 263.39 211.071 253.782 205.524C244.285 199.786 234.236 196.917 223.635 196.916C213.255 196.916 206.464 199.689 203.262 205.235C199.949 210.59 201.054 218.049 206.575 227.612L141.975 227.61C132.699 211.544 128.723 197.2 130.048 184.577C131.593 171.954 137.887 162.2 148.93 155.315C160.083 148.239 174.935 144.701 193.487 144.702C212.922 144.703 232.192 148.242 251.296 155.319C270.289 162.205 287.627 171.96 303.308 184.583C318.989 197.207 331.468 211.552 340.745 227.618C349.358 242.536 353.169 255.637 352.175 266.921C351.403 278.205 347.704 288.055 341.078 296.47C334.674 304.885 324.736 315.213 311.264 327.453L393.422 327.456L422.246 377.375L233.415 377.368L204.592 327.449Z" fill="#F8B803" />
-                            <path d="M25.447 198.058L2.58852 198.057L-26.4005 147.851L59.4015 147.854L191.923 377.368L128.979 377.365L25.447 198.058Z" fill="#F8B803" />
-                            <path d="M204.592 327.449L204.923 327.449C211.769 320.564 222.094 311.479 235.897 300.196C249.258 288.912 259.306 279.923 266.042 273.23C272.668 266.345 277.195 259.077 279.624 251.427C282.053 243.777 280.893 235.839 276.145 227.615C270.844 218.435 263.39 211.071 253.782 205.524C244.285 199.786 234.236 196.917 223.635 196.916C213.255 196.916 206.464 199.689 203.262 205.235C199.949 210.59 201.054 218.049 206.575 227.612L141.975 227.61C132.699 211.544 128.723 197.2 130.048 184.577C131.593 171.954 137.887 162.2 148.93 155.315C160.083 148.239 174.935 144.701 193.487 144.702C212.922 144.703 232.192 148.242 251.296 155.319C270.289 162.205 287.627 171.96 303.308 184.583C318.989 197.207 331.468 211.552 340.745 227.618C349.358 242.536 353.169 255.637 352.175 266.921C351.403 278.205 347.704 288.055 341.078 296.47C334.674 304.885 324.736 315.213 311.264 327.453L393.422 327.456L422.246 377.375L233.415 377.368L204.592 327.449Z" stroke="#1B1B18" stroke-width="1" />
-                            <path d="M25.447 198.058L2.58852 198.057L-26.4005 147.851L59.4015 147.854L191.923 377.368L128.979 377.365L25.447 198.058Z" stroke="#1B1B18" stroke-width="1" />
-                        </g>
-                        <g style="mix-blend-mode: hard-light" class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M217.342 305.363L217.673 305.363C224.519 298.478 234.844 289.393 248.647 278.11C262.008 266.826 272.056 257.837 278.792 251.144C285.418 244.259 289.945 236.991 292.374 229.341C294.803 221.691 293.643 213.753 288.895 205.529C283.594 196.349 276.14 188.985 266.532 183.438C257.035 177.7 246.986 174.831 236.385 174.83C226.005 174.83 219.214 177.603 216.012 183.149C212.699 188.504 213.804 195.963 219.325 205.527L154.725 205.524C145.449 189.458 141.473 175.114 142.798 162.491C144.343 149.868 150.637 140.114 161.68 133.229C172.833 126.153 187.685 122.615 206.237 122.616C225.672 122.617 244.942 126.156 264.046 133.233C283.039 140.119 300.377 149.874 316.058 162.497C331.739 175.121 344.218 189.466 353.495 205.532C362.108 220.45 365.919 233.551 364.925 244.835C364.153 256.12 360.454 265.969 353.828 274.384C347.424 282.799 337.486 293.127 324.014 305.367L406.172 305.37L434.996 355.289L246.165 355.282L217.342 305.363Z" fill="#F0ACB8" />
-                            <path d="M38.197 175.972L15.3385 175.971L-13.6505 125.765L72.1515 125.768L204.673 355.282L141.729 355.279L38.197 175.972Z" fill="#F0ACB8" />
-                            <path d="M217.342 305.363L217.673 305.363C224.519 298.478 234.844 289.393 248.647 278.11C262.008 266.826 272.056 257.837 278.792 251.144C285.418 244.259 289.945 236.991 292.374 229.341C294.803 221.691 293.643 213.753 288.895 205.529C283.594 196.349 276.14 188.985 266.532 183.438C257.035 177.7 246.986 174.831 236.385 174.83C226.005 174.83 219.214 177.603 216.012 183.149C212.699 188.504 213.804 195.963 219.325 205.527L154.725 205.524C145.449 189.458 141.473 175.114 142.798 162.491C144.343 149.868 150.637 140.114 161.68 133.229C172.833 126.153 187.685 122.615 206.237 122.616C225.672 122.617 244.942 126.156 264.046 133.233C283.039 140.119 300.377 149.874 316.058 162.497C331.739 175.121 344.218 189.466 353.495 205.532C362.108 220.45 365.919 233.551 364.925 244.835C364.153 256.12 360.454 265.969 353.828 274.384C347.424 282.799 337.486 293.127 324.014 305.367L406.172 305.37L434.996 355.289L246.165 355.282L217.342 305.363Z" stroke="#1B1B18" stroke-width="1" />
-                            <path d="M38.197 175.972L15.3385 175.971L-13.6505 125.765L72.1515 125.768L204.673 355.282L141.729 355.279L38.197 175.972Z" stroke="#1B1B18" stroke-width="1" />
-                        </g>
-                        <g style="mix-blend-mode: plus-darker" class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M230.951 281.792L231.282 281.793C238.128 274.907 248.453 265.823 262.256 254.539C275.617 243.256 285.666 234.267 292.402 227.573C299.027 220.688 303.554 213.421 305.983 205.771C308.412 198.12 307.253 190.183 302.504 181.959C297.203 172.778 289.749 165.415 280.142 159.868C270.645 154.13 260.596 151.26 249.995 151.26C239.615 151.26 232.823 154.033 229.621 159.579C226.309 164.934 227.413 172.393 232.935 181.956L168.335 181.954C159.058 165.888 155.082 151.543 156.407 138.92C157.953 126.298 164.247 116.544 175.289 109.659C186.442 102.583 201.294 99.045 219.846 99.0457C239.281 99.0464 258.551 102.585 277.655 109.663C296.649 116.549 313.986 126.303 329.667 138.927C345.349 151.551 357.827 165.895 367.104 181.961C375.718 196.88 379.528 209.981 378.535 221.265C377.762 232.549 374.063 242.399 367.438 250.814C361.033 259.229 351.095 269.557 337.624 281.796L419.782 281.8L448.605 331.719L259.774 331.712L230.951 281.792Z" fill="#F3BEC7" />
-                            <path d="M51.8063 152.402L28.9479 152.401L-0.0411453 102.195L85.7608 102.198L218.282 331.711L155.339 331.709L51.8063 152.402Z" fill="#F3BEC7" />
-                            <path d="M230.951 281.792L231.282 281.793C238.128 274.907 248.453 265.823 262.256 254.539C275.617 243.256 285.666 234.267 292.402 227.573C299.027 220.688 303.554 213.421 305.983 205.771C308.412 198.12 307.253 190.183 302.504 181.959C297.203 172.778 289.749 165.415 280.142 159.868C270.645 154.13 260.596 151.26 249.995 151.26C239.615 151.26 232.823 154.033 229.621 159.579C226.309 164.934 227.413 172.393 232.935 181.956L168.335 181.954C159.058 165.888 155.082 151.543 156.407 138.92C157.953 126.298 164.247 116.544 175.289 109.659C186.442 102.583 201.294 99.045 219.846 99.0457C239.281 99.0464 258.551 102.585 277.655 109.663C296.649 116.549 313.986 126.303 329.667 138.927C345.349 151.551 357.827 165.895 367.104 181.961C375.718 196.88 379.528 209.981 378.535 221.265C377.762 232.549 374.063 242.399 367.438 250.814C361.033 259.229 351.095 269.557 337.624 281.796L419.782 281.8L448.605 331.719L259.774 331.712L230.951 281.792Z" stroke="#1B1B18" stroke-width="1" />
-                            <path d="M51.8063 152.402L28.9479 152.401L-0.0411453 102.195L85.7608 102.198L218.282 331.711L155.339 331.709L51.8063 152.402Z" stroke="#1B1B18" stroke-width="1" />
-                        </g>
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M188.467 355.363L188.798 355.363C195.644 348.478 205.969 339.393 219.772 328.11C233.133 316.826 243.181 307.837 249.917 301.144C253.696 297.217 256.792 293.166 259.205 288.991C261.024 285.845 262.455 282.628 263.499 279.341C265.928 271.691 264.768 263.753 260.02 255.529C254.719 246.349 247.265 238.985 237.657 233.438C228.16 227.7 218.111 224.831 207.51 224.83C197.13 224.83 190.339 227.603 187.137 233.149C183.824 238.504 184.929 245.963 190.45 255.527L125.851 255.524C116.574 239.458 112.598 225.114 113.923 212.491C114.615 206.836 116.261 201.756 118.859 197.253C122.061 191.704 126.709 187.03 132.805 183.229C143.958 176.153 158.81 172.615 177.362 172.616C196.797 172.617 216.067 176.156 235.171 183.233C254.164 190.119 271.502 199.874 287.183 212.497C302.864 225.121 315.343 239.466 324.62 255.532C333.233 270.45 337.044 283.551 336.05 294.835C335.46 303.459 333.16 311.245 329.151 318.194C327.915 320.337 326.515 322.4 324.953 324.384C318.549 332.799 308.611 343.127 295.139 355.367L377.297 355.37L406.121 405.289L217.29 405.282L188.467 355.363Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M9.32197 225.972L-13.5365 225.971L-42.5255 175.765L43.2765 175.768L175.798 405.282L112.854 405.279L9.32197 225.972Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M345.247 111.915C329.566 99.2919 312.229 89.5371 293.235 82.6512L235.167 183.228C254.161 190.114 271.498 199.869 287.179 212.492L345.247 111.915Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M382.686 154.964C373.41 138.898 360.931 124.553 345.25 111.93L287.182 212.506C302.863 225.13 315.342 239.475 324.618 255.541L382.686 154.964Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M293.243 82.6472C274.139 75.57 254.869 72.031 235.434 72.0303L177.366 172.607C196.801 172.608 216.071 176.147 235.175 183.224L293.243 82.6472Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M394.118 194.257C395.112 182.973 391.301 169.872 382.688 154.953L324.619 255.53C333.233 270.448 337.044 283.55 336.05 294.834L394.118 194.257Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M235.432 72.0311C216.88 72.0304 202.027 75.5681 190.875 82.6442L132.806 183.221C143.959 176.145 158.812 172.607 177.363 172.608L235.432 72.0311Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M265.59 124.25C276.191 124.251 286.24 127.12 295.737 132.858L237.669 233.435C228.172 227.697 218.123 224.828 207.522 224.827L265.59 124.25Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M295.719 132.859C305.326 138.406 312.78 145.77 318.081 154.95L260.013 255.527C254.712 246.347 247.258 238.983 237.651 233.436L295.719 132.859Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M387.218 217.608C391.227 210.66 393.527 202.874 394.117 194.25L336.049 294.827C335.459 303.451 333.159 311.237 329.15 318.185L387.218 217.608Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M245.211 132.577C248.413 127.03 255.204 124.257 265.584 124.258L207.516 224.835C197.136 224.834 190.345 227.607 187.143 233.154L245.211 132.577Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M318.094 154.945C322.842 163.17 324.002 171.107 321.573 178.757L263.505 279.334C265.934 271.684 264.774 263.746 260.026 255.522L318.094 154.945Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M176.925 96.6737C180.127 91.1249 184.776 86.4503 190.871 82.6499L132.803 183.227C126.708 187.027 122.059 191.702 118.857 197.25L176.925 96.6737Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M387.226 217.606C385.989 219.749 384.59 221.813 383.028 223.797L324.96 324.373C326.522 322.39 327.921 320.326 329.157 318.183L387.226 217.606Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M317.269 188.408C319.087 185.262 320.519 182.045 321.562 178.758L263.494 279.335C262.451 282.622 261.019 285.839 259.201 288.985L317.269 188.408Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M245.208 132.573C241.895 137.928 243 145.387 248.522 154.95L190.454 255.527C184.932 245.964 183.827 238.505 187.14 233.15L245.208 132.573Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M176.93 96.6719C174.331 101.175 172.686 106.255 171.993 111.91L113.925 212.487C114.618 206.831 116.263 201.752 118.862 197.249L176.93 96.6719Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M317.266 188.413C314.853 192.589 311.757 196.64 307.978 200.566L249.91 301.143C253.689 297.216 256.785 293.166 259.198 288.99L317.266 188.413Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M464.198 304.708L435.375 254.789L377.307 355.366L406.13 405.285L464.198 304.708Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M353.209 254.787C366.68 242.548 376.618 232.22 383.023 223.805L324.955 324.382C318.55 332.797 308.612 343.124 295.141 355.364L353.209 254.787Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M435.37 254.787L353.212 254.784L295.144 355.361L377.302 355.364L435.37 254.787Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M183.921 154.947L248.521 154.95L190.453 255.527L125.853 255.524L183.921 154.947Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M171.992 111.914C170.668 124.537 174.643 138.881 183.92 154.947L125.852 255.524C116.575 239.458 112.599 225.114 113.924 212.491L171.992 111.914Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M307.987 200.562C301.251 207.256 291.203 216.244 277.842 227.528L219.774 328.105C233.135 316.821 243.183 307.832 249.919 301.139L307.987 200.562Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M15.5469 75.1797L44.5359 125.386L-13.5321 225.963L-42.5212 175.756L15.5469 75.1797Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M277.836 227.536C264.033 238.82 253.708 247.904 246.862 254.789L188.794 355.366C195.64 348.481 205.965 339.397 219.768 328.113L277.836 227.536Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M275.358 304.706L464.189 304.713L406.12 405.29L217.29 405.283L275.358 304.706Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M44.5279 125.39L67.3864 125.39L9.31834 225.967L-13.5401 225.966L44.5279 125.39Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M101.341 75.1911L233.863 304.705L175.795 405.282L43.2733 175.768L101.341 75.1911ZM15.5431 75.19L-42.525 175.767L43.277 175.77L101.345 75.1932L15.5431 75.19Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M246.866 254.784L246.534 254.784L188.466 355.361L188.798 355.361L246.866 254.784Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M246.539 254.781L275.362 304.701L217.294 405.277L188.471 355.358L246.539 254.781Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M67.3906 125.391L170.923 304.698L112.855 405.275L9.32257 225.967L67.3906 125.391Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                            <path d="M170.921 304.699L233.865 304.701L175.797 405.278L112.853 405.276L170.921 304.699Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="bevel" />
-                        </g>
-                        <g style="mix-blend-mode: hard-light" class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M246.544 254.79L246.875 254.79C253.722 247.905 264.046 238.82 277.849 227.537C291.21 216.253 301.259 207.264 307.995 200.57C314.62 193.685 319.147 186.418 321.577 178.768C324.006 171.117 322.846 163.18 318.097 154.956C312.796 145.775 305.342 138.412 295.735 132.865C286.238 127.127 276.189 124.258 265.588 124.257C255.208 124.257 248.416 127.03 245.214 132.576C241.902 137.931 243.006 145.39 248.528 154.953L183.928 154.951C174.652 138.885 170.676 124.541 172 111.918C173.546 99.2946 179.84 89.5408 190.882 82.6559C202.035 75.5798 216.887 72.0421 235.439 72.0428C254.874 72.0435 274.144 75.5825 293.248 82.6598C312.242 89.5457 329.579 99.3005 345.261 111.924C360.942 124.548 373.421 138.892 382.697 154.958C391.311 169.877 395.121 182.978 394.128 194.262C393.355 205.546 389.656 215.396 383.031 223.811C376.627 232.226 366.688 242.554 353.217 254.794L435.375 254.797L464.198 304.716L275.367 304.709L246.544 254.79Z" fill="#F0ACB8" />
-                            <path d="M246.544 254.79L246.875 254.79C253.722 247.905 264.046 238.82 277.849 227.537C291.21 216.253 301.259 207.264 307.995 200.57C314.62 193.685 319.147 186.418 321.577 178.768C324.006 171.117 322.846 163.18 318.097 154.956C312.796 145.775 305.342 138.412 295.735 132.865C286.238 127.127 276.189 124.258 265.588 124.257C255.208 124.257 248.416 127.03 245.214 132.576C241.902 137.931 243.006 145.39 248.528 154.953L183.928 154.951C174.652 138.885 170.676 124.541 172 111.918C173.546 99.2946 179.84 89.5408 190.882 82.6559C202.035 75.5798 216.887 72.0421 235.439 72.0428C254.874 72.0435 274.144 75.5825 293.248 82.6598C312.242 89.5457 329.579 99.3005 345.261 111.924C360.942 124.548 373.421 138.892 382.697 154.958C391.311 169.877 395.121 182.978 394.128 194.262C393.355 205.546 389.656 215.396 383.031 223.811C376.627 232.226 366.688 242.554 353.217 254.794L435.375 254.797L464.198 304.716L275.367 304.709L246.544 254.79Z" stroke="#1B1B18" stroke-width="1" stroke-linejoin="round" />
-                        </g>
-                        <g style="mix-blend-mode: hard-light" class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M67.41 125.402L44.5515 125.401L15.5625 75.1953L101.364 75.1985L233.886 304.712L170.942 304.71L67.41 125.402Z" fill="#F0ACB8" />
-                            <path d="M67.41 125.402L44.5515 125.401L15.5625 75.1953L101.364 75.1985L233.886 304.712L170.942 304.71L67.41 125.402Z" stroke="#1B1B18" stroke-width="1" />
-                        </g>
-                    </svg>
+</head>
 
-                    {{-- Dark Mode 12 SVG --}}
-                    <svg class="w-[448px] max-w-none relative -mt-[4.9rem] -ml-8 lg:ml-0 lg:-mt-[6.6rem] hidden dark:block" viewBox="0 0 440 376" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M188.263 355.73L188.595 355.73C195.441 348.845 205.766 339.761 219.569 328.477C232.93 317.193 242.978 308.205 249.714 301.511C256.34 294.626 260.867 287.358 263.296 279.708C265.725 272.058 264.565 264.121 259.816 255.896C254.516 246.716 247.062 239.352 237.454 233.805C227.957 228.067 217.908 225.198 207.307 225.198C196.927 225.197 190.136 227.97 186.934 233.516C183.621 238.872 184.726 246.331 190.247 255.894L125.647 255.891C116.371 239.825 112.395 225.481 113.72 212.858C115.265 200.235 121.559 190.481 132.602 183.596C143.754 176.52 158.607 172.982 177.159 172.983C196.594 172.984 215.863 176.523 234.968 183.6C253.961 190.486 271.299 200.241 286.98 212.864C302.661 225.488 315.14 239.833 324.416 255.899C333.03 270.817 336.841 283.918 335.847 295.203C335.075 306.487 331.376 316.336 324.75 324.751C318.346 333.167 308.408 343.494 294.936 355.734L377.094 355.737L405.917 405.656L217.087 405.649L188.263 355.73Z" fill="black"/>
-                            <path d="M9.11884 226.339L-13.7396 226.338L-42.7286 176.132L43.0733 176.135L175.595 405.649L112.651 405.647L9.11884 226.339Z" fill="black"/>
-                            <path d="M188.263 355.73L188.595 355.73C195.441 348.845 205.766 339.761 219.569 328.477C232.93 317.193 242.978 308.205 249.714 301.511C256.34 294.626 260.867 287.358 263.296 279.708C265.725 272.058 264.565 264.121 259.816 255.896C254.516 246.716 247.062 239.352 237.454 233.805C227.957 228.067 217.908 225.198 207.307 225.198C196.927 225.197 190.136 227.97 186.934 233.516C183.621 238.872 184.726 246.331 190.247 255.894L125.647 255.891C116.371 239.825 112.395 225.481 113.72 212.858C115.265 200.235 121.559 190.481 132.602 183.596C143.754 176.52 158.607 172.982 177.159 172.983C196.594 172.984 215.863 176.523 234.968 183.6C253.961 190.486 271.299 200.241 286.98 212.864C302.661 225.488 315.14 239.833 324.416 255.899C333.03 270.817 336.841 283.918 335.847 295.203C335.075 306.487 331.376 316.336 324.75 324.751C318.346 333.167 308.408 343.494 294.936 355.734L377.094 355.737L405.917 405.656L217.087 405.649L188.263 355.73Z" stroke="#FF750F" stroke-width="1"/>
-                            <path d="M9.11884 226.339L-13.7396 226.338L-42.7286 176.132L43.0733 176.135L175.595 405.649L112.651 405.647L9.11884 226.339Z" stroke="#FF750F" stroke-width="1"/>
-                            <path d="M204.592 327.449L204.923 327.449C211.769 320.564 222.094 311.479 235.897 300.196C249.258 288.912 259.306 279.923 266.042 273.23C272.668 266.345 277.195 259.077 279.624 251.427C282.053 243.777 280.893 235.839 276.145 227.615C270.844 218.435 263.39 211.071 253.782 205.524C244.285 199.786 234.236 196.917 223.635 196.916C213.255 196.916 206.464 199.689 203.262 205.235C199.949 210.59 201.054 218.049 206.575 227.612L141.975 227.61C132.699 211.544 128.723 197.2 130.048 184.577C131.593 171.954 137.887 162.2 148.93 155.315C160.083 148.239 174.935 144.701 193.487 144.702C212.922 144.703 232.192 148.242 251.296 155.319C270.289 162.205 287.627 171.96 303.308 184.583C318.989 197.207 331.468 211.552 340.745 227.618C349.358 242.536 353.169 255.637 352.175 266.921C351.403 278.205 347.704 288.055 341.078 296.47C334.674 304.885 324.736 315.213 311.264 327.453L393.422 327.456L422.246 377.375L233.415 377.368L204.592 327.449Z" fill="#391800"/>
-                            <path d="M25.447 198.058L2.58852 198.057L-26.4005 147.851L59.4015 147.854L191.923 377.368L128.979 377.365L25.447 198.058Z" fill="#391800"/>
-                            <path d="M204.592 327.449L204.923 327.449C211.769 320.564 222.094 311.479 235.897 300.196C249.258 288.912 259.306 279.923 266.042 273.23C272.668 266.345 277.195 259.077 279.624 251.427C282.053 243.777 280.893 235.839 276.145 227.615C270.844 218.435 263.39 211.071 253.782 205.524C244.285 199.786 234.236 196.917 223.635 196.916C213.255 196.916 206.464 199.689 203.262 205.235C199.949 210.59 201.054 218.049 206.575 227.612L141.975 227.61C132.699 211.544 128.723 197.2 130.048 184.577C131.593 171.954 137.887 162.2 148.93 155.315C160.083 148.239 174.935 144.701 193.487 144.702C212.922 144.703 232.192 148.242 251.296 155.319C270.289 162.205 287.627 171.96 303.308 184.583C318.989 197.207 331.468 211.552 340.745 227.618C349.358 242.536 353.169 255.637 352.175 266.921C351.403 278.205 347.704 288.055 341.078 296.47C334.674 304.885 324.736 315.213 311.264 327.453L393.422 327.456L422.246 377.375L233.415 377.368L204.592 327.449Z" stroke="#FF750F" stroke-width="1"/>
-                            <path d="M25.447 198.058L2.58852 198.057L-26.4005 147.851L59.4015 147.854L191.923 377.368L128.979 377.365L25.447 198.058Z" stroke="#FF750F" stroke-width="1"/>
-                        </g>
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4" style="mix-blend-mode:hard-light">
-                            <path d="M217.342 305.363L217.673 305.363C224.519 298.478 234.844 289.393 248.647 278.11C262.008 266.826 272.056 257.837 278.792 251.144C285.418 244.259 289.945 236.991 292.374 229.341C294.803 221.691 293.643 213.753 288.895 205.529C283.594 196.349 276.14 188.985 266.532 183.438C257.035 177.7 246.986 174.831 236.385 174.83C226.005 174.83 219.214 177.603 216.012 183.149C212.699 188.504 213.804 195.963 219.325 205.527L154.725 205.524C145.449 189.458 141.473 175.114 142.798 162.491C144.343 149.868 150.637 140.114 161.68 133.229C172.833 126.153 187.685 122.615 206.237 122.616C225.672 122.617 244.942 126.156 264.046 133.233C283.039 140.119 300.377 149.874 316.058 162.497C331.739 175.121 344.218 189.466 353.495 205.532C362.108 220.45 365.919 233.551 364.925 244.835C364.153 256.12 360.454 265.969 353.828 274.384C347.424 282.799 337.486 293.127 324.014 305.367L406.172 305.37L434.996 355.289L246.165 355.282L217.342 305.363Z" fill="#733000"/>
-                            <path d="M38.197 175.972L15.3385 175.971L-13.6505 125.765L72.1515 125.768L204.673 355.282L141.729 355.279L38.197 175.972Z" fill="#733000"/>
-                            <path d="M217.342 305.363L217.673 305.363C224.519 298.478 234.844 289.393 248.647 278.11C262.008 266.826 272.056 257.837 278.792 251.144C285.418 244.259 289.945 236.991 292.374 229.341C294.803 221.691 293.643 213.753 288.895 205.529C283.594 196.349 276.14 188.985 266.532 183.438C257.035 177.7 246.986 174.831 236.385 174.83C226.005 174.83 219.214 177.603 216.012 183.149C212.699 188.504 213.804 195.963 219.325 205.527L154.725 205.524C145.449 189.458 141.473 175.114 142.798 162.491C144.343 149.868 150.637 140.114 161.68 133.229C172.833 126.153 187.685 122.615 206.237 122.616C225.672 122.617 244.942 126.156 264.046 133.233C283.039 140.119 300.377 149.874 316.058 162.497C331.739 175.121 344.218 189.466 353.495 205.532C362.108 220.45 365.919 233.551 364.925 244.835C364.153 256.12 360.454 265.969 353.828 274.384C347.424 282.799 337.486 293.127 324.014 305.367L406.172 305.37L434.996 355.289L246.165 355.282L217.342 305.363Z" stroke="#FF750F" stroke-width="1"/>
-                            <path d="M38.197 175.972L15.3385 175.971L-13.6505 125.765L72.1515 125.768L204.673 355.282L141.729 355.279L38.197 175.972Z" stroke="#FF750F" stroke-width="1"/>
-                        </g>
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M217.342 305.363L217.673 305.363C224.519 298.478 234.844 289.393 248.647 278.11C262.008 266.826 272.056 257.837 278.792 251.144C285.418 244.259 289.945 236.991 292.374 229.341C294.803 221.691 293.643 213.753 288.895 205.529C283.594 196.349 276.14 188.985 266.532 183.438C257.035 177.7 246.986 174.831 236.385 174.83C226.005 174.83 219.214 177.603 216.012 183.149C212.699 188.504 213.804 195.963 219.325 205.527L154.726 205.524C145.449 189.458 141.473 175.114 142.798 162.491C144.343 149.868 150.637 140.114 161.68 133.229C172.833 126.153 187.685 122.615 206.237 122.616C225.672 122.617 244.942 126.156 264.046 133.233C283.039 140.119 300.377 149.874 316.058 162.497C331.739 175.121 344.218 189.466 353.495 205.532C362.108 220.45 365.919 233.551 364.925 244.835C364.153 256.12 360.454 265.969 353.828 274.384C347.424 282.799 337.486 293.127 324.014 305.367L406.172 305.37L434.996 355.289L246.165 355.282L217.342 305.363Z" stroke="#FF750F" stroke-width="1"/>
-                            <path d="M38.197 175.972L15.3385 175.971L-13.6505 125.765L72.1515 125.768L204.673 355.282L141.729 355.279L38.197 175.972Z" stroke="#FF750F" stroke-width="1"/>
-                        </g>
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4">
-                            <path d="M188.467 355.363L188.798 355.363C195.644 348.478 205.969 339.393 219.772 328.11C233.133 316.826 243.181 307.837 249.917 301.144C253.696 297.217 256.792 293.166 259.205 288.991C261.024 285.845 262.455 282.628 263.499 279.341C265.928 271.691 264.768 263.753 260.02 255.529C254.719 246.349 247.265 238.985 237.657 233.438C228.16 227.7 218.111 224.831 207.51 224.83C197.13 224.83 190.339 227.603 187.137 233.149C183.824 238.504 184.929 245.963 190.45 255.527L125.851 255.524C116.574 239.458 112.598 225.114 113.923 212.491C114.615 206.836 116.261 201.756 118.859 197.253C122.061 191.704 126.709 187.03 132.805 183.229C143.958 176.153 158.81 172.615 177.362 172.616C196.797 172.617 216.067 176.156 235.171 183.233C254.164 190.119 271.502 199.874 287.183 212.497C302.864 225.121 315.343 239.466 324.62 255.532C333.233 270.45 337.044 283.551 336.05 294.835C335.46 303.459 333.16 311.245 329.151 318.194C327.915 320.337 326.515 322.4 324.953 324.384C318.549 332.799 308.611 343.127 295.139 355.367L377.297 355.37L406.121 405.289L217.29 405.282L188.467 355.363Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M9.32197 225.972L-13.5365 225.971L-42.5255 175.765L43.2765 175.768L175.798 405.282L112.854 405.279L9.32197 225.972Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M345.247 111.915C329.566 99.2919 312.229 89.5371 293.235 82.6512L235.167 183.228C254.161 190.114 271.498 199.869 287.179 212.492L345.247 111.915Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M382.686 154.964C373.41 138.898 360.931 124.553 345.25 111.93L287.182 212.506C302.863 225.13 315.342 239.475 324.618 255.541L382.686 154.964Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M293.243 82.6472C274.139 75.57 254.869 72.031 235.434 72.0303L177.366 172.607C196.801 172.608 216.071 176.147 235.175 183.224L293.243 82.6472Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M394.118 194.257C395.112 182.973 391.301 169.872 382.688 154.953L324.619 255.53C333.233 270.448 337.044 283.55 336.05 294.834L394.118 194.257Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M235.432 72.0311C216.88 72.0304 202.027 75.5681 190.875 82.6442L132.806 183.221C143.959 176.145 158.812 172.607 177.363 172.608L235.432 72.0311Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M265.59 124.25C276.191 124.251 286.24 127.12 295.737 132.858L237.669 233.435C228.172 227.697 218.123 224.828 207.522 224.827L265.59 124.25Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M295.719 132.859C305.326 138.406 312.78 145.77 318.081 154.95L260.013 255.527C254.712 246.347 247.258 238.983 237.651 233.436L295.719 132.859Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M387.218 217.608C391.227 210.66 393.527 202.874 394.117 194.25L336.049 294.827C335.459 303.451 333.159 311.237 329.15 318.185L387.218 217.608Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M245.211 132.577C248.413 127.03 255.204 124.257 265.584 124.258L207.516 224.835C197.136 224.834 190.345 227.607 187.143 233.154L245.211 132.577Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M318.094 154.945C322.842 163.17 324.002 171.107 321.573 178.757L263.505 279.334C265.934 271.684 264.774 263.746 260.026 255.522L318.094 154.945Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M176.925 96.6737C180.127 91.1249 184.776 86.4503 190.871 82.6499L132.803 183.227C126.708 187.027 122.059 191.702 118.857 197.25L176.925 96.6737Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M387.226 217.606C385.989 219.749 384.59 221.813 383.028 223.797L324.96 324.373C326.522 322.39 327.921 320.326 329.157 318.183L387.226 217.606Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M317.269 188.408C319.087 185.262 320.519 182.045 321.562 178.758L263.494 279.335C262.451 282.622 261.019 285.839 259.201 288.985L317.269 188.408Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M245.208 132.573C241.895 137.928 243 145.387 248.522 154.95L190.454 255.527C184.932 245.964 183.827 238.505 187.14 233.15L245.208 132.573Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M176.93 96.6719C174.331 101.175 172.686 106.255 171.993 111.91L113.925 212.487C114.618 206.831 116.263 201.752 118.862 197.249L176.93 96.6719Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M317.266 188.413C314.853 192.589 311.757 196.64 307.978 200.566L249.91 301.143C253.689 297.216 256.785 293.166 259.198 288.99L317.266 188.413Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M464.198 304.708L435.375 254.789L377.307 355.366L406.13 405.285L464.198 304.708Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M353.209 254.787C366.68 242.548 376.618 232.22 383.023 223.805L324.955 324.382C318.55 332.797 308.612 343.124 295.141 355.364L353.209 254.787Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M435.37 254.787L353.212 254.784L295.144 355.361L377.302 355.364L435.37 254.787Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M183.921 154.947L248.521 154.95L190.453 255.527L125.853 255.524L183.921 154.947Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M171.992 111.914C170.668 124.537 174.643 138.881 183.92 154.947L125.852 255.524C116.575 239.458 112.599 225.114 113.924 212.491L171.992 111.914Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M307.987 200.562C301.251 207.256 291.203 216.244 277.842 227.528L219.774 328.105C233.135 316.821 243.183 307.832 249.919 301.139L307.987 200.562Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M15.5469 75.1797L44.5359 125.386L-13.5321 225.963L-42.5212 175.756L15.5469 75.1797Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M277.836 227.536C264.033 238.82 253.708 247.904 246.862 254.789L188.794 355.366C195.64 348.481 205.965 339.397 219.768 328.113L277.836 227.536Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M275.358 304.706L464.189 304.713L406.12 405.29L217.29 405.283L275.358 304.706Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M44.5279 125.39L67.3864 125.39L9.31834 225.967L-13.5401 225.966L44.5279 125.39Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M101.341 75.1911L233.863 304.705L175.795 405.282L43.2733 175.768L101.341 75.1911ZM15.5431 75.19L-42.525 175.767L43.277 175.77L101.345 75.1932L15.5431 75.19Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M246.866 254.784L246.534 254.784L188.466 355.361L188.798 355.361L246.866 254.784Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M246.539 254.781L275.362 304.701L217.294 405.277L188.471 355.358L246.539 254.781Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M67.3906 125.391L170.923 304.698L112.855 405.275L9.32257 225.967L67.3906 125.391Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                            <path d="M170.921 304.699L233.865 304.701L175.797 405.278L112.853 405.276L170.921 304.699Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="bevel"/>
-                        </g>
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4" style="mix-blend-mode:hard-light">
-                            <path d="M246.544 254.79L246.875 254.79C253.722 247.905 264.046 238.82 277.849 227.537C291.21 216.253 301.259 207.264 307.995 200.57C314.62 193.685 319.147 186.418 321.577 178.768C324.006 171.117 322.846 163.18 318.097 154.956C312.796 145.775 305.342 138.412 295.735 132.865C286.238 127.127 276.189 124.258 265.588 124.257C255.208 124.257 248.416 127.03 245.214 132.576C241.902 137.931 243.006 145.39 248.528 154.953L183.928 154.951C174.652 138.885 170.676 124.541 172 111.918C173.546 99.2946 179.84 89.5408 190.882 82.6559C202.035 75.5798 216.887 72.0421 235.439 72.0428C254.874 72.0435 274.144 75.5825 293.248 82.6598C312.242 89.5457 329.579 99.3005 345.261 111.924C360.942 124.548 373.421 138.892 382.697 154.958C391.311 169.877 395.121 182.978 394.128 194.262C393.355 205.546 389.656 215.396 383.031 223.811C376.627 232.226 366.688 242.554 353.217 254.794L435.375 254.797L464.198 304.716L275.367 304.709L246.544 254.79Z" fill="#4B0600"/>
-                            <path d="M246.544 254.79L246.875 254.79C253.722 247.905 264.046 238.82 277.849 227.537C291.21 216.253 301.259 207.264 307.995 200.57C314.62 193.685 319.147 186.418 321.577 178.768C324.006 171.117 322.846 163.18 318.097 154.956C312.796 145.775 305.342 138.412 295.735 132.865C286.238 127.127 276.189 124.258 265.588 124.257C255.208 124.257 248.416 127.03 245.214 132.576C241.902 137.931 243.006 145.39 248.528 154.953L183.928 154.951C174.652 138.885 170.676 124.541 172 111.918C173.546 99.2946 179.84 89.5408 190.882 82.6559C202.035 75.5798 216.887 72.0421 235.439 72.0428C254.874 72.0435 274.144 75.5825 293.248 82.6598C312.242 89.5457 329.579 99.3005 345.261 111.924C360.942 124.548 373.421 138.892 382.697 154.958C391.311 169.877 395.121 182.978 394.128 194.262C393.355 205.546 389.656 215.396 383.031 223.811C376.627 232.226 366.688 242.554 353.217 254.794L435.375 254.797L464.198 304.716L275.367 304.709L246.544 254.79Z" stroke="#FF750F" stroke-width="1" stroke-linejoin="round"/>
-                        </g>
-                        <g class="transition-all delay-300 translate-y-0 opacity-100 duration-750 starting:opacity-0 starting:translate-y-4" style="mix-blend-mode:hard-light">
-                            <path d="M67.41 125.402L44.5515 125.401L15.5625 75.1953L101.364 75.1985L233.886 304.712L170.942 304.71L67.41 125.402Z" fill="#4B0600"/>
-                            <path d="M67.41 125.402L44.5515 125.401L15.5625 75.1953L101.364 75.1985L233.886 304.712L170.942 304.71L67.41 125.402Z" stroke="#FF750F" stroke-width="1"/>
-                        </g>
-                    </svg>
-                    <div class="absolute inset-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]"></div>
-                </div>
-            </main>
+<body>
+
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="icon icon-arrow-right"></span>
+    </button>
+
+    <!-- preload -->
+    <div class="preload preload-container">
+        <div class="preload-logo">
+            <div class="spinner"></div>
         </div>
+    </div>
+    <!-- /preload -->
 
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
-    </body>
+    <div id="wrapper">
+        <!-- Top Bar-->
+        <div class="tf-topbar bg-dark-5 topbar-bg">
+            <div class="container">
+                <div class="topbar-wraper">
+                    <div class="d-none d-xl-block flex-shrink-0">
+                        <ul class="tf-social-icon topbar-left">
+                            <li><a href="https://www.facebook.com/" class="social-item social-facebook"><i
+                                        class="icon icon-fb"></i></a></li>
+                            <li><a href="https://www.instagram.com/" class="social-item social-instagram"><i
+                                        class="icon icon-instagram"></i></a>
+                            </li>
+                            <li><a href="https://x.com/" class="social-item social-x"><i class="icon icon-x"></i></a>
+                            </li>
+                            <li><a href="https://www.snapchat.com/" class="social-item social-snapchat"><i
+                                        class="icon icon-snapchat"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="overflow-hidden">
+                        <div class="topbar-center marquee-wrapper">
+                            <div class="initial-child-container">
+                                <div class="marquee-child-item">
+                                    <p>Return extended to 60 days</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Life-time Guarantes</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Limited-Time Offer</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <!-- 2 -->
+                                <div class="marquee-child-item">
+                                    <p>Return extended to 60 days</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Life-time Guarantes</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Limited-Time Offer</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <!-- 3 -->
+                                <div class="marquee-child-item">
+                                    <p>Return extended to 60 days</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Life-time Guarantes</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Limited-Time Offer</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <!-- 4 -->
+                                <div class="marquee-child-item">
+                                    <p>Return extended to 60 days</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Life-time Guarantes</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Limited-Time Offer</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <!-- 5 -->
+                                <div class="marquee-child-item">
+                                    <p>Return extended to 60 days</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Life-time Guarantes</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                                <div class="marquee-child-item">
+                                    <p>Limited-Time Offer</p>
+                                </div>
+                                <div class="marquee-child-item"><span class="dot"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-block flex-shrink-0">
+                        <div class="topbar-right">
+                            <div class="tf-languages">
+                                <select class="image-select center style-default type-languages">
+                                    <option>English</option>
+                                    <option>العربية</option>
+                                    <option>简体中文</option>
+                                    <option>اردو</option>
+                                </select>
+                            </div>
+                            <div class="tf-currencies">
+                                <select class="image-select center style-default type-currencies">
+                                    <option selected data-thumbnail="images/country/us.png">United States (USD $)
+                                    </option>
+                                    <option data-thumbnail="images/country/fr.png">France (EUR €)</option>
+                                    <option data-thumbnail="images/country/ger.png">Germany (EUR €)</option>
+                                    <option data-thumbnail="images/country/vn.png">Vietnam (VND ₫)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Top Bar -->
+        <!-- Header -->
+        <header id="header" class="header-default">
+            <div class="container">
+                <div class="row wrapper-header align-items-center">
+                    <div class="col-md-4 col-3 d-xl-none">
+                        <a href="index.html#mobileMenu" class="mobile-menu" data-bs-toggle="offcanvas" aria-controls="mobileMenu">
+                            <i class="icon icon-categories1"></i>
+                        </a>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-6">
+                        <a href="index.html" class="logo-header">
+                            <img src="{{ asset('frontend/assets/images/logo/logo.svg') }}" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col-xl-8 d-none d-xl-block">
+                        <nav class="box-navigation text-center">
+                            <ul class="box-nav-menu">
+                                <li class="menu-item">
+                                    <a href="index.html#" class="item-link">Home<i class="icon icon-arr-down"></i></a>
+                                    <div class="sub-menu mega-menu mega-home">
+                                        <div class="box-search">
+                                            <div class="tf-select">
+                                                <select name="pagetype" id="pagetype">
+                                                    <option value="">Page Type</option>
+                                                    <option value="fashion">Fashion</option>
+                                                    <option value="furniture">Furniture</option>
+                                                    <option value="electronics">Electronics</option>
+                                                    <option value="accessories">Accessories</option>
+                                                    <option value="food">Food & Drink</option>
+                                                    <option value="georgia">Other</option>
+                                                </select>
+                                            </div>
+                                            <form class="form-search">
+                                                <input type="text" placeholder="Search demo..." tabindex="0"
+                                                    aria-required="true" required="">
+                                                <button type="submit"><i class="icon icon-search"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="row-demo">
+                                            <div class="demo-item">
+                                                <a href="index.html" class="demo-image">
+                                                    <img class="lazyload" data-src="images/demo/fashion-1.jpg"
+                                                        src="{{ asset('frontend/assets/images/demo/fashion-1.jpg') }}" alt="home-fashion">
+                                                    <div class="demo-label">
+                                                        <span>New</span>
+                                                        <span class="demo-hot">Hot</span>
+                                                    </div>
+                                                </a>
+                                                <a href="index.html" class="demo-name link">Fashion Style 1</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-fashion-02.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/fashion-1.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/fashion-1.jpg') }}" alt="home-fashion">
+                                                </a>
+                                                <a href="home-fashion-02.html" class="demo-name link">Fashion Style
+                                                    2</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-electronic.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/electronic.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/electronic.jpg') }}" alt="home-electronic">
+                                                </a>
+                                                <a href="home-electronic.html" class="demo-name link">Electronic</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-furniture.html" class="demo-image">
+                                                    <img class="lazyload" data-src="images/demo/furniture.jpg"
+                                                        src="images/demo/furniture.jpg" alt="home-furniture">
+                                                </a>
+                                                <a href="home-furniture.html" class="demo-name link">Furniture</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-fashion-women.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/women-fashion.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/women-fashion.jpg') }}" alt="home-women-fashion">
+                                                    <div class="demo-label">
+                                                        <span>New</span>
+                                                        <span class="demo-hot">Hot</span>
+                                                    </div>
+                                                </a>
+                                                <a href="home-fashion-women.html" class="demo-name link">Women
+                                                    Fashion</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-skincare.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/comestic.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/comestic.jpg') }}" alt="home-comestic">
+                                                </a>
+                                                <a href="home-skincare.html" class="demo-name link">Skincare</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-bicycle.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/bicycle.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/bicycle.jpg') }}" alt="home-bicycle">
+                                                </a>
+                                                <a href="home-bicycle.html" class="demo-name link">Bicycle</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-phonecase.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/phonecase.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/phonecase.jpg') }}" alt="home-phonecase">
+                                                </a>
+                                                <a href="home-phonecase.html" class="demo-name link">Phone Case</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-pet-accessories.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/pet-accessories.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/pet-accessories.jpg') }}" alt="home-pet">
+                                                </a>
+                                                <a href="home-pet-accessories.html" class="demo-name link">Pet
+                                                    Accessories</a>
+                                            </div>
+                                            <div class="demo-item">
+                                                <a href="home-sportwear.html" class="demo-image">
+                                                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/sportwear.jpg') }}"
+                                                        src="{{ asset('frontend/assets/images/demo/sportwear.jpg') }}" alt="home-sportwear">
+                                                </a>
+                                                <a href="home-sportwear.html" class="demo-name link">Sportwear</a>
+                                            </div>
+                                        </div>
+                                        <div class="view-all-demo text-center">
+                                            <a href="index.html#modalDemo" data-bs-toggle="modal"
+                                                class="tf-btn btn-primary animate-btn">
+                                                Explore all demos (17+)
+                                                <i class="icon icon-arr-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="index.html#" class="item-link">Shop<i class="icon icon-arr-down"></i></a>
+                                    <div class="sub-menu mega-menu mega-shop">
+                                        <div class="wrapper-sub-menu">
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">SHOP LAYOUT</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="shop-default.html"
+                                                            class="menu-link-text link">Default</a></li>
+                                                    <li><a href="shop-left-sidebar.html"
+                                                            class="menu-link-text link">Filter Left Sidebar</a></li>
+                                                    <li><a href="shop-right-sidebar.html"
+                                                            class="menu-link-text link">Filter Right Sidebar</a></li>
+                                                    <li><a href="shop-horizontal-filter.html"
+                                                            class="menu-link-text link">Horizontal Filter</a></li>
+                                                    <li><a href="shop-default.html" class="menu-link-text link">Filter
+                                                            Drawer</a></li>
+                                                    <li><a href="shop-collection-list.html"
+                                                            class="menu-link-text link">Collection List</a></li>
+                                                    <li><a href="shop-sub-collection.html"
+                                                            class="menu-link-text link">Sub Collection 1</a></li>
+                                                    <li><a href="shop-sub-collection-02.html"
+                                                            class="menu-link-text link">Sub Collection 2</a></li>
+                                                    <li><a href="shop-grid-3-columns.html"
+                                                            class="menu-link-text link">Grid 3 Columns </a></li>
+                                                    <li><a href="shop-default.html" class="menu-link-text link">Grid 4
+                                                            Columns</a></li>
+                                                    <li><a href="shop-fullwidth.html" class="menu-link-text link">Full
+                                                            Width</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">SHOP LISTS</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="shop-default.html"
+                                                            class="menu-link-text link">Pagination Links</a></li>
+                                                    <li><a href="shop-load-more-button.html"
+                                                            class="menu-link-text link">Load More Button</a></li>
+                                                    <li><a href="shop-infinity-scroll.html"
+                                                            class="menu-link-text link">Infinity Scroll <span
+                                                                class="demo-label">Hot</span></a></li>
+                                                    <li><a href="shop-filter-sidebar.html"
+                                                            class="menu-link-text link">Filter Sidebar</a></li>
+                                                    <li><a href="shop-filter-hidden.html"
+                                                            class="menu-link-text link">Filter Hidden</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">PRODUCT STYLES</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="product-style-01.html"
+                                                            class="menu-link-text link">Product Style 1</a></li>
+                                                    <li><a href="product-style-02.html"
+                                                            class="menu-link-text link">Product Style 2</a></li>
+                                                    <li><a href="product-style-03.html"
+                                                            class="menu-link-text link">Product Style 3</a></li>
+                                                    <li><a href="home-fashion-02.html"
+                                                            class="menu-link-text link">Product Popup</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper-sub-collection">
+                                            <div dir="ltr" class="swiper tf-swiper hover-sw-nav wow fadeInUp"
+                                                data-swiper='{
+                                                    "slidesPerView": 2,
+                                                    "spaceBetween": 24,
+                                                    "speed": 800,
+                                                    "observer": true,
+                                                    "observeParents": true,
+                                                    "slidesPerGroup": 2,
+                                                    "navigation": {
+                                                        "clickable": true,
+                                                        "nextEl": ".nav-next-cls-header",
+                                                        "prevEl": ".nav-prev-cls-header"
+                                                    },
+                                                    "pagination": { "el": ".sw-pagination-cls-header", "clickable": true }
+                                                }'>
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="wg-cls style-abs asp-1 hover-img">
+                                                            <a href="shop-default.html" class="image img-style d-block">
+                                                                <img src="images/cls-categories/fashion/men-2.jpg"
+                                                                    data-src="images/cls-categories/fashion/men-2.jpg"
+                                                                    alt="" class="lazyload">
+                                                            </a>
+                                                            <div class="cls-btn text-center">
+                                                                <a href="shop-default.html"
+                                                                    class="tf-btn btn-cls btn-white hover-dark hover-icon-2">
+                                                                    Men
+                                                                    <i class="icon icon-arrow-top-left"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item 2 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="wg-cls style-abs asp-1 hover-img">
+                                                            <a href="shop-default.html" class="image img-style d-block">
+                                                                <img src="images/cls-categories/fashion/women.jpg"
+                                                                    data-src="images/cls-categories/fashion/women.jpg"
+                                                                    alt="" class="lazyload">
+                                                            </a>
+                                                            <div class="cls-btn text-center">
+                                                                <a href="shop-default.html"
+                                                                    class="tf-btn btn-cls btn-white hover-dark hover-icon-2">
+                                                                    Women
+                                                                    <i class="icon icon-arrow-top-left"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item 3 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="wg-cls style-abs asp-1 hover-img">
+                                                            <a href="shop-default.html" class="image img-style d-block">
+                                                                <img src="images/cls-categories/fashion/accessories.jpg"
+                                                                    data-src="images/cls-categories/fashion/accessories.jpg"
+                                                                    alt="" class="lazyload">
+                                                            </a>
+                                                            <div class="cls-btn text-center">
+                                                                <a href="shop-default.html"
+                                                                    class="tf-btn btn-cls btn-white hover-dark hover-icon-2">
+                                                                    Accessories
+                                                                    <i class="icon icon-arrow-top-left"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item 4 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="wg-cls style-abs asp-1 hover-img">
+                                                            <a href="shop-default.html" class="image img-style d-block">
+                                                                <img src="images/cls-categories/fashion/sportwear.jpg"
+                                                                    data-src="images/cls-categories/fashion/sportwear.jpg"
+                                                                    alt="" class="lazyload">
+                                                            </a>
+                                                            <div class="cls-btn text-center">
+                                                                <a href="shop-default.html"
+                                                                    class="tf-btn btn-cls btn-white hover-dark hover-icon-2">
+                                                                    Sportwear
+                                                                    <i class="icon icon-arrow-top-left"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex d-xl-none sw-dot-default sw-pagination-cls-header justify-content-center">
+                                                </div>
+                                                <div
+                                                    class="d-none d-xl-flex swiper-button-next nav-swiper nav-next-cls-header">
+                                                </div>
+                                                <div
+                                                    class="d-none d-xl-flex swiper-button-prev nav-swiper nav-prev-cls-header">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="index.html#" class="item-link">Products<i class="icon icon-arr-down"></i></a>
+                                    <div class="sub-menu mega-menu mega-product">
+                                        <div class="wrapper-sub-menu">
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">PRODUCT LAYOUTS</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="product-detail.html"
+                                                            class="menu-link-text link">Product Single</a></li>
+                                                    <li><a href="product-right-thumbnail.html"
+                                                            class="menu-link-text link">Product Right Thumbnail</a></li>
+                                                    <li><a href="product-detail.html"
+                                                            class="menu-link-text link">Product Left Thumbnail</a></li>
+                                                    <li><a href="product-bottom-thumbnail.html"
+                                                            class="menu-link-text link">Product Bottom Thumbnail</a>
+                                                    </li>
+                                                    <li><a href="product-grid.html" class="menu-link-text link">Product
+                                                            Grid</a></li>
+                                                    <li><a href="product-grid-02.html"
+                                                            class="menu-link-text link">Product Grid 2</a></li>
+                                                    <li><a href="product-stacked.html"
+                                                            class="menu-link-text link">Product Stacked</a></li>
+                                                    <li><a href="product-drawer-sidebar.html"
+                                                            class="menu-link-text link">Product Drawer Sidebar</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">PRODUCT DETAILS</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="product-inner-zoom.html"
+                                                            class="menu-link-text link">Product Inner Zoom</a></li>
+                                                    <li><a href="product-inner-circle-zoom.html"
+                                                            class="menu-link-text link">Product Inner Circle Zoom</a>
+                                                    </li>
+                                                    <li><a href="product-no-zoom.html"
+                                                            class="menu-link-text link">Product No Zoom <span
+                                                                class="demo-label">Hot</span></a></li>
+                                                    <li><a href="product-external-zoom.html"
+                                                            class="menu-link-text link">Product External Zoom</a></li>
+                                                    <li><a href="product-open-lightbox.html"
+                                                            class="menu-link-text link">Product Open Lightbox <span
+                                                                class="demo-label bg-primary">New</span></a></li>
+                                                    <li><a href="product-video.html" class="menu-link-text link">Product
+                                                            Video</a></li>
+                                                    <li><a href="product-3d.html" class="menu-link-text link">Product
+                                                            3D/AR</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">PRODUCT FEATURES</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="product-together.html" class="menu-link-text link">Buy
+                                                            Together</a></li>
+
+                                                    <li><a href="product-countdown-timer.html"
+                                                            class="menu-link-text link">Countdown Timer</a></li>
+
+                                                    <li><a href="product-volume-discount.html"
+                                                            class="menu-link-text link">Volume Discount</a></li>
+                                                    <li><a href="product-volume-discount-thumbnail.html"
+                                                            class="menu-link-text link">Volume Discount Thumbnail</a>
+                                                    </li>
+                                                    <li><a href="product-swatch-dropdown.html"
+                                                            class="menu-link-text link">Swatch Dropdown</a></li>
+                                                    <li><a href="product-swatch-dropdown-color.html"
+                                                            class="menu-link-text link">Swatch Dropdown Color</a></li>
+                                                    <li><a href="product-swatch-image.html"
+                                                            class="menu-link-text link">Swatch Image</a></li>
+                                                    <li><a href="product-swatch-image-square.html"
+                                                            class="menu-link-text link">Swatch Image rectangle</a></li>
+                                                    <li><a href="product-pickup-available.html"
+                                                            class="menu-link-text link">Pickup Available</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-item">
+                                                <div class="menu-heading">Product description</div>
+                                                <ul class="menu-list">
+                                                    <li><a href="product-description-vertical.html"
+                                                            class="menu-link-text link">Product Description Vertical</a>
+                                                    </li>
+                                                    <li><a href="product-description-tab.html"
+                                                            class="menu-link-text link">Product Description Tab</a></li>
+                                                    <li><a href="product-description-accordions.html"
+                                                            class="menu-link-text link">Product Description
+                                                            Accordions</a></li>
+                                                    <li><a href="product-description-side-accordions.html"
+                                                            class="menu-link-text link">Product Description Side
+                                                            Accordions</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper-sub-product">
+                                            <div dir="ltr" class="swiper tf-swiper wrap-sw-over" data-swiper='{
+                                                    "slidesPerView": 2,
+                                                    "spaceBetween": 24,
+                                                    "speed": 800,
+                                                    "observer": true,
+                                                    "observeParents": true,
+                                                    "slidesPerGroup": 2,
+                                                    "navigation": {
+                                                        "clickable": true,
+                                                        "nextEl": ".nav-next-product-header",
+                                                        "prevEl": ".nav-prev-product-header"
+                                                    },
+                                                    "pagination": { "el": ".sw-pagination-product-header", "clickable": true }
+                                                }'>
+                                                <div class="swiper-wrapper">
+                                                    <!-- item 1 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="card-product">
+                                                            <div class="card-product-wrapper">
+                                                                <a href="product-detail.html" class="product-img">
+                                                                    <img class="img-product lazyload"
+                                                                        data-src="images/products/fashion/product-12.jpg"
+                                                                        src="images/products/fashion/product-12.jpg"
+                                                                        alt="image-product">
+                                                                    <img class="img-hover lazyload"
+                                                                        data-src="images/products/fashion/product-20.jpg"
+                                                                        src="images/products/fashion/product-20.jpg"
+                                                                        alt="image-product">
+                                                                </a>
+
+                                                                <ul class="list-product-btn">
+                                                                    <li>
+                                                                        <a href="index.html#shoppingCart"
+                                                                            data-bs-toggle="offcanvas"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-cart2"></span>
+                                                                            <span class="tooltip">Add to Cart</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="wishlist">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-heart2"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Wishlist</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="index.html#quickView" data-bs-toggle="modal"
+                                                                            class="hover-tooltip tooltip-left box-icon quickview">
+                                                                            <span class="icon icon-view"></span>
+                                                                            <span class="tooltip">Quick View</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="compare">
+                                                                        <a href="index.html#compare" data-bs-toggle="modal"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-compare"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Compare</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </div>
+                                                            <div class="card-product-info text-center">
+                                                                <a href="product-detail.html"
+                                                                    class="name-product link fw-medium text-md">Daystak
+                                                                    Chair RD1</a>
+                                                                <p class="price-wrap fw-medium">
+                                                                    <span class="price-new text-primary">$100.00</span>
+                                                                    <span class="price-old">$130.00</span>
+                                                                </p>
+                                                                <ul class="list-color-product justify-content-center">
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                                        <span class="tooltip color-filter">Yellow</span>
+                                                                        <span
+                                                                            class="swatch-value bg-light-orange-2"></span>
+                                                                        <img class="lazyload"
+                                                                            data-src="images/products/fashion/product-12.jpg"
+                                                                            src="images/products/fashion/product-12.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                                        <span class="tooltip color-filter">Grey</span>
+                                                                        <span class="swatch-value bg-grey-4"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-6.jpg"
+                                                                            src="images/products/fashion/product-6.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                                        <span class="tooltip color-filter">Black</span>
+                                                                        <span class="swatch-value bg-dark"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-20.jpg"
+                                                                            src="images/products/fashion/product-20.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item 2 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="card-product">
+                                                            <div class="card-product-wrapper">
+                                                                <a href="product-detail.html" class="product-img">
+                                                                    <img class="img-product lazyload"
+                                                                        data-src="images/products/fashion/product-8.jpg"
+                                                                        src="images/products/fashion/product-8.jpg"
+                                                                        alt="image-product">
+                                                                    <img class="img-hover lazyload"
+                                                                        data-src="images/products/fashion/product-7.jpg"
+                                                                        src="images/products/fashion/product-7.jpg"
+                                                                        alt="image-product">
+                                                                </a>
+                                                                <ul class="list-product-btn">
+                                                                    <li>
+                                                                        <a href="index.html#shoppingCart"
+                                                                            data-bs-toggle="offcanvas"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-cart2"></span>
+                                                                            <span class="tooltip">Add to Cart</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="wishlist">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-heart2"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Wishlist</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="index.html#quickView" data-bs-toggle="modal"
+                                                                            class="hover-tooltip tooltip-left box-icon quickview">
+                                                                            <span class="icon icon-view"></span>
+                                                                            <span class="tooltip">Quick View</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="compare">
+                                                                        <a href="index.html#compare" data-bs-toggle="modal"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-compare"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Compare</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="card-product-info text-center">
+                                                                <a href="product-detail.html"
+                                                                    class="name-product link fw-medium text-md">Loose
+                                                                    Fit Tee</a>
+                                                                <p class="price-wrap fw-medium">
+                                                                    <span class="price-new">$130.00</span>
+                                                                </p>
+                                                                <ul class="list-color-product justify-content-center">
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                                        <span class="tooltip color-filter">Purple</span>
+                                                                        <span
+                                                                            class="swatch-value bg-light-purple"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-8.jpg"
+                                                                            src="images/products/fashion/product-8.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                                        <span class="tooltip color-filter">Grey</span>
+                                                                        <span class="swatch-value bg-grey-4"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-7.jpg"
+                                                                            src="images/products/fashion/product-7.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                                        <span class="tooltip color-filter">Light
+                                                                            Orange</span>
+                                                                        <span
+                                                                            class="swatch-value bg-light-orange-2"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-28.jpg"
+                                                                            src="images/products/fashion/product-28.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item 3 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="card-product">
+                                                            <div class="card-product-wrapper">
+                                                                <a href="product-detail.html" class="product-img">
+                                                                    <img class="img-product lazyload"
+                                                                        data-src="images/products/fashion/product-30.jpg"
+                                                                        src="images/products/fashion/product-30.jpg"
+                                                                        alt="image-product">
+                                                                    <img class="img-hover lazyload"
+                                                                        data-src="images/products/fashion/product-10.jpg"
+                                                                        src="images/products/fashion/product-10.jpg"
+                                                                        alt="image-product">
+                                                                </a>
+                                                                <ul class="list-product-btn">
+                                                                    <li>
+                                                                        <a href="index.html#shoppingCart"
+                                                                            data-bs-toggle="offcanvas"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-cart2"></span>
+                                                                            <span class="tooltip">Add to Cart</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="wishlist">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-heart2"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Wishlist</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="index.html#quickView" data-bs-toggle="modal"
+                                                                            class="hover-tooltip tooltip-left box-icon quickview">
+                                                                            <span class="icon icon-view"></span>
+                                                                            <span class="tooltip">Quick View</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="compare">
+                                                                        <a href="index.html#compare" data-bs-toggle="modal"
+                                                                            class="hover-tooltip tooltip-left box-icon">
+                                                                            <span class="icon icon-compare"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Compare</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="card-product-info text-center">
+                                                                <a href="product-detail.html"
+                                                                    class="name-product link fw-medium text-md">Crop
+                                                                    T-shirt</a>
+                                                                <p class="price-wrap fw-medium">
+                                                                    <span class="price-new text-primary">$120.00</span>
+                                                                    <span class="price-old">$140.00</span>
+                                                                </p>
+                                                                <ul class="list-color-product justify-content-center">
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                                        <span class="tooltip color-filter">Purple</span>
+                                                                        <span class="swatch-value bg-purple-3"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-30.jpg"
+                                                                            src="images/products/fashion/product-30.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                                        <span class="tooltip color-filter">Light
+                                                                            Blue</span>
+                                                                        <span
+                                                                            class="swatch-value bg-light-blue-2"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-10.jpg"
+                                                                            src="images/products/fashion/product-10.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item 4 -->
+                                                    <div class="swiper-slide">
+                                                        <div class="card-product">
+                                                            <div class="card-product-wrapper">
+                                                                <a href="product-detail.html" class="product-img">
+                                                                    <img class="img-product lazyload"
+                                                                        data-src="images/products/fashion/product-6.jpg"
+                                                                        src="images/products/fashion/product-6.jpg"
+                                                                        alt="image-product">
+                                                                    <img class="img-hover lazyload"
+                                                                        data-src="images/products/fashion/product-21.jpg"
+                                                                        src="images/products/fashion/product-21.jpg"
+                                                                        alt="image-product">
+                                                                </a>
+                                                                <ul class="list-product-btn">
+                                                                    <li>
+                                                                        <a href="index.html#shoppingCart"
+                                                                            data-bs-toggle="offcanvas"
+                                                                            class="box-icon hover-tooltip tooltip-left">
+                                                                            <span class="icon icon-cart2"></span>
+                                                                            <span class="tooltip">Add to Cart</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="wishlist">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="box-icon hover-tooltip tooltip-left">
+                                                                            <span class="icon icon-heart2"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Wishlist</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="index.html#quickView" data-bs-toggle="modal"
+                                                                            class="box-icon quickview hover-tooltip tooltip-left">
+                                                                            <span class="icon icon-view"></span>
+                                                                            <span class="tooltip">Quick View</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="compare">
+                                                                        <a href="index.html#compare" data-bs-toggle="modal"
+                                                                            class="box-icon hover-tooltip tooltip-left">
+                                                                            <span class="icon icon-compare"></span>
+                                                                            <span class="tooltip">Add to
+                                                                                Compare</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+
+
+                                                            </div>
+                                                            <div class="card-product-info text-center">
+                                                                <a href="product-detail.html"
+                                                                    class="name-product link fw-medium text-md">Oversized
+                                                                    Fit
+                                                                    Tee</a>
+                                                                <p class="price-wrap fw-medium">
+                                                                    <span class="price-new text-primary">$60.00</span>
+                                                                    <span class="price-old">$80.00</span>
+                                                                </p>
+                                                                <ul class="list-color-product justify-content-center">
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot line active">
+                                                                        <span class="tooltip color-filter">White</span>
+                                                                        <span class="swatch-value bg-white"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-6.jpg"
+                                                                            src="images/products/fashion/product-6.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+                                                                    <li
+                                                                        class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                                        <span class="tooltip color-filter">Dark
+                                                                            Green</span>
+                                                                        <span class="swatch-value bg-dark-green"></span>
+                                                                        <img class=" lazyload"
+                                                                            data-src="images/products/fashion/product-21.jpg"
+                                                                            src="images/products/fashion/product-21.jpg"
+                                                                            alt="image-product">
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="sw-dot-default sw-pagination-product-header justify-content-center">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item position-relative">
+                                    <a href="index.html#" class="item-link">Pages<i class="icon icon-arr-down"></i></a>
+                                    <div class="sub-menu sub-menu-style-2">
+                                        <ul class="menu-list">
+                                            <li><a href="about-us.html" class="menu-link-text link">About</a></li>
+                                            <li><a href="contact-us.html" class="menu-link-text link">Contact</a></li>
+                                            <li><a href="store-location.html" class="menu-link-text link">Store
+                                                    location</a></li>
+                                            <li><a href="account-page.html" class="menu-link-text link">My account</a>
+                                            </li>
+                                            <li><a href="faq.html" class="menu-link-text link">FAQ</a></li>
+                                            <li><a href="view-cart.html" class="menu-link-text link">View cart</a></li>
+                                            <li><a href="404.html" class="menu-link-text link">404</a></li>
+                                            <li><a href="coming-soon.html" class="menu-link-text link">Coming Soon!</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="menu-list">
+                                            <li><a href="index.html" class="menu-link-text link">Newsletter Popup 1</a>
+                                            </li>
+                                            <li><a href="newsletter-popup-02.html"
+                                                    class="menu-link-text link">Newsletter Popup 2</a></li>
+                                            <li><a href="newsletter-popup-03.html"
+                                                    class="menu-link-text link">Newsletter Popup 3</a></li>
+                                            <li><a href="cart-empty.html" class="menu-link-text link">Cart drawer
+                                                    empty</a>
+                                            </li>
+                                            <li><a href="cart-drawer-v2.html" class="menu-link-text link">Cart drawer
+                                                    v2</a></li>
+                                            <li><a href="before-you-leave.html" class="menu-link-text link">Before you
+                                                    leave</a></li>
+                                            <li><a href="cookies.html" class="menu-link-text link">Cookies</a></li>
+                                            <li><a href="home-fashion-02.html" class="menu-link-text link">Sub navtab
+                                                    products</a></li>
+                                        </ul>
+                                        <div class="banner hover-img">
+                                            <a href="blog-single.html" class="img-style">
+                                                <img src="images/blog/banner-header.jpg" alt="banner">
+                                            </a>
+                                            <div class="content">
+                                                <div class="title">
+                                                    Unveiling the latest gear
+                                                </div>
+                                                <a href="blog-single.html" class="box-icon animate-btn"><i
+                                                        class="icon icon-arrow-top-left"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item position-relative">
+                                    <a href="index.html#" class="item-link">Blog<i class="icon icon-arr-down"></i></a>
+                                    <div class="sub-menu sub-menu-style-3">
+                                        <ul class="menu-list mt-0">
+                                            <li>
+                                                <div class="menu-heading">Blogs</div>
+                                            </li>
+                                            <li><a href="blog-list-01.html" class="menu-link-text link">Blog List 1</a>
+                                            </li>
+                                            <li><a href="blog-list-02.html" class="menu-link-text link">Blog List 2</a>
+                                            </li>
+                                            <li><a href="blog-grid-01.html" class="menu-link-text link">Blog Grid 1</a>
+                                            </li>
+                                            <li><a href="blog-grid-02.html" class="menu-link-text link">Blog Grid 2</a>
+                                            </li>
+                                            <li><a href="blog-single.html" class="menu-link-text link">Single Blog </a>
+                                            </li>
+                                        </ul>
+                                        <div class="wrapper-sub-blog">
+                                            <div class="menu-heading">Recent Posts</div>
+                                            <ul class="list-recent-blog">
+                                                <li class="item">
+                                                    <a href="blog-single.html" class="img-box">
+                                                        <img src="images/blog/recent-1.jpg" alt="img-recent-blog">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a href="blog-single.html"
+                                                            class="fw-medium text-sm link title">The Power of
+                                                            Monochrome: Styling One Color</a>
+                                                        <span class="text-xxs text-grey date-post">Sep 19 2025</span>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="blog-single.html" class="img-box">
+                                                        <img src="images/blog/recent-2.jpg" alt="img-recent-blog">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a href="blog-single.html"
+                                                            class="fw-medium text-sm link title">10 Must-Have
+                                                            Accessories for Every Season</a>
+                                                        <span class="text-xxs text-grey date-post">Sep 19 2025</span>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="blog-single.html" class="img-box">
+                                                        <img src="images/blog/recent-3.jpg" alt="img-recent-blog">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a href="blog-single.html"
+                                                            class="fw-medium text-sm link title">How to Elevate Your
+                                                            Look with Layering</a>
+                                                        <span class="text-xxs text-grey date-post">Sep 19 2025</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="menu-item"><a
+                                        href="https://themeforest.net/item/vince-multipurpose-ecommerce-html5-template/57202368?s_rank=5"
+                                        target="_blank" class="item-link">Buy Theme!</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-3">
+                        <ul class="nav-icon d-flex justify-content-end align-items-center">
+                            <li class="nav-search">
+                                <a href="index.html#search" data-bs-toggle="modal" class="nav-icon-item">
+                                    <i class="icon icon-search"></i>
+                                </a>
+                            </li>
+                            <li class="nav-account">
+                                <a href="index.html#login" data-bs-toggle="offcanvas" aria-controls="login" class="nav-icon-item">
+                                    <i class="icon icon-user"></i>
+                                </a>
+                            </li>
+                            <li class="nav-wishlist">
+                                <a href="wish-list.html" class="nav-icon-item">
+                                    <i class="icon icon-heart"></i>
+                                    <span class="count-box">0</span>
+                                </a>
+                            </li>
+                            <li class="nav-cart">
+                                <a href="index.html#shoppingCart" data-bs-toggle="offcanvas" class="nav-icon-item">
+                                    <i class="icon icon-cart"></i>
+                                    <span class="count-box">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /Header -->
+        <!-- Slider -->
+        <section class="tf-slideshow slider-fashion-1 slider-default">
+            <div class="swiper tf-sw-slideshow slider-effect-fade" data-effect="fade" data-preview="1" data-tablet="1"
+                data-mobile="1" data-centered="false" data-space="0" data-space-mb="0" data-loop="true"
+                data-auto-play="true" data-speed="800">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-wrap bg-type-1">
+                            <div class="image">
+                                <img src="{{ asset('frontend/assets/images/slider/fashion/slider-fashion-1.png') }}"
+                                    data-src="{{ asset('frontend/assets/images/slider/fashion/slider-fashion-1.png') }}" alt="slider" class="lazyload">
+                            </div>
+                            <div class="box-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-12 col-sm-6">
+                                            <div class="content-slider">
+                                                <div class="box-title-slider">
+                                                    <h2 class="heading fw-medium fade-item fade-item-1 text-dark-5">
+                                                        Style <br> Redefined
+                                                    </h2>
+                                                    <p class="sub text-md fade-item fade-item-2 text-dark-5">
+                                                        Discover the latest trends in fashion that speak your style.
+                                                    </p>
+                                                </div>
+                                                <div class="box-btn-slider fade-item fade-item-3">
+                                                    <a href="shop-default.html" class="tf-btn btn-dark2 animate-btn">
+                                                        Shop Collection
+                                                        <i class="icon icon-arr-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-wrap bg-type-2">
+                            <div class="image">
+                                <img src="{{ asset('frontend/assets/images/slider/fashion/slider-fashion-2.png' )}}"
+                                    data-src="{{ asset('frontend/assets/images/slider/fashion/slider-fashion-2.png' )}}" alt="slider" class="lazyload">
+                            </div>
+                            <div class="box-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-12 col-sm-6">
+                                            <div class="content-slider">
+                                                <div class="box-title-slider">
+                                                    <h2 class="heading  fw-medium fade-item fade-item-1 text-dark-5">
+                                                        Elegance <br> Redefined
+                                                    </h2>
+                                                    <p class="sub text-md fade-item fade-item-2 text-dark-5">
+                                                        Discover timeless styles for every occasion.
+                                                    </p>
+                                                </div>
+                                                <div class="box-btn-slider fade-item fade-item-3">
+                                                    <a href="shop-default.html" class="tf-btn animate-btn btn-dark2">
+                                                        Shop Collection
+                                                        <i class="icon icon-arr-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-wrap bg-type-3">
+                            <div class="image">
+                                <img src="{{ asset('frontend/assets/images/slider/fashion/slider-fashion-3.png') }}"
+                                    data-src="{{ asset('frontend/assets/images/slider/fashion/slider-fashion-3.png') }}" alt="slider" class="lazyload">
+                            </div>
+                            <div class="box-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-5 offset-lg-7 col-sm-6 offset-sm-6 col-12">
+                                            <div class="content-slider">
+                                                <div class="box-title-slider">
+                                                    <h2 class="heading  fw-medium fade-item fade-item-1 text-dark-5">
+                                                        Elevate Your <br> Wardrobe
+                                                    </h2>
+                                                    <p class="sub text-md fade-item fade-item-2 text-dark-5">
+                                                        Timeless pieces to refresh your look for every season.
+                                                    </p>
+                                                </div>
+                                                <div class="box-btn-slider fade-item fade-item-3">
+                                                    <a href="shop-default.html" class="tf-btn animate-btn btn-dark2">
+                                                        Shop Collection
+                                                        <i class="icon icon-arr-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-pagination">
+                    <div class="container">
+                        <div class="sw-dots sw-pagination-slider justify-content-center"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Slider -->
+        
+        <!-- Footer -->
+        <footer id="footer" class="footer-default xl-pb-70">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top-wrap">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="{{ asset('frontend/assets/images/logo/logo.svg') }}" class="logo" alt="logo">
+                            </a>
+                        </div>
+                        <ul class="tf-social-icon style-large">
+                            <li>
+                                <a href="https://www.facebook.com/" class="social-item social-facebook">
+                                    <i class="icon icon-fb"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" class="social-item social-instagram">
+                                    <i class="icon icon-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.snapchat.com/" class="social-item social-linkedin"><i
+                                        class="icon icon-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/" class="social-item social-x">
+                                    <i class="icon icon-x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-body">
+                <div class="container">
+                    <div class="row-footer">
+                        <div class="footer-col-block s1">
+                            <div class="footer-heading footer-heading-mobile text-xl fw-medium">
+                                Business Contact
+                            </div>
+                            <div class="tf-collapse-content">
+                                <div class="footer-contact">
+                                    <ul class="footer-info">
+                                        <li class="item">
+                                            <span class="box-icon">
+                                                <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.1869 1.73431C9.06854 0.61592 7.58155 0 5.99993 0C4.4183 0 2.93129 0.61592 1.81292 1.73431C0.694534 2.85273 0.0786133 4.33969 0.0786133 5.92129C0.0786133 9.12084 3.10388 11.7821 4.72917 13.2118C4.95504 13.4105 5.15008 13.582 5.30547 13.7272C5.50016 13.9091 5.75006 14 5.9999 14C6.24979 14 6.49964 13.9091 6.69435 13.7272C6.84975 13.582 7.04479 13.4105 7.27065 13.2118C8.89594 11.7821 11.9212 9.12084 11.9212 5.92129C11.9212 4.33969 11.3053 2.85273 10.1869 1.73431ZM6.72897 12.5961C6.49816 12.7991 6.29885 12.9744 6.13451 13.1279C6.05902 13.1984 5.94078 13.1984 5.86526 13.1279C5.70095 12.9744 5.50161 12.7991 5.2708 12.596C3.74283 11.2519 0.898656 8.75001 0.898656 5.92131C0.898656 3.1085 3.18704 0.820124 5.99987 0.820124C8.81268 0.820124 11.1011 3.1085 11.1011 5.92131C11.1011 8.75001 8.25694 11.2519 6.72897 12.5961Z"
+                                                        fill="#0D0D0D" />
+                                                    <path
+                                                        d="M6.00008 3.08887C4.56122 3.08887 3.39062 4.25943 3.39062 5.69829C3.39062 7.13715 4.56122 8.30772 6.00008 8.30772C7.43894 8.30772 8.6095 7.13715 8.6095 5.69829C8.6095 4.25943 7.43894 3.08887 6.00008 3.08887ZM6.00008 7.48759C5.01343 7.48759 4.21072 6.68489 4.21072 5.69826C4.21072 4.71164 5.01343 3.90894 6.00008 3.90894C6.98673 3.90894 7.7894 4.71164 7.7894 5.69826C7.7894 6.68489 6.98673 7.48759 6.00008 7.48759Z"
+                                                        fill="#0D0D0D" />
+                                                </svg>
+                                            </span>
+                                            <a target="_blank"
+                                                href="https://www.google.com/maps?q=123Yarranst,Punchbowl,NSW2196,Australia">
+                                                123 Yarran st, Punchbowl, NSW 2196, Australia
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <span class="box-icon">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.6666 9.4091L10.9841 8.4641C10.7324 8.12417 10.3574 7.89649 9.93972 7.82996C9.522 7.76343 9.09484 7.86335 8.74998 8.10827L8.09081 8.59243C7.13399 7.73698 6.36526 6.69214 5.83331 5.5241L6.49248 5.04577C6.837 4.79478 7.06794 4.41741 7.13464 3.99641C7.20135 3.5754 7.09838 3.14513 6.84831 2.79993L6.18331 1.86077C5.93339 1.51663 5.55703 1.28582 5.13698 1.21909C4.71693 1.15236 4.28757 1.25518 3.94331 1.50493L2.91664 2.23993C2.58681 2.47798 2.33009 2.80349 2.17547 3.17972C2.02086 3.55595 1.9745 3.96792 2.04164 4.3691C2.33803 6.09644 3.02915 7.73206 4.06118 9.14856C5.0932 10.5651 6.43827 11.7242 7.99164 12.5358C8.30603 12.696 8.65376 12.78 9.00664 12.7808C9.46814 12.7804 9.91756 12.6333 10.29 12.3608L11.3108 11.6666C11.4837 11.5428 11.6302 11.3858 11.7419 11.2048C11.8535 11.0238 11.9281 10.8224 11.9612 10.6123C11.9943 10.4023 11.9853 10.1877 11.9347 9.98113C11.8842 9.77457 11.793 9.58012 11.6666 9.4091ZM10.7975 10.9433L9.78248 11.6666C9.58631 11.8098 9.35413 11.8954 9.11199 11.914C8.86984 11.9325 8.62732 11.8832 8.41164 11.7716C6.97557 11.0225 5.73227 9.95129 4.779 8.6418C3.82572 7.33231 3.18832 5.82004 2.91664 4.22327C2.87745 3.98261 2.90577 3.73579 2.99846 3.51026C3.09114 3.28473 3.24455 3.08933 3.44164 2.94577L4.45664 2.21077C4.6131 2.09841 4.80765 2.05252 4.99783 2.08312C5.188 2.11373 5.35834 2.21833 5.47164 2.3741L6.15998 3.3191C6.27119 3.47659 6.31717 3.67098 6.28831 3.8616C6.27352 3.95579 6.24012 4.04608 6.19004 4.12721C6.13996 4.20834 6.07421 4.27867 5.99664 4.3341L5.05164 5.02243C4.97248 5.07857 4.91486 5.16007 4.88834 5.25342C4.86182 5.34678 4.86798 5.44639 4.90581 5.53577C5.52168 7.06896 6.5077 8.42575 7.77581 9.48493C7.85256 9.54453 7.94697 9.57689 8.04414 9.57689C8.14132 9.57689 8.23573 9.54453 8.31248 9.48493L9.25748 8.80243C9.41322 8.68947 9.60729 8.64263 9.79741 8.67214C9.98754 8.70164 10.1583 8.80508 10.2725 8.95993L10.9608 9.9166C11.072 10.0741 11.118 10.2685 11.0891 10.4591C11.0752 10.5552 11.0422 10.6475 10.9921 10.7306C10.942 10.8137 10.8759 10.886 10.7975 10.9433Z"
+                                                        fill="#0D0D0D" />
+                                                </svg>
+                                            </span>
+                                            <a href="tel:18888383022">(64) 8342 1245</a>
+                                        </li>
+                                        <li class="item">
+                                            <span class="box-icon">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.8125 2.625H2.1875C1.8394 2.625 1.50556 2.76328 1.25942 3.00942C1.01328 3.25556 0.875 3.5894 0.875 3.9375V10.0625C0.875 10.4106 1.01328 10.7444 1.25942 10.9906C1.50556 11.2367 1.8394 11.375 2.1875 11.375H11.8125C12.1606 11.375 12.4944 11.2367 12.7406 10.9906C12.9867 10.7444 13.125 10.4106 13.125 10.0625V3.9375C13.125 3.5894 12.9867 3.25556 12.7406 3.00942C12.4944 2.76328 12.1606 2.625 11.8125 2.625ZM11.5675 3.5L7.28 7.07438C7.20139 7.13985 7.10231 7.17571 7 7.17571C6.89769 7.17571 6.79861 7.13985 6.72 7.07438L2.4325 3.5H11.5675ZM11.8125 10.5H2.1875C2.07147 10.5 1.96019 10.4539 1.87814 10.3719C1.79609 10.2898 1.75 10.1785 1.75 10.0625V4.06875L6.16 7.74375C6.39584 7.94019 6.69307 8.04776 7 8.04776C7.30693 8.04776 7.60416 7.94019 7.84 7.74375L12.25 4.06875V10.0625C12.25 10.1785 12.2039 10.2898 12.1219 10.3719C12.0398 10.4539 11.9285 10.5 11.8125 10.5Z"
+                                                        fill="#0D0D0D" />
+                                                </svg>
+                                            </span>
+                                            <a href="mailto:support@example.com">support@example.com</a>
+                                        </li>
+                                    </ul>
+                                    <a href="https://www.google.com/maps?q=15Yarranst,Punchbowl,NSW,Australia"
+                                        class="tf-btn btn-line-dark fw-normal">
+                                        <span class="text-sm text-transform-none">
+                                            Get direction
+                                        </span>
+                                        <i class="icon-arrow-top-left fs-8"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-inner-wrap footer-col-block s2">
+                            <div class="footer-heading footer-heading-mobile text-xl fw-medium">
+                                Subscribe Newsletter
+                            </div>
+                            <div class="tf-collapse-content">
+                                <div class="footer-newsletter">
+                                    <p>
+                                        We invite you to register to read the latest news, offers and events about
+                                        our company. We promise not spam your inbox.
+                                    </p>
+                                    <form action="index.html#" class="form-newsletter" method="post" accept-charset="utf-8"
+                                        data-mailchimp="true">
+                                        <div class="subscribe-content">
+                                            <fieldset class="email">
+                                                <input type="email" name="email-form" class="subscribe-email"
+                                                    placeholder="Email address" tabindex="0" aria-required="true"
+                                                    required>
+                                            </fieldset>
+                                            <div class="button-submit">
+                                                <button class="subscribe-button animate-btn">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_5296_3345)">
+                                                            <path
+                                                                d="M17.7938 8.50229L17.7931 8.50162L14.1192 4.84537C13.8439 4.57147 13.3988 4.57249 13.1248 4.84776C12.8508 5.123 12.8519 5.56818 13.1271 5.84212L15.5938 8.29687H0.703125C0.314789 8.29687 0 8.61166 0 9C0 9.38833 0.314789 9.70312 0.703125 9.70312H15.5938L13.1272 12.1579C12.8519 12.4318 12.8509 12.877 13.1248 13.1522C13.3988 13.4275 13.844 13.4285 14.1192 13.1546L17.7932 9.49837L17.7938 9.4977C18.0692 9.22285 18.0683 8.77623 17.7938 8.50229Z"
+                                                                fill="white" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_5296_3345">
+                                                                <rect width="18" height="18" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-inner-wrap s3">
+                            <div class="footer-col-block inner-col">
+                                <div class="footer-heading footer-heading-mobile text-xl fw-medium">About Us</div>
+                                <div class="tf-collapse-content">
+                                    <ul class="footer-menu-list">
+                                        <li>
+                                            <a href="about-us.html">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact-us.html">Contact Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="store-location.html">Our Store</a>
+                                        </li>
+                                        <li>
+                                            <a href="about-us.html">Our Story</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-col-block inner-col">
+                                <div class="footer-heading footer-heading-mobile text-xl fw-medium">Resource</div>
+                                <div class="tf-collapse-content">
+                                    <ul class="footer-menu-list">
+                                        <li>
+                                            <a href="privacy-policy.html">Privacy Policies</a>
+                                        </li>
+                                        <li>
+                                            <a href="term-and-condition.html">Terms & Conditions</a>
+                                        </li>
+                                        <li>
+                                            <a href="return-and-refund.html">Returns & Refunds</a>
+                                        </li>
+                                        <li>
+                                            <a href="faq.html">FAQ’s</a>
+                                        </li>
+                                        <li>
+                                            <a href="shipping.html">Shipping</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-wrap">
+                        <p class="text-dark">Copyright © 2025 by <span class="fw-medium">Vineta.</span> All Rights
+                            Reserved.</p>
+                        <ul class="tf-payment">
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/EximBank.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/ApplePay.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/DinersClub.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/Discover.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/GooglePay.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/Mastercard-2.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/Mastercard.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/Shop.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/UnionPay.png') }}" alt="payment"></li>
+                            <li class="item"><img src="{{ asset('frontend/assets/images/payment/Visa.png') }}" alt="payment"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer -->
+    </div>
+
+    <!-- modal demo -->
+    <div class="modal fade modalDemo" id="modalDemo">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="header">
+                    <h5 class="demo-title">Ultimate HTML Theme</h5>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="mega-menu">
+                    <div class="row-demo">
+                        <div class="demo-item">
+                            <a href="index.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/fashion-1.jpg"
+                                    src="images/demo/fashion-1.jpg" alt="home-fashion">
+                                <div class="demo-label">
+                                    <span>New</span>
+                                    <span class="demo-hot">Hot</span>
+                                </div>
+                            </a>
+                            <a href="index.html" class="demo-name link">Fashion Style 1</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-fashion-02.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/fashion-1.jpg') }}"
+                                    src="{{ asset('frontend/assets/images/demo/fashion-1.jpg') }}" alt="home-fashion">
+                            </a>
+                            <a href="home-fashion-02.html" class="demo-name link">Fashion Style
+                                2</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-electronic.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/electronic.jpg') }}"
+                                    src="{{ asset('frontend/assets/images/demo/electronic.jpg') }}" alt="home-electronic">
+                            </a>
+                            <a href="home-electronic.html" class="demo-name link">Electronic</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-furniture.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/furniture.jpg"
+                                    src="images/demo/furniture.jpg" alt="home-furniture">
+                            </a>
+                            <a href="home-furniture.html" class="demo-name link">Furniture</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-fashion-women.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/women-fashion.jpg') }}"
+                                    src="{{ asset('frontend/assets/images/demo/women-fashion.jpg') }}" alt="home-women-fashion">
+                                <div class="demo-label">
+                                    <span>New</span>
+                                    <span class="demo-hot">Hot</span>
+                                </div>
+                            </a>
+                            <a href="home-fashion-women.html" class="demo-name link">Women
+                                Fashion</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-skincare.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/comestic.jpg') }}" src="{{ asset('frontend/assets/images/demo/comestic.jpg') }}"
+                                    alt="home-comestic">
+                            </a>
+                            <a href="home-skincare.html" class="demo-name link">Skincare</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-bicycle.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/bicycle.jpg" src="images/demo/bicycle.jpg"
+                                    alt="home-bicycle">
+                                <div class="demo-label"><span>New</span></div>
+                            </a>
+                            <a href="home-bicycle.html" class="demo-name link">Bicycle</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-phonecase.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/phonecase.jpg') }}"
+                                    src="{{ asset('frontend/assets/images/demo/phonecase.jpg') }}" alt="home-phonecase">
+                            </a>
+                            <a href="home-phonecase.html" class="demo-name link">Phone Case</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-pet-accessories.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/pet-accessories.jpg') }}"
+                                    src="{{ asset('frontend/assets/images/demo/pet-accessories.jpg') }}" alt="home-pet">
+                            </a>
+                            <a href="home-pet-accessories.html" class="demo-name link">Pet
+                                Accessories</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-sportwear.html" class="demo-image">
+                                <img class="lazyload" data-src="{{ asset('frontend/assets/images/demo/sportwear.jpg') }}"
+                                    src="{{ asset('frontend/assets/images/demo/sportwear.jpg') }}" alt="home-bicycle">
+                            </a>
+                            <a href="home-sportwear.html" class="demo-name link">Sportwear</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-jewelry.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/jewelry.jpg" src="images/demo/jewelry.jpg"
+                                    alt="home-jewelry">
+                            </a>
+                            <a href="home-jewelry.html" class="demo-name link">Jewelry</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-electric-accessories.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/eletric-accessories.jpg"
+                                    src="images/demo/eletric-accessories.jpg" alt="home-electric-accessories">
+                                <div class="demo-label">
+                                    <span>New</span>
+                                    <span class="demo-hot">Hot</span>
+                                </div>
+                            </a>
+                            <a href="home-electric-accessories.html" class="demo-name link">Electric Accessories</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-mega-electronic.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/mega-shop.jpg"
+                                    src="images/demo/mega-shop.jpg" alt="home-mega-electronic">
+                            </a>
+                            <a href="home-mega-electronic.html" class="demo-name link">Mega Shop</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-vegetable.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/supermarket.jpg"
+                                    src="images/demo/supermarket.jpg" alt="home-supermarket">
+                            </a>
+                            <a href="home-vegetable.html" class="demo-name link">Supermarket</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-pod.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/pod.jpg" src="images/demo/pod.jpg"
+                                    alt="home-pod">
+                            </a>
+                            <a href="home-pod.html" class="demo-name link">Print On Demand</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-baby.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/baby.jpg" src="images/demo/baby.jpg"
+                                    alt="home-baby">
+                                <div class="demo-label">
+                                    <span>New</span>
+                                </div>
+                            </a>
+                            <a href="home-baby.html" class="demo-name link">Baby</a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-plant.html" class="demo-image">
+                                <img class="lazyload" data-src="images/demo/plant.jpg" src="images/demo/plant.jpg"
+                                    alt="home-plant">
+                            </a>
+                            <a href="home-plant.html" class="demo-name link">Plant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal demo -->
+
+    <!-- newsletter -->
+    <div class="modal modalCentered fade auto-popup modal-newsletter">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-top">
+                    <img class="lazyload" data-src="images/section/newsletter-1.jpg"
+                        src="images/section/newsletter-1.jpg" alt="images">
+                    <span class="icon icon-close btn-hide-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="modal-bottom text-center">
+                    <h5 class="title">Sign up to our Newsletter</h5>
+                    <p class="text text-sm text-main">Be the first to get the latest news about trends, <br> promotions,
+                        and much more!</p>
+
+                    <form action="index.html#" class="form-newsletter">
+                        <div class="mb_20">
+                            <fieldset class="email position-relative">
+                                <i class="icon icon-mail"></i>
+                                <input type="email" name="email" class="" placeholder="Your email address" tabindex="0"
+                                    aria-required="true" required="">
+                            </fieldset>
+                        </div>
+                        <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
+                            type="submit">Send</button>
+                    </form>
+
+                    <ul class="tf-social-icon style-default justify-content-center">
+                        <li><a href="https://x.com/" class="social-x"><i class="icon icon-x"></i></a></li>
+                        <li><a href="https://www.facebook.com/" class="social-facebook"><i
+                                    class="icon icon-fb2"></i></a></li>
+                        <li><a href="https://www.instagram.com/" class="social-instagram"><i
+                                    class="icon icon-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/" class="social-youtube"><i
+                                    class="icon icon-youtube"></i></a></li>
+                    </ul>
+                    <p class="text text-sm mb-0 text-main">Will be used in accordance with our <a
+                            href="privacy-policy.html" class="fw-medium">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /newsletter  -->
+
+
+    <!-- mobile menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+        <button class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="mb-canvas-content">
+            <div class="mb-body">
+                <div class="mb-content-top">
+
+                    <ul class="nav-ul-mb" id="wrapper-menu-navigation">
+                        <li class="nav-mb-item">
+                            <a href="index.html#dropdown-menu-home" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                                aria-expanded="true" aria-controls="dropdown-menu-home">
+                                <span>Home</span>
+                                <span class="btn-open-sub"></span>
+                            </a>
+                            <div id="dropdown-menu-home" class="collapse">
+                                <ul class="sub-nav-menu">
+                                    <li><a href="index.html" class="sub-nav-link">Fashion Style 1</a></li>
+                                    <li><a href="home-fashion-02.html" class="sub-nav-link">Fashion Style 2</a></li>
+                                    <li><a href="home-electronic.html" class="sub-nav-link">Electronic</a></li>
+                                    <li><a href="home-furniture.html" class="sub-nav-link">Furniture</a></li>
+                                    <li><a href="home-fashion-women.html" class="sub-nav-link">Women Fashion</a></li>
+                                    <li><a href="home-skincare.html" class="sub-nav-link">Skincare</a></li>
+                                    <li><a href="home-bicycle.html" class="sub-nav-link">Bicycle</a></li>
+                                    <li><a href="home-phonecase.html" class="sub-nav-link">Phone Case</a></li>
+                                    <li><a href="home-pet-accessories.html" class="sub-nav-link">Pet Accessories</a>
+                                    </li>
+                                    <li><a href="home-sportwear.html" class="sub-nav-link">Sportwear</a></li>
+                                    <li><a href="home-jewelry.html" class="sub-nav-link">Jewelry</a></li>
+                                    <li><a href="home-electric-accessories.html" class="sub-nav-link">Electronic
+                                            Accessories</a></li>
+                                    <li><a href="home-mega-electronic.html" class="sub-nav-link">Mega Shop</a></li>
+                                    <li><a href="home-baby.html" class="sub-nav-link">Baby</a></li>
+                                    <li><a href="home-vegetable.html" class="sub-nav-link">Supermarket</a></li>
+                                    <li><a href="home-pod.html" class="sub-nav-link">POD</a></li>
+                                    <li><a href="home-plant.html" class="sub-nav-link">Plant</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="nav-mb-item">
+                            <a href="index.html#dropdown-menu-shop" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                                aria-expanded="true" aria-controls="dropdown-menu-shop">
+                                <span>Shop</span>
+                                <span class="btn-open-sub"></span>
+                            </a>
+                            <div id="dropdown-menu-shop" class="collapse">
+                                <ul class="sub-nav-menu">
+                                    <li><a href="index.html#sub-shop-layout" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-shop-layout">
+                                            <span>Shop Layout</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-shop-layout" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="shop-default.html" class="sub-nav-link">Default</a></li>
+                                                <li><a href="shop-left-sidebar.html" class="sub-nav-link">Filter
+                                                        Left Sidebar</a></li>
+                                                <li><a href="shop-right-sidebar.html" class="sub-nav-link">Filter
+                                                        Right Sidebar</a></li>
+                                                <li><a href="shop-horizontal-filter.html"
+                                                        class="menu-link-text link">Horizontal Filter</a></li>
+                                                <li><a href="shop-default.html" class="sub-nav-link">Filter
+                                                        Drawer</a></li>
+                                                <li><a href="shop-collection-list.html"
+                                                        class="menu-link-text link">Collection List</a></li>
+                                                <li><a href="shop-sub-collection.html" class="sub-nav-link">Sub
+                                                        Collection 1</a></li>
+                                                <li><a href="shop-sub-collection-02.html" class="sub-nav-link">Sub
+                                                        Collection 2</a></li>
+                                                <li><a href="shop-grid-3-columns.html" class="sub-nav-link">Grid
+                                                        3 Columns </a></li>
+                                                <li><a href="shop-default.html" class="sub-nav-link">Grid 4
+                                                        Columns</a></li>
+                                                <li><a href="shop-fullwidth.html" class="sub-nav-link">Full
+                                                        Width</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#sub-shop-list" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-shop-list">
+                                            <span>Shop List</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-shop-list" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="shop-default.html" class="sub-nav-link">Pagination
+                                                        Links</a></li>
+                                                <li><a href="shop-load-more-button.html" class="sub-nav-link">Load More
+                                                        Button</a></li>
+                                                <li><a href="shop-infinity-scroll.html" class="sub-nav-link">Infinity
+                                                        Scroll <span class="demo-label">Hot</span></a></li>
+                                                <li><a href="shop-filter-sidebar.html" class="sub-nav-link">Filter
+                                                        Sidebar</a></li>
+                                                <li><a href="shop-filter-hidden.html" class="sub-nav-link">Filter
+                                                        Hidden</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#sub-shop-styles" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-shop-styles">
+                                            <span>Product Styles</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-shop-styles" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="product-style-01.html" class="sub-nav-link">Product
+                                                        Style 1</a></li>
+                                                <li><a href="product-style-02.html" class="sub-nav-link">Product
+                                                        Style 2</a></li>
+                                                <li><a href="product-style-03.html" class="sub-nav-link">Product
+                                                        Style 3</a></li>
+                                                <li><a href="home-fashion-02.html" class="sub-nav-link">Product
+                                                        Popup</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-mb-item">
+                            <a href="index.html#dropdown-menu-product" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                                aria-expanded="true" aria-controls="dropdown-menu-product">
+                                <span>Products</span>
+                                <span class="btn-open-sub"></span>
+                            </a>
+                            <div id="dropdown-menu-product" class="collapse">
+                                <ul class="sub-nav-menu">
+                                    <li>
+                                        <a href="index.html#sub-product-layout" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-product-layout">
+                                            <span>Product Layouts</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-product-layout" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="product-detail.html" class="sub-nav-link">Product
+                                                        Single</a></li>
+                                                <li><a href="product-right-thumbnail.html" class="sub-nav-link">Product
+                                                        Right Thumbnail</a></li>
+                                                <li><a href="product-detail.html" class="sub-nav-link">Product
+                                                        Left Thumbnail</a></li>
+                                                <li><a href="product-bottom-thumbnail.html" class="sub-nav-link">Product
+                                                        Bottom Thumbnail</a>
+                                                </li>
+                                                <li><a href="product-grid.html" class="sub-nav-link">Product
+                                                        Grid</a></li>
+                                                <li><a href="product-grid-02.html" class="sub-nav-link">Product
+                                                        Grid 2</a></li>
+                                                <li><a href="product-stacked.html" class="sub-nav-link">Product
+                                                        Stacked</a></li>
+                                                <li><a href="product-drawer-sidebar.html" class="sub-nav-link">Product
+                                                        Drawer Sidebar</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#sub-product-detail" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-product-detail">
+                                            <span>Product Details</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-product-detail" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="product-inner-zoom.html" class="sub-nav-link">Product Inner
+                                                        Zoom</a></li>
+                                                <li><a href="product-inner-circle-zoom.html"
+                                                        class="sub-nav-link">Product Inner Circle Zoom</a>
+                                                </li>
+                                                <li><a href="product-no-zoom.html" class="sub-nav-link">Product
+                                                        No Zoom <span class="demo-label">Hot</span></a></li>
+                                                <li><a href="product-external-zoom.html" class="sub-nav-link">Product
+                                                        External Zoom</a></li>
+                                                <li><a href="product-open-lightbox.html" class="sub-nav-link">Product
+                                                        Open Lightbox <span class="demo-label bg-primary">New</span></a>
+                                                </li>
+                                                <li><a href="product-video.html" class="sub-nav-link">Product
+                                                        Video</a></li>
+                                                <li><a href="product-3d.html" class="sub-nav-link">Product
+                                                        3D/AR</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#sub-product-feature" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-product-feature">
+                                            <span>Products Features</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-product-feature" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="product-together.html" class="sub-nav-link">Buy
+                                                        Together</a></li>
+
+                                                <li><a href="product-countdown-timer.html"
+                                                        class="sub-nav-link">Countdown Timer</a></li>
+
+                                                <li><a href="product-volume-discount.html" class="sub-nav-link">Volume
+                                                        Discount</a></li>
+                                                <li><a href="product-volume-discount-thumbnail.html"
+                                                        class="sub-nav-link">Volume Discount Thumbnail</a>
+                                                </li>
+                                                <li><a href="product-swatch-dropdown.html" class="sub-nav-link">Swatch
+                                                        Dropdown</a></li>
+                                                <li><a href="product-swatch-dropdown-color.html"
+                                                        class="sub-nav-link">Swatch Dropdown Color</a></li>
+                                                <li><a href="product-swatch-image.html" class="sub-nav-link">Swatch
+                                                        Image</a></li>
+                                                <li><a href="product-swatch-image-square.html"
+                                                        class="sub-nav-link">Swatch Image rectangle</a></li>
+                                                <li><a href="product-pickup-available.html" class="sub-nav-link">Pickup
+                                                        Available</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#sub-product-desc" class="sub-nav-link collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="true"
+                                            aria-controls="sub-product-desc">
+                                            <span>Products Description</span>
+                                            <span class="btn-open-sub"></span>
+                                        </a>
+                                        <div id="sub-product-desc" class="collapse">
+                                            <ul class="sub-nav-menu sub-menu-level-2">
+                                                <li><a href="product-description-vertical.html"
+                                                        class="sub-nav-link">Product Description Vertical</a>
+                                                </li>
+                                                <li><a href="product-description-tab.html" class="sub-nav-link">Product
+                                                        Description Tab</a></li>
+                                                <li><a href="product-description-accordions.html"
+                                                        class="sub-nav-link">Product Description
+                                                        Accordions</a></li>
+                                                <li><a href="product-description-side-accordions.html"
+                                                        class="sub-nav-link">Product Description Side
+                                                        Accordions</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-mb-item">
+                            <a href="index.html#dropdown-menu-pages" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                                aria-expanded="true" aria-controls="dropdown-menu-pages">
+                                <span>Pages</span>
+                                <span class="btn-open-sub"></span>
+                            </a>
+                            <div id="dropdown-menu-pages" class="collapse">
+                                <ul class="sub-nav-menu">
+                                    <li><a href="about-us.html" class="sub-nav-link">About</a></li>
+                                    <li><a href="contact-us.html" class="sub-nav-link">Contact</a></li>
+                                    <li><a href="store-location.html" class="sub-nav-link">Store
+                                            location</a></li>
+                                    <li><a href="account-page.html" class="sub-nav-link">My account</a></li>
+                                    <li><a href="faq.html" class="sub-nav-link">FAQ</a></li>
+                                    <li><a href="cart-empty.html" class="sub-nav-link">Cart drawer empty</a>
+                                    </li>
+                                    <li><a href="cart-drawer-v2.html" class="sub-nav-link">Cart drawer
+                                            v2</a></li>
+                                    <li><a href="view-cart.html" class="sub-nav-link">View cart</a></li>
+                                    <li><a href="before-you-leave.html" class="sub-nav-link">Before you
+                                            leave</a></li>
+                                    <li><a href="cookies.html" class="sub-nav-link">Cookies</a></li>
+                                    <li><a href="home-fashion-02.html" class="sub-nav-link">Sub navtab
+                                            products</a></li>
+                                    <li><a href="404.html" class="sub-nav-link">404</a></li>
+                                    <li><a href="coming-soon.html" class="sub-nav-link">Coming Soon!</a>
+                                    </li>
+                                    <li><a href="index.html" class="sub-nav-link">Newsletter
+                                            Popup 1</a></li>
+                                    <li><a href="newsletter-popup-02.html" class="sub-nav-link">Newsletter
+                                            Popup 2</a></li>
+                                    <li><a href="newsletter-popup-03.html" class="sub-nav-link">Newsletter
+                                            Popup 3</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="nav-mb-item">
+                            <a href="index.html#dropdown-menu-blog" class="collapsed mb-menu-link" data-bs-toggle="collapse"
+                                aria-expanded="true" aria-controls="dropdown-menu-blog">
+                                <span>Blog</span>
+                                <span class="btn-open-sub"></span>
+                            </a>
+                            <div id="dropdown-menu-blog" class="collapse">
+                                <ul class="sub-nav-menu">
+                                    <li><a href="blog-list-01.html" class="sub-nav-link">Blog List 1</a>
+                                    </li>
+                                    <li><a href="blog-list-02.html" class="sub-nav-link">Blog List 2</a>
+                                    </li>
+                                    <li><a href="blog-grid-01.html" class="sub-nav-link">Blog Grid 1</a>
+                                    </li>
+                                    <li><a href="blog-grid-02.html" class="sub-nav-link">Blog Grid 2</a>
+                                    </li>
+                                    <li><a href="blog-single.html" class="sub-nav-link">Single Blog </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-mb-item">
+                            <a href="https://themeforest.net/item/vince-multipurpose-ecommerce-html5-template/57202368?s_rank=5"
+                                target="_blank" class="mb-menu-link">Buy Theme</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-other-content">
+                    <div class="group-icon">
+                        <a href="wish-list.html" class="site-nav-icon">
+                            <i class="icon icon-heart"></i>
+                            Wishlist
+                        </a>
+                        <a href="index.html#login" data-bs-toggle="offcanvas" class="site-nav-icon">
+                            <i class="icon icon-user"></i>
+                            Login
+                        </a>
+                    </div>
+                    <div class="mb-notice">
+                        <a href="contact-us.html" class="text-need">Need Help?</a>
+                    </div>
+                    <div class="mb-contact">
+                        <p>Address: 123 Yarran st, Punchbowl, NSW 2196, Australia</p>
+                    </div>
+                    <ul class="mb-info">
+                        <li>
+                            Email:
+                            <b class="fw-medium">clientcare@ecom.com</b>
+                        </li>
+                        <li>
+                            Phone:
+                            <b class="fw-medium">1.888.838.3022</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-bottom">
+                <div class="bottom-bar-language">
+                    <div class="tf-currencies">
+                        <select class="image-select center style-default type-currencies">
+                            <option selected data-thumbnail="images/country/us.png">USD</option>
+                            <option data-thumbnail="images/country/fr.png">EUR</option>
+                            <option data-thumbnail="images/country/ger.png">EUR</option>
+                            <option data-thumbnail="images/country/vn.png">VND</option>
+                        </select>
+                    </div>
+                    <div class="tf-languages">
+                        <select class="image-select center style-default type-languages">
+                            <option>English</option>
+                            <option>العربية</option>
+                            <option>简体中文</option>
+                            <option>اردو</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /mobile menu -->
+
+    <!-- toolbar -->
+    <div class="tf-toolbar-bottom">
+        <div class="toolbar-item">
+            <a href="index.html">
+                <div class="toolbar-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.21534 1H3.08153C1.93379 1 1 1.93379 1 3.08153V7.21534C1 8.36309 1.93379 9.29688 3.08153 9.29688H7.21534C8.36309 9.29688 9.29688 8.36309 9.29688 7.21534V3.08153C9.29688 1.93379 8.36309 1 7.21534 1ZM7.89062 7.21534C7.89062 7.58768 7.58768 7.89062 7.21534 7.89062H3.08153C2.70919 7.89062 2.40625 7.58768 2.40625 7.21534V3.08153C2.40625 2.70919 2.70919 2.40625 3.08153 2.40625H7.21534C7.58768 2.40625 7.89062 2.70919 7.89062 3.08153V7.21534Z"
+                            fill="black" />
+                        <path
+                            d="M16.8906 1H12.8125C11.6494 1 10.7031 1.94627 10.7031 3.10938V7.1875C10.7031 8.35061 11.6494 9.29688 12.8125 9.29688H16.8906C18.0537 9.29688 19 8.35061 19 7.1875V3.10938C19 1.94627 18.0537 1 16.8906 1ZM17.5938 7.1875C17.5938 7.5752 17.2783 7.89062 16.8906 7.89062H12.8125C12.4248 7.89062 12.1094 7.5752 12.1094 7.1875V3.10938C12.1094 2.72167 12.4248 2.40625 12.8125 2.40625H16.8906C17.2783 2.40625 17.5938 2.72167 17.5938 3.10938V7.1875Z"
+                            fill="black" />
+                        <path
+                            d="M7.21534 10.7031H3.08153C1.93379 10.7031 1 11.6369 1 12.7847V16.9185C1 18.0662 1.93379 19 3.08153 19H7.21534C8.36309 19 9.29688 18.0662 9.29688 16.9185V12.7847C9.29688 11.6369 8.36309 10.7031 7.21534 10.7031ZM7.89062 16.9185C7.89062 17.2908 7.58768 17.5938 7.21534 17.5938H3.08153C2.70919 17.5938 2.40625 17.2908 2.40625 16.9185V12.7847C2.40625 12.4123 2.70919 12.1094 3.08153 12.1094H7.21534C7.58768 12.1094 7.89062 12.4123 7.89062 12.7847V16.9185Z"
+                            fill="black" />
+                        <path
+                            d="M16.8906 10.7031H12.8125C11.6494 10.7031 10.7031 11.6494 10.7031 12.8125V16.8906C10.7031 18.0537 11.6494 19 12.8125 19H16.8906C18.0537 19 19 18.0537 19 16.8906V12.8125C19 11.6494 18.0537 10.7031 16.8906 10.7031ZM17.5938 16.8906C17.5938 17.2783 17.2783 17.5938 16.8906 17.5938H12.8125C12.4248 17.5938 12.1094 17.2783 12.1094 16.8906V12.8125C12.1094 12.4248 12.4248 12.1094 12.8125 12.1094H16.8906C17.2783 12.1094 17.5938 12.4248 17.5938 12.8125V16.8906Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="toolbar-label">Home</div>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="index.html#login" data-bs-toggle="offcanvas">
+                <div class="toolbar-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.6849 6.28659C12.6849 7.00267 12.4004 7.68943 11.8941 8.19578C11.3877 8.70212 10.701 8.98659 9.98488 8.98659C9.2688 8.98659 8.58204 8.70212 8.07569 8.19578C7.56934 7.68943 7.28488 7.00267 7.28488 6.28659C7.28488 5.5705 7.56934 4.88375 8.07569 4.3774C8.58204 3.87105 9.2688 3.58659 9.98488 3.58659C10.701 3.58659 11.3877 3.87105 11.8941 4.3774C12.4004 4.88375 12.6849 5.5705 12.6849 6.28659ZM14.3515 6.28659C14.3515 6.86003 14.2386 7.42785 14.0192 7.95764C13.7997 8.48743 13.4781 8.96881 13.0726 9.37429C12.6671 9.77977 12.1857 10.1014 11.6559 10.3209C11.1261 10.5403 10.5583 10.6533 9.98488 10.6533C9.41144 10.6533 8.84362 10.5403 8.31383 10.3209C7.78404 10.1014 7.30266 9.77977 6.89718 9.37429C6.4917 8.96881 6.17005 8.48743 5.95061 7.95764C5.73116 7.42785 5.61821 6.86003 5.61821 6.28659C5.61821 5.12848 6.07827 4.0178 6.89718 3.19889C7.71609 2.37998 8.82677 1.91992 9.98488 1.91992C11.143 1.91992 12.2537 2.37998 13.0726 3.19889C13.8915 4.0178 14.3515 5.12848 14.3515 6.28659ZM3.83488 17.7049C3.83488 16.2183 4.48488 15.0616 5.55571 14.2524C6.64738 13.4283 8.20571 12.9491 9.98738 12.9491C11.7699 12.9491 13.3282 13.4283 14.419 14.2524C15.4907 15.0608 16.1407 16.2191 16.1407 17.7049C16.1407 17.9259 16.2285 18.1379 16.3848 18.2942C16.5411 18.4505 16.753 18.5383 16.974 18.5383C17.1951 18.5383 17.407 18.4505 17.5633 18.2942C17.7196 18.1379 17.8074 17.9259 17.8074 17.7049C17.8074 15.6633 16.8849 14.0258 15.424 12.9224C13.9824 11.8341 12.0474 11.2824 9.98738 11.2824C7.92738 11.2824 5.99238 11.8341 4.55155 12.9224C3.08988 14.0258 2.16821 15.6641 2.16821 17.7049C2.16821 17.9259 2.25601 18.1379 2.41229 18.2942C2.56857 18.4505 2.78053 18.5383 3.00155 18.5383C3.22256 18.5383 3.43452 18.4505 3.5908 18.2942C3.74708 18.1379 3.83488 17.9259 3.83488 17.7049Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="toolbar-label">Account</div>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="shop-default.html">
+                <div class="toolbar-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.875 8.479C1.875 8.134 2.155 7.854 2.5 7.854C2.845 7.854 3.125 8.134 3.125 8.479V15.5623C3.125 16.5982 3.96417 17.4373 5 17.4373H15C16.0358 17.4373 16.875 16.5982 16.875 15.5623V8.479C16.875 8.134 17.155 7.854 17.5 7.854C17.845 7.854 18.125 8.134 18.125 8.479V15.5623C18.125 17.2882 16.7258 18.6873 15 18.6873H5C3.27417 18.6873 1.875 17.2882 1.875 15.5623V8.479Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10 11.1875C10.8292 11.1875 11.6233 11.5167 12.21 12.1025C12.7958 12.6892 13.125 13.4833 13.125 14.3125V18.0625C13.125 18.4075 12.845 18.6875 12.5 18.6875C12.155 18.6875 11.875 18.4075 11.875 18.0625V14.3125C11.875 13.815 11.6775 13.3383 11.3258 12.9867C10.9742 12.635 10.4975 12.4375 10 12.4375C9.5025 12.4375 9.02583 12.635 8.67417 12.9867C8.3225 13.3383 8.125 13.815 8.125 14.3125V18.0625C8.125 18.4075 7.845 18.6875 7.5 18.6875C7.155 18.6875 6.875 18.4075 6.875 18.0625V14.3125C6.875 13.4833 7.20417 12.6892 7.79 12.1025C8.37667 11.5167 9.17083 11.1875 10 11.1875Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.45325 1.9375V6.625C7.45325 8.385 6.02492 9.8125 4.26492 9.8125C3.27242 9.8125 2.33492 9.355 1.72408 8.57333C1.11325 7.79083 0.897416 6.77167 1.13742 5.80833L1.79992 3.15917C2.07158 2.07333 3.04658 1.3125 4.16492 1.3125H6.82825C7.17325 1.3125 7.45325 1.5925 7.45325 1.9375ZM6.20325 2.5625H4.16492C3.61992 2.5625 3.14492 2.93333 3.01325 3.46167L2.35075 6.11167C2.20325 6.70083 2.33575 7.325 2.70908 7.80417C3.08325 8.2825 3.65742 8.5625 4.26492 8.5625C5.33492 8.5625 6.20325 7.695 6.20325 6.625V2.5625Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.1716 1.3125H15.835C16.9533 1.3125 17.9283 2.07333 18.2 3.15917L18.8625 5.80833C19.1025 6.77167 18.8866 7.79083 18.2758 8.57333C17.665 9.355 16.7275 9.8125 15.735 9.8125C13.975 9.8125 12.5466 8.385 12.5466 6.625V1.9375C12.5466 1.5925 12.8266 1.3125 13.1716 1.3125ZM13.7966 2.5625V6.625C13.7966 7.695 14.665 8.5625 15.735 8.5625C16.3425 8.5625 16.9166 8.2825 17.2908 7.80417C17.6641 7.325 17.7966 6.70083 17.6491 6.11167L16.9866 3.46167C16.855 2.93333 16.38 2.5625 15.835 2.5625H13.7966Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.82153 1.3125H13.1715C13.3374 1.3125 13.4965 1.37833 13.614 1.49583C13.7315 1.61333 13.7965 1.7725 13.7965 1.93833L13.7924 6.47167C13.7907 8.3175 12.294 9.8125 10.449 9.8125H9.5407C7.69403 9.8125 6.19653 8.31583 6.19653 6.46917V1.9375C6.19653 1.5925 6.47653 1.3125 6.82153 1.3125ZM7.44653 2.5625V6.46917C7.44653 7.625 8.38403 8.5625 9.5407 8.5625H10.449C11.6049 8.5625 12.5415 7.62667 12.5424 6.47083L12.5465 2.5625H7.44653Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="toolbar-label">Shop</div>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="wish-list.html">
+                <div class="toolbar-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_4013_1872)">
+                            <path
+                                d="M18.3932 3.30791C16.218 1.13334 12.6795 1.13334 10.5049 3.30791L9.99983 3.8127L9.49504 3.30791C7.32046 1.13304 3.78163 1.13304 1.60706 3.30791C-0.523361 5.43833 -0.537195 8.81527 1.57498 11.1632C3.50142 13.3039 9.18304 17.9289 9.4241 18.1246C9.58775 18.2576 9.78467 18.3224 9.9804 18.3224C9.98688 18.3224 9.99335 18.3224 9.99953 18.3221C10.202 18.3315 10.406 18.2621 10.575 18.1246C10.816 17.9289 16.4982 13.3039 18.4253 11.1629C20.5371 8.81527 20.5233 5.43833 18.3932 3.30791ZM17.1125 9.98174C15.6105 11.6503 11.4818 15.0917 9.99953 16.313C8.51724 15.092 4.38944 11.6509 2.88773 9.98203C1.41427 8.34433 1.40044 6.01199 2.85564 4.55679C3.59885 3.81388 4.57488 3.44213 5.5509 3.44213C6.52693 3.44213 7.50295 3.81358 8.24616 4.55679L9.3564 5.66703C9.48856 5.79919 9.65516 5.87807 9.82999 5.90574C10.1137 5.96667 10.4216 5.88749 10.6424 5.66732L11.7532 4.55679C13.2399 3.07067 15.6582 3.07097 17.144 4.55679C18.5992 6.01199 18.5854 8.34433 17.1125 9.98174Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_4013_1872">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="toolbar-count">0</div>
+                </div>
+                <div class="toolbar-label">Wishlist</div>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="index.html#shoppingCart" data-bs-toggle="offcanvas">
+                <div class="toolbar-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.70906 7.42985L4.0424 16.699H15.8641L15.1974 7.42985H4.70906ZM16.7491 5.76318H3.15823L2.38073 16.5798C2.36436 16.8082 2.39521 17.0374 2.47134 17.2533C2.54748 17.4692 2.66727 17.6671 2.82325 17.8347C2.97923 18.0022 3.16805 18.1358 3.37795 18.2272C3.58785 18.3186 3.81431 18.3657 4.04323 18.3657H15.8641C16.0931 18.3657 16.3196 18.3185 16.5296 18.2271C16.7395 18.1357 16.9284 18.002 17.0844 17.8344C17.2404 17.6667 17.3601 17.4687 17.4362 17.2527C17.5123 17.0368 17.5431 16.8074 17.5266 16.579L16.7491 5.76318Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.38996 3.86652C9.17153 3.86641 8.95523 3.90936 8.75342 3.99292C8.55162 4.07649 8.36826 4.19901 8.21385 4.3535C8.05944 4.50799 7.93701 4.6914 7.85355 4.89325C7.77009 5.0951 7.72724 5.31143 7.72746 5.52985V6.10068C7.72746 6.3217 7.63966 6.53366 7.48338 6.68994C7.3271 6.84622 7.11514 6.93402 6.89412 6.93402C6.67311 6.93402 6.46115 6.84622 6.30487 6.68994C6.14859 6.53366 6.06079 6.3217 6.06079 6.10068V5.52985C6.06068 5.09263 6.14672 4.65967 6.31399 4.2557C6.48125 3.85174 6.72647 3.48469 7.03564 3.17553C7.3448 2.86637 7.71185 2.62115 8.11581 2.45388C8.51977 2.28661 8.95273 2.20057 9.38996 2.20068H10.5275C11.412 2.2009 12.2603 2.55246 12.8857 3.17802C13.5111 3.80359 13.8625 4.65194 13.8625 5.53652V6.10068C13.8625 6.3217 13.7747 6.53366 13.6184 6.68994C13.4621 6.84622 13.2501 6.93402 13.0291 6.93402C12.8081 6.93402 12.5961 6.84622 12.4399 6.68994C12.2836 6.53366 12.1958 6.3217 12.1958 6.10068V5.53652C12.1958 5.09397 12.02 4.66954 11.7072 4.35653C11.3943 4.04353 10.97 3.86757 10.5275 3.86735"
+                            fill="black" />
+                    </svg>
+                    <div class="toolbar-count">0</div>
+                </div>
+                <div class="toolbar-label">Cart</div>
+            </a>
+        </div>
+    </div>
+    <!-- /toolbar  -->
+
+    <!-- login -->
+    <div class="offcanvas offcanvas-end popup-style-1 popup-login" id="login">
+        <div class="canvas-wrapper">
+            <div class="canvas-header popup-header">
+                <span class="title">Log in</span>
+                <button class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="canvas-body popup-inner">
+                <form action="account-page.html" accept-charset="utf-8" class="form-login">
+                    <div>
+                        <fieldset class="email mb_12">
+                            <input type="email" class="" placeholder="Email*" required>
+                        </fieldset>
+                        <fieldset class="password">
+                            <input type="password" class="" placeholder="Password*" required>
+                        </fieldset>
+                    </div>
+                    <div class="bot">
+                        <a href="index.html#resetPass" data-bs-toggle="offcanvas" class="text text-sm text-main-2">Forgot your
+                            password?</a>
+                        <div class="button-wrap">
+                            <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
+                                type="submit">Sign in</button>
+                            <button type="button" data-bs-target="#register" data-bs-toggle="offcanvas"
+                                class="tf-btn btn-out-line-dark2 w-100">Create an account</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="other-login">
+                    <p class="text-sm text-center text-main-2">Or sign in with:</p>
+                    <a href="account-page.html" class="w-100 text-md mb_8">
+                        <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="16" fill="#3B5998" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.155 10.656L18.649 10.657C17.468 10.657 17.239 11.218 17.239 12.041V13.857H20.056L19.689 16.702H17.239V24H14.302V16.702H11.846V13.857H14.302V11.76C14.302 9.325 15.789 8 17.96 8C19 8 19.894 8.077 20.155 8.112V10.656ZM16 0C7.164 0 0 7.163 0 16C0 24.836 7.164 32 16 32C24.837 32 32 24.836 32 16C32 7.163 24.837 0 16 0Z"
+                                fill="white" />
+                        </svg>
+                        FACEBOOK
+                    </a>
+                    <a href="account-page.html" class="w-100 text-md bg-dark">
+                        <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_235_18876)">
+                                <path
+                                    d="M30.7919 13.218L17.7394 13.2174C17.163 13.2174 16.6958 13.6845 16.6958 14.2609V18.4306C16.6958 19.0068 17.163 19.4741 17.7393 19.4741H25.0897C24.2848 21.5629 22.7825 23.3122 20.8659 24.4237L24.0001 29.8493C29.0277 26.9416 32.0001 21.8398 32.0001 16.1287C32.0001 15.3155 31.9402 14.7342 31.8203 14.0796C31.7292 13.5823 31.2974 13.218 30.7919 13.218Z"
+                                    fill="#167EE6" />
+                                <path
+                                    d="M16.0002 25.7392C12.4031 25.7392 9.26282 23.7738 7.57625 20.8655L2.15088 23.9926C4.91182 28.7777 10.0839 32 16.0002 32C18.9025 32 21.6411 31.2186 24.0002 29.8568V29.8494L20.866 24.4237C19.4324 25.2552 17.7734 25.7392 16.0002 25.7392Z"
+                                    fill="#12B347" />
+                                <path
+                                    d="M24 29.8568V29.8493L20.8658 24.4237C19.4322 25.2551 17.7733 25.7391 16 25.7391V32C18.9023 32 21.641 31.2186 24 29.8568Z"
+                                    fill="#0F993E" />
+                                <path
+                                    d="M6.26088 16C6.26088 14.2269 6.74475 12.5681 7.57606 11.1346L2.15069 8.00745C0.781375 10.3591 0 13.0903 0 16C0 18.9098 0.781375 21.6409 2.15069 23.9926L7.57606 20.8654C6.74475 19.4319 6.26088 17.7731 6.26088 16Z"
+                                    fill="#FFD500" />
+                                <path
+                                    d="M16.0002 6.26088C18.3459 6.26088 20.5005 7.09437 22.1834 8.48081C22.5986 8.82281 23.2021 8.79813 23.5824 8.41781L26.5368 5.46344C26.9683 5.03194 26.9375 4.32562 26.4766 3.92575C23.6569 1.47956 19.9881 0 16.0002 0C10.0839 0 4.91182 3.22231 2.15088 8.00744L7.57625 11.1346C9.26282 8.22625 12.4031 6.26088 16.0002 6.26088Z"
+                                    fill="#FF4B26" />
+                                <path
+                                    d="M22.1833 8.48081C22.5984 8.82281 23.2019 8.79813 23.5822 8.41781L26.5366 5.46344C26.968 5.03194 26.9373 4.32562 26.4764 3.92575C23.6567 1.4795 19.9879 0 16 0V6.26088C18.3456 6.26088 20.5003 7.09437 22.1833 8.48081Z"
+                                    fill="#D93F21" />
+                            </g>
+                            <defs>
+                                <clipPath>
+                                    <rect width="32" height="32" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        GOOGLE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /login -->
+
+    <!-- register -->
+    <div class="offcanvas offcanvas-end popup-style-1 popup-register" id="register">
+        <div class="canvas-wrapper">
+            <div class="canvas-header popup-header">
+                <span class="title">Create account</span>
+                <button class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="canvas-body popup-inner">
+                <form action="account-page.html" class="form-login">
+                    <div class="">
+                        <fieldset class="text mb_12">
+                            <input type="text" placeholder="First name">
+                        </fieldset>
+                        <fieldset class="text mb_12">
+                            <input type="text" placeholder="Last name">
+                        </fieldset>
+                        <fieldset class="email mb_12">
+                            <input type="email" placeholder="Email*">
+                        </fieldset>
+                        <fieldset class="password">
+                            <input type="password" placeholder="Password*">
+                        </fieldset>
+                    </div>
+                    <div class="bot">
+                        <p class="text text-sm text-main-2">Sign up for early Sale access plus tailored new
+                            arrivals, trends and promotions. To opt out, click unsubscribe in our emails.</p>
+                        <div class="button-wrap">
+                            <button class="subscribe-button tf-btn animate-btn bg-dark-2 w-100" type="submit">Sign
+                                up</button>
+                            <button type="button" data-bs-target="#login" data-bs-toggle="offcanvas"
+                                class="tf-btn btn-out-line-dark2 w-100">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /register -->
+
+    <!-- Reset pass -->
+    <div class="offcanvas offcanvas-end popup-style-1 popup-reset-pass" id="resetPass">
+        <div class="canvas-wrapper">
+            <div class="canvas-header popup-header">
+                <span class="title">Reset Your Password</span>
+                <button class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="canvas-body popup-inner">
+                <form action="index.html#" class="form-login">
+                    <div class="">
+                        <p class="text text-sm text-main-2">Forgot your password? No worries! Enter your registered
+                            email to receive a link and securely reset it in just a few steps.</p>
+                        <fieldset class="email mb_12">
+                            <input type="email" placeholder="Enter Your Email*">
+                        </fieldset>
+                    </div>
+                    <div class="bot">
+                        <div class="button-wrap">
+                            <button class="subscribe-button tf-btn animate-btn bg-dark-2 w-100" type="submit">Reset
+                                Password</button>
+                            <button type="button" data-bs-dismiss="offcanvas"
+                                class="tf-btn btn-out-line-dark2 w-100">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /Reset pass -->
+
+    <!-- search -->
+    <div class="modal fade popup-search" id="search">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="header">
+                    <button class="icon-close icon-close-popup" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="looking-for-wrap">
+                                <div class="heading">What are you looking for?</div>
+                                <form class="form-search">
+                                    <fieldset class="text">
+                                        <input type="text" placeholder="Search" class="" name="text" tabindex="0"
+                                            value="" aria-required="true" required="">
+                                    </fieldset>
+                                    <button type="submit">
+                                        <i class="icon icon-search"></i>
+                                    </button>
+                                </form>
+                                <div class="popular-searches justify-content-md-center">
+                                    <div class="text fw-medium">Popular searches:</div>
+                                    <ul>
+                                        <li><a class="link" href="index.html#">Featured</a></li>
+                                        <li><a class="link" href="index.html#">Trendy</a></li>
+                                        <li><a class="link" href="index.html#">New</a></li>
+                                        <li><a class="link" href="index.html#">Sale</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="featured-product">
+                                <div class="text-xl-2 fw-medium featured-product-heading">Featured product</div>
+                                <div dir="ltr" class="swiper tf-swiper wrap-sw-over" data-swiper='{
+                                        "slidesPerView": 2,
+                                        "spaceBetween": 12,
+                                        "speed": 800,
+                                        "observer": true,
+                                        "observeParents": true,
+                                        "slidesPerGroup": 2,
+                                        "pagination": { "el": ".sw-pagination-search", "clickable": true },
+                                        "breakpoints": {
+                                        "768": { "slidesPerView": 3, "spaceBetween": 12, "slidesPerGroup": 3 },
+                                        "1200": { "slidesPerView": 4, "spaceBetween": 24, "slidesPerGroup": 4}
+                                        }
+                                    }'>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="card-product style-3 card-product-size">
+                                                <div class="card-product-wrapper">
+                                                    <a href="product-detail.html" class="product-img">
+                                                        <img class="img-product lazyload"
+                                                            data-src="images/products/fashion/product-27.jpg"
+                                                            src="images/products/fashion/product-27.jpg"
+                                                            alt="image-product">
+                                                        <img class="img-hover lazyload"
+                                                            data-src="images/products/fashion/product-23.jpg"
+                                                            src="images/products/fashion/product-23.jpg"
+                                                            alt="image-product">
+                                                    </a>
+                                                    <ul class="list-product-btn">
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip wishlist">
+                                                                <span class="icon icon-heart2"></span>
+                                                                <span class="tooltip">Add to Wishlist</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn-quickview box-icon hover-tooltip quickview">
+                                                                <span class="icon icon-view"></span>
+                                                                <span class="tooltip">Quick View</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip compare btn-compare">
+                                                                <span class="icon icon-compare"></span>
+                                                                <span class="tooltip">Add to Compare</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="product-btn-main">
+                                                        <a href="index.html#shoppingCart" data-bs-toggle="offcanvas"
+                                                            class="btn-main-product">
+                                                            <span class="icon icon-cart2"></span>
+                                                            <span class="text-md fw-medium">
+                                                                Add to Cart
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <ul class="size-box">
+                                                        <li class="size-item text-xs text-white">M</li>
+                                                        <li class="size-item text-xs text-white">L</li>
+                                                        <li class="size-item text-xs text-white">XL</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-product-info">
+                                                    <a href="product-detail.html"
+                                                        class="name-product link fw-medium text-md">Basic Sports T-Shirt
+                                                        Crew Neck Ribbed</a>
+                                                    <p class="price-wrap fw-medium">
+                                                        <span class="price-new text-primary">80.00</span>
+                                                        <span class="price-old">$100.00</span>
+                                                    </p>
+                                                    <ul class="list-color-product">
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                            <span class="tooltip color-filter">Purple</span>
+                                                            <span class="swatch-value bg-light-purple-3"></span>
+                                                            <img class="lazyload"
+                                                                data-src="images/products/fashion/product-27.jpg"
+                                                                src="images/products/fashion/product-27.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Light Grey</span>
+                                                            <span class="swatch-value bg-grey-4"></span>
+                                                            <img class="lazyload"
+                                                                data-src="images/products/fashion/product-11.jpg"
+                                                                src="images/products/fashion/product-11.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Light Orange</span>
+                                                            <span class="swatch-value bg-light-orange"></span>
+                                                            <img class="lazyload"
+                                                                data-src="images/products/fashion/product-12.jpg"
+                                                                src="images/products/fashion/product-12.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card-product style-3">
+                                                <div class="card-product-wrapper">
+                                                    <a href="product-detail.html" class="product-img">
+                                                        <img class="img-product lazyload"
+                                                            data-src="images/products/fashion/product-10.jpg"
+                                                            src="images/products/fashion/product-10.jpg"
+                                                            alt="image-product">
+                                                        <img class="img-hover lazyload"
+                                                            data-src="images/products/fashion/product-20.jpg"
+                                                            src="images/products/fashion/product-20.jpg"
+                                                            alt="image-product">
+                                                    </a>
+                                                    <ul class="list-product-btn">
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip wishlist">
+                                                                <span class="icon icon-heart2"></span>
+                                                                <span class="tooltip">Add to Wishlist</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn-quickview box-icon hover-tooltip quickview">
+                                                                <span class="icon icon-view"></span>
+                                                                <span class="tooltip">Quick View</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip compare btn-compare">
+                                                                <span class="icon icon-compare"></span>
+                                                                <span class="tooltip">Add to Compare</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="product-btn-main">
+                                                        <a href="index.html#shoppingCart" data-bs-toggle="offcanvas"
+                                                            class="btn-main-product">
+                                                            <span class="icon icon-cart2"></span>
+                                                            <span class="text-md fw-medium">
+                                                                Add to Cart
+                                                            </span>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="card-product-info">
+                                                    <a href="product-detail.html"
+                                                        class="name-product link fw-medium text-md">Regular Fit
+                                                        Fine Knit Polo Shirt</a>
+                                                    <p class="price-wrap fw-medium">
+                                                        <span class="price-new text-primary">$65.00</span>
+                                                        <span class=" price-old">$90.00</span>
+                                                    </p>
+                                                    <ul class="list-color-product">
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                            <span class="tooltip color-filter">Light Blue</span>
+                                                            <span class="swatch-value bg-light-blue-2"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-10.jpg"
+                                                                src="images/products/fashion/product-10.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Black</span>
+                                                            <span class="swatch-value bg-dark"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-13.jpg"
+                                                                src="images/products/fashion/product-13.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Purple</span>
+                                                            <span class="swatch-value bg-light-purple"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-14.jpg"
+                                                                src="images/products/fashion/product-14.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card-product style-3">
+                                                <div class="card-product-wrapper">
+                                                    <a href="product-detail.html" class="product-img">
+                                                        <img class="img-product lazyload"
+                                                            data-src="images/products/fashion/product-21.jpg"
+                                                            src="images/products/fashion/product-21.jpg"
+                                                            alt="image-product">
+                                                        <img class="img-hover lazyload"
+                                                            data-src="images/products/fashion/women-black-3.jpg"
+                                                            src="images/products/fashion/women-black-3.jpg"
+                                                            alt="image-product">
+                                                    </a>
+                                                    <ul class="list-product-btn">
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip wishlist">
+                                                                <span class="icon icon-heart2"></span>
+                                                                <span class="tooltip">Add to Wishlist</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn-quickview box-icon hover-tooltip quickview">
+                                                                <span class="icon icon-view"></span>
+                                                                <span class="tooltip">Quick View</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip compare btn-compare">
+                                                                <span class="icon icon-compare"></span>
+                                                                <span class="tooltip">Add to Compare</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="product-btn-main">
+                                                        <a href="index.html#shoppingCart" data-bs-toggle="offcanvas"
+                                                            class="btn-main-product">
+                                                            <span class="icon icon-cart2"></span>
+                                                            <span class="text-md fw-medium">
+                                                                Add to Cart
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product-info">
+                                                    <a href="product-detail.html"
+                                                        class="name-product link fw-medium text-md">Crop College
+                                                        T-Shirt</a>
+                                                    <p class="price-wrap fw-medium">
+                                                        <span class="price-new text-primary">$80.00</span>
+                                                        <span class=" price-old">$100.00</span>
+                                                    </p>
+                                                    <ul class="list-color-product">
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                            <span class="tooltip color-filter">Dark Green</span>
+                                                            <span class="swatch-value bg-dark-green"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-21.jpg"
+                                                                src="images/products/fashion/product-21.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Black</span>
+                                                            <span class="swatch-value bg-dark"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/women-black-3.jpg"
+                                                                src="images/products/fashion/women-black-3.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Purple</span>
+                                                            <span class="swatch-value bg-light-purple-3"></span>
+                                                            <img class="lazyload"
+                                                                data-src="images/products/fashion/product-23.jpg"
+                                                                src="images/products/fashion/product-23.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card-product style-3 card-product-size">
+                                                <div class="card-product-wrapper">
+                                                    <a href="product-detail.html" class="product-img">
+                                                        <img class="img-product lazyload"
+                                                            data-src="images/products/fashion/product-22.jpg"
+                                                            src="images/products/fashion/product-22.jpg"
+                                                            alt="image-product">
+                                                        <img class="img-hover lazyload"
+                                                            data-src="images/products/fashion/product-5.jpg"
+                                                            src="images/products/fashion/product-5.jpg"
+                                                            alt="image-product">
+                                                    </a>
+                                                    <ul class="list-product-btn">
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip wishlist">
+                                                                <span class="icon icon-heart2"></span>
+                                                                <span class="tooltip">Add to Wishlist</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn-quickview box-icon hover-tooltip quickview">
+                                                                <span class="icon icon-view"></span>
+                                                                <span class="tooltip">Quick View</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"
+                                                                class="box-icon hover-tooltip compare btn-compare">
+                                                                <span class="icon icon-compare"></span>
+                                                                <span class="tooltip">Add to Compare</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="product-btn-main">
+                                                        <a href="index.html#shoppingCart" data-bs-toggle="offcanvas"
+                                                            class="btn-main-product">
+                                                            <span class="icon icon-cart2"></span>
+                                                            <span class="text-md fw-medium">
+                                                                Add to Cart
+                                                            </span>
+                                                        </a>
+                                                    </div>
+
+                                                    <ul class="size-box">
+                                                        <li class="size-item text-xs text-white">XS</li>
+                                                        <li class="size-item text-xs text-white">S</li>
+                                                        <li class="size-item text-xs text-white">M</li>
+                                                        <li class="size-item text-xs text-white">L</li>
+                                                        <li class="size-item text-xs text-white">XL</li>
+                                                        <li class="size-item text-xs text-white">2XL</li>
+                                                    </ul>
+
+                                                </div>
+                                                <div class="card-product-info">
+                                                    <a href="product-detail.html"
+                                                        class="name-product link fw-medium text-md">Bow-Tie T-Shirt</a>
+                                                    <p class="price-wrap fw-medium">
+                                                        <span class="price-new text-primary">$120.00</span>
+                                                        <span class=" price-old">$140.00</span>
+                                                    </p>
+                                                    <ul class="list-color-product">
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot active">
+                                                            <span class="tooltip color-filter">Black</span>
+                                                            <span class="swatch-value bg-dark"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-22.jpg"
+                                                                src="images/products/fashion/product-22.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip tooltip-bot">
+                                                            <span class="tooltip color-filter">Beige</span>
+                                                            <span class="swatch-value bg-beige"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-5.jpg"
+                                                                src="images/products/fashion/product-5.jpg"
+                                                                alt="image-product">
+                                                        </li>
+                                                        <li
+                                                            class="list-color-item color-swatch hover-tooltip line tooltip-bot">
+                                                            <span class="tooltip color-filter">White</span>
+                                                            <span class="swatch-value bg-white"></span>
+                                                            <img class=" lazyload"
+                                                                data-src="images/products/fashion/product-1.jpg"
+                                                                src="images/products/fashion/product-1.jpg"
+                                                                alt="image-product">
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="d-flex d-xl-none sw-dot-default sw-pagination-search justify-content-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /search -->
+
+    <!-- shoppingCart -->
+    <div class="offcanvas offcanvas-end popup-style-1 popup-shopping-cart" id="shoppingCart">
+        <div class="canvas-wrapper">
+            <div class="popup-header">
+                <span class="title">Shopping cart</span>
+                <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas"></span>
+            </div>
+            <div class="wrap">
+                <div class="tf-mini-cart-threshold">
+                    <div class="text">
+                        Spend <span class="fw-medium">$100</span> more to get <span class="fw-medium">Free
+                            Shipping</span>
+                    </div>
+                    <div class="tf-progress-bar tf-progress-ship">
+                        <div class="value" style="width: 0%;" data-progress="75">
+                            <i class="icon icon-car"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="tf-mini-cart-wrap">
+                    <div class="tf-mini-cart-main">
+                        <div class="tf-mini-cart-sroll">
+                            <div class="tf-mini-cart-items">
+                                <div class="tf-mini-cart-item file-delete">
+                                    <div class="tf-mini-cart-image">
+                                        <a href="product-detail.html">
+                                            <img class="lazyload" data-src="images/products/fashion/women-1.jpg"
+                                                src="images/products/fashion/women-1.jpg" alt="img-product">
+                                        </a>
+                                    </div>
+                                    <div class="tf-mini-cart-info">
+                                        <div class="d-flex justify-content-between">
+                                            <a class="title link text-md fw-medium" href="product-detail.html">Short
+                                                Sleeve Sweat</a>
+                                            <i class="icon icon-close remove fs-12"></i>
+                                        </div>
+                                        <div class="info-variant">
+                                            <select class="text-xs">
+                                                <option value="White / L">White / L</option>
+                                                <option value="White / M">White / M</option>
+                                                <option value="Black / L">Black / L</option>
+                                            </select>
+                                            <i class="icon-pen edit"></i>
+                                        </div>
+                                        <p class="price-wrap text-sm fw-medium">
+                                            <span class="new-price text-primary">$130.00</span>
+                                            <span
+                                                class="old-price text-decoration-line-through text-dark-1">$150.00</span>
+                                        </p>
+                                        <div class="wg-quantity small">
+                                            <button class="btn-quantity minus-btn">-</button>
+                                            <input class="quantity-product font-4" type="text" name="number" value="1">
+                                            <button class="btn-quantity plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tf-mini-cart-item file-delete">
+                                    <div class="tf-mini-cart-image">
+                                        <a href="product-detail.html">
+                                            <img class="lazyload" data-src="images/products/fashion/women-2.jpg"
+                                                src="images/products/fashion/women-2.jpg" alt="img-product">
+                                        </a>
+                                    </div>
+                                    <div class="tf-mini-cart-info">
+                                        <div class="d-flex justify-content-between">
+                                            <a class="title link text-md fw-medium" href="product-detail.html">Loose
+                                                Fit Tee</a>
+                                            <i class="icon icon-close remove fs-12"></i>
+                                        </div>
+                                        <div class="info-variant">
+                                            <select class="text-xs">
+                                                <option value="White / L">White / L</option>
+                                                <option value="White / M">White / M</option>
+                                                <option value="Black / L">Black / L</option>
+                                            </select>
+                                            <i class="icon-pen edit"></i>
+                                        </div>
+                                        <p class="price-wrap text-sm fw-medium">
+                                            <span class="new-price text-primary">$130.00</span>
+                                            <span
+                                                class="old-price text-decoration-line-through text-dark-1">$150.00</span>
+                                        </p>
+                                        <div class="wg-quantity small">
+                                            <button class="btn-quantity minus-btn">-</button>
+                                            <input class="quantity-product font-4" type="text" name="number" value="1">
+                                            <button class="btn-quantity plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tf-minicart-recommendations">
+                                <div
+                                    class="tf-minicart-recommendations-heading d-flex justify-content-between align-items-end">
+                                    <div class="tf-minicart-recommendations-title text-md fw-medium">You may also
+                                        like</div>
+                                    <div class="d-flex gap-10">
+                                        <div
+                                            class="swiper-button-prev nav-swiper arrow-1 size-30 nav-prev-also-product">
+                                        </div>
+                                        <div
+                                            class="swiper-button-next nav-swiper arrow-1 size-30 nav-next-also-product">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div dir="ltr" class="swiper tf-swiper" data-swiper='{
+                                            "slidesPerView": 1,
+                                            "spaceBetween": 10,
+                                            "speed": 800,
+                                            "observer": true,
+                                            "observeParents": true,
+                                            "slidesPerGroup": 1,
+                                            "navigation": {
+                                                "clickable": true,
+                                                "nextEl": ".nav-next-also-product",
+                                                "prevEl": ".nav-prev-also-product"
+                                            }
+                                        }'>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="tf-mini-cart-item line radius-16">
+                                                <div class="tf-mini-cart-image">
+                                                    <a href="product-detail.html">
+                                                        <img class="lazyload"
+                                                            data-src="images/products/fashion/product-1.jpg"
+                                                            src="images/products/fashion/product-1.jpg"
+                                                            alt="img-product">
+                                                    </a>
+                                                </div>
+                                                <div class="tf-mini-cart-info justify-content-center">
+                                                    <a class="title link text-md fw-medium"
+                                                        href="product-detail.html">Polo T-Shirt</a>
+                                                    <p class="price-wrap text-sm fw-medium">
+                                                        <span class="new-price text-primary">$130.00</span>
+                                                        <span
+                                                            class="old-price text-decoration-line-through text-dark-1">$150.00</span>
+                                                    </p>
+                                                    <a href="index.html#"
+                                                        class="tf-btn animate-btn d-inline-flex bg-dark-2 w-max-content">Add
+                                                        to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="tf-mini-cart-item line radius-16">
+                                                <div class="tf-mini-cart-image">
+                                                    <a href="product-detail.html">
+                                                        <img class="lazyload"
+                                                            data-src="images/products/fashion/product-2.jpg"
+                                                            src="images/products/fashion/product-2.jpg"
+                                                            alt="img-product">
+                                                    </a>
+                                                </div>
+                                                <div class="tf-mini-cart-info justify-content-center">
+                                                    <a class="title link text-md fw-medium"
+                                                        href="product-detail.html">Short Sleeve Sweat</a>
+                                                    <p class="price-wrap text-sm fw-medium">
+                                                        <span class="new-price text-primary">$100.00</span>
+                                                        <span
+                                                            class="old-price text-decoration-line-through text-dark-1">$115.00</span>
+                                                    </p>
+                                                    <a href="index.html#"
+                                                        class="tf-btn animate-btn d-inline-flex bg-dark-2 w-max-content">Add
+                                                        to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="tf-mini-cart-item line radius-16">
+                                                <div class="tf-mini-cart-image">
+                                                    <a href="product-detail.html">
+                                                        <img class="lazyload"
+                                                            data-src="images/products/fashion/product-3.jpg"
+                                                            src="images/products/fashion/product-3.jpg"
+                                                            alt="img-product">
+                                                    </a>
+                                                </div>
+                                                <div class="tf-mini-cart-info justify-content-center">
+                                                    <a class="title link text-md fw-medium"
+                                                        href="product-detail.html">Crop T-shirt</a>
+                                                    <p class="price-wrap text-sm fw-medium">
+                                                        <span class="new-price text-primary">$80.00</span>
+                                                        <span
+                                                            class="old-price text-decoration-line-through text-dark-1">$100.00</span>
+                                                    </p>
+                                                    <a href="index.html#"
+                                                        class="tf-btn animate-btn d-inline-flex bg-dark-2 w-max-content">Add
+                                                        to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tf-mini-cart-bottom">
+                        <div class="tf-mini-cart-tool">
+                            <div class="tf-mini-cart-tool-btn btn-add-gift">
+                                <i class="icon icon-gift2"></i>
+                                <div class="text-xxs">Add gift wrap</div>
+                            </div>
+                            <div class="tf-mini-cart-tool-btn btn-add-note">
+                                <i class="icon icon-note"></i>
+                                <div class="text-xxs">Order note</div>
+                            </div>
+                            <div class="tf-mini-cart-tool-btn btn-coupon">
+                                <i class="icon icon-coupon"></i>
+                                <div class="text-xxs">Coupon</div>
+                            </div>
+                            <div class="tf-mini-cart-tool-btn btn-estimate-shipping">
+                                <i class="icon icon-car"></i>
+                                <div class="text-xxs">Shipping</div>
+                            </div>
+                        </div>
+                        <div class="tf-mini-cart-bottom-wrap">
+                            <div class="tf-cart-totals-discounts">
+                                <div class="tf-cart-total text-xl fw-medium">Total:</div>
+                                <div class="tf-totals-total-value text-xl fw-medium">$130.00 USD</div>
+                            </div>
+                            <div class="tf-cart-tax text-sm opacity-8">Taxes and shipping calculated at checkout
+                            </div>
+                            <div class="tf-cart-checkbox">
+                                <div class="tf-checkbox-wrapp">
+                                    <input class="" type="checkbox" id="CartDrawer-Form_agree" name="agree_checkbox">
+                                    <div>
+                                        <i class="icon-check"></i>
+                                    </div>
+                                </div>
+                                <label for="CartDrawer-Form_agree" class="text-sm">
+                                    I agree with the
+                                    <a href="term-and-condition.html" title="Terms of Service" class="fw-medium">terms
+                                        and conditions</a>
+                                </label>
+                            </div>
+                            <div class="tf-mini-cart-view-checkout">
+                                <a href="checkout.html"
+                                    class="tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center"><span>Check
+                                        out</span></a>
+                                <a href="view-cart.html"
+                                    class="tf-btn btn-out-line-dark2 w-100 justify-content-center">View cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tf-mini-cart-tool-openable add-gift">
+                        <div class="overplay tf-mini-cart-tool-close"></div>
+                        <form action="index.html#" class="tf-mini-cart-tool-content">
+                            <div class="tf-mini-cart-tool-text text-sm fw-medium">Add gift wrap</div>
+                            <div class="tf-mini-cart-tool-text1">The product will be wrapped carefully.
+                                Fee is only <span class="text fw-medium text-dark">$10.00</span>. Do you want a
+                                gift wrap?</div>
+                            <div class="tf-cart-tool-btns">
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
+                                    type="submit">Add a Gift Wrap</button>
+                                <div class="tf-btn btn-out-line-dark2 w-100 tf-mini-cart-tool-close">Cancel</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tf-mini-cart-tool-openable add-note">
+                        <div class="overplay tf-mini-cart-tool-close"></div>
+                        <form action="index.html#" class="tf-mini-cart-tool-content">
+                            <label for="Cart-note" class="tf-mini-cart-tool-text text-sm fw-medium">Order
+                                note</label>
+                            <textarea name="note" id="Cart-note" placeholder="Instruction for seller..."></textarea>
+                            <div class="tf-cart-tool-btns">
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
+                                    type="submit">Save</button>
+                                <div class="tf-btn btn-out-line-dark2 w-100 tf-mini-cart-tool-close">Close</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tf-mini-cart-tool-openable coupon">
+                        <div class="overplay tf-mini-cart-tool-close"></div>
+                        <form action="index.html#" class="tf-mini-cart-tool-content">
+                            <div class="tf-mini-cart-tool-text text-sm fw-medium">Add coupon</div>
+                            <div class="tf-mini-cart-tool-text1">* Discount will be calculated and
+                                applied at checkout</div>
+                            <input type="text" name="text" placeholder="">
+                            <div class="tf-cart-tool-btns">
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
+                                    type="submit">Save</button>
+                                <div class="tf-btn btn-out-line-dark2 w-100 tf-mini-cart-tool-close">Close</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tf-mini-cart-tool-openable estimate-shipping">
+                        <div class="overplay tf-mini-cart-tool-close"></div>
+                        <form id="shipping-form" class="tf-mini-cart-tool-content">
+                            <div class="tf-mini-cart-tool-text text-sm fw-medium">Shipping estimates</div>
+                            <div class="field">
+                                <p class="text-sm">Country</p>
+                                <div class="tf-select">
+                                    <select class="w-100" id="shipping-country-form" name="address[country]"
+                                        data-default="">
+                                        <option value="Australia"
+                                            data-provinces='[["Australian Capital Territory","Australian Capital Territory"],["New South Wales","New South Wales"],["Northern Territory","Northern Territory"],["Queensland","Queensland"],["South Australia","South Australia"],["Tasmania","Tasmania"],["Victoria","Victoria"],["Western Australia","Western Australia"]]'>
+                                            Australia</option>
+                                        <option value="Austria" data-provinces='[]'>Austria</option>
+                                        <option value="Belgium" data-provinces='[]'>Belgium</option>
+                                        <option value="Canada"
+                                            data-provinces='[["Ontario","Ontario"],["Quebec","Quebec"]]'>Canada
+                                        </option>
+                                        <option value="Czech Republic" data-provinces='[]'>Czechia</option>
+                                        <option value="Denmark" data-provinces='[]'>Denmark</option>
+                                        <option value="Finland" data-provinces='[]'>Finland</option>
+                                        <option value="France" data-provinces='[]'>France</option>
+                                        <option value="Germany" data-provinces='[]'>Germany</option>
+                                        <option selected value="United States"
+                                            data-provinces='[["Alabama","Alabama"],["California","California"],["Florida","Florida"]]'>
+                                            United States</option>
+                                        <option value="United Kingdom"
+                                            data-provinces='[["England","England"],["Scotland","Scotland"],["Wales","Wales"],["Northern Ireland","Northern Ireland"]]'>
+                                            United Kingdom</option>
+                                        <option value="India" data-provinces='[]'>India</option>
+                                        <option value="Japan" data-provinces='[]'>Japan</option>
+                                        <option value="Mexico" data-provinces='[]'>Mexico</option>
+                                        <option value="South Korea" data-provinces='[]'>South Korea</option>
+                                        <option value="Spain" data-provinces='[]'>Spain</option>
+                                        <option value="Italy" data-provinces='[]'>Italy</option>
+                                        <option value="Vietnam"
+                                            data-provinces='[["Ha Noi","Ha Noi"],["Da Nang","Da Nang"],["Ho Chi Minh","Ho Chi Minh"]]'>
+                                            Vietnam</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <p class="text-sm">State/Province</p>
+                                <div class="tf-select">
+                                    <select id="shipping-province-form" name="address[province]"
+                                        data-default=""></select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <p class="text-sm">Zipcode</p>
+                                <input type="text" data-opend-focus id="zipcode" name="address[zip]" value="">
+                            </div>
+                            <div id="zipcode-message" class="error" style="display: none;">
+                                We found one shipping rate available for undefined.
+                            </div>
+                            <div id="zipcode-success" class="success" style="display: none;">
+                                <p>We found one shipping rate available for your address:</p>
+                                <p class="standard">Standard at <span>$0.00</span> USD</p>
+                            </div>
+                            <div class="tf-cart-tool-btns">
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
+                                    type="submit">Estimate</button>
+                                <div
+                                    class="tf-mini-cart-tool-primary tf-btn btn-out-line-dark2 w-100 tf-mini-cart-tool-close">
+                                    Close</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /shoppingCart -->
+
+    <!-- modal quickView -->
+    <div class="modal fade modalCentered modal-quick-view" id="quickView">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                <div class="tf-product-media-wrap">
+                    <div dir="ltr" class="swiper tf-single-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-color="orange">
+                                <div class="item">
+                                    <img class="lazyload" data-src="images/products/fashion/product-40.jpg"
+                                        src="images/products/fashion/product-40.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-color="green">
+                                <div class="item">
+                                    <img class="lazyload" data-src="images/products/fashion/product-41.jpg"
+                                        src="images/products/fashion/product-41.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-color="pink">
+                                <div class="item">
+                                    <img class="lazyload" data-src="images/products/fashion/product-42.jpg"
+                                        src="images/products/fashion/product-42.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev nav-swiper arrow-1 nav-prev-cls single-slide-prev"></div>
+                        <div class="swiper-button-next nav-swiper arrow-1 nav-next-cls single-slide-next"></div>
+                    </div>
+                </div>
+                <div class="tf-product-info-wrap">
+                    <div class="tf-product-info-inner">
+                        <div class="tf-product-info-heading">
+                            <h6 class="product-info-name"><a class="link" href="product-detail.html">Striped T-Shirt</a>
+                            </h6>
+                            <div class="product-info-price">
+                                <h6 class="price-new price-on-sale">$100.00</h6>
+                                <h6 class="price-old">$130.00</h6>
+                                <span class="badge-sale">20% Off</span>
+                            </div>
+                            <p class="text">Pants in an airy weave made from a linen and viscose blend. Featuring a high
+                                waist and a zip fly with button. Shaping at the front and back and wide legs.</p>
+                        </div>
+                        <div class="tf-product-info-variant">
+                            <div class="variant-picker-item variant-color">
+                                <div class="variant-picker-label">
+                                    Color:<span class="variant-picker-label-value value-currentColor">Orange</span>
+                                </div>
+                                <div class="variant-picker-values">
+                                    <div class="hover-tooltip color-btn active" data-color="orange">
+                                        <span class="check-color bg-light-orange-2"></span>
+                                        <span class="tooltip">Orange</span>
+                                    </div>
+                                    <div class="hover-tooltip color-btn" data-color="green">
+                                        <span class="check-color bg-light-green"></span>
+                                        <span class="tooltip">Green</span>
+                                    </div>
+                                    <div class="hover-tooltip color-btn" data-color="pink">
+                                        <span class="check-color bg-pink"></span>
+                                        <span class="tooltip">Pink</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="variant-picker-item variant-size">
+                                <div class="variant-picker-label">
+                                    <div>Size:<span class="variant-picker-label-value value-currentSize">Small</span>
+                                    </div>
+                                </div>
+                                <div class="variant-picker-values">
+                                    <span class="size-btn active" data-size="small">S</span>
+                                    <span class="size-btn" data-size="medium">M</span>
+                                    <span class="size-btn" data-size="large">L</span>
+                                    <span class="size-btn" data-size="extra large">XL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tf-product-total-quantity">
+                            <div class="group-btn">
+                                <div class="wg-quantity">
+                                    <button class="btn-quantity minus-btn">-</button>
+                                    <input class="quantity-product font-4" type="text" name="number" value="1">
+                                    <button class="btn-quantity plus-btn">+</button>
+                                </div>
+                                <a href="index.html#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn hover-primary">Add to
+                                    cart</a>
+                            </div>
+                            <a href="checkout.html" class="tf-btn w-100 animate-btn paypal btn-primary">Buy It Now</a>
+                            <a href="checkout.html" class="more-choose-payment link">More payment options</a>
+                        </div>
+                        <a href="product-detail.html" class="view-details link">View full details <i
+                                class="icon icon-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal quickView -->
+
+    <!-- compare  -->
+    <div class="modal modalCentered fade modal-compare" id="compare">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <span class="icon icon-close btn-hide-popup" data-bs-dismiss="modal"></span>
+                <div class="modal-compare-wrap list-file-delete">
+                    <h6 class="title text-center">Compare Products</h6>
+                    <div class="tf-compare-inner">
+                        <div class="tf-compare-list">
+                            <div class="tf-compare-item file-delete">
+                                <span class="icon-close remove"></span>
+                                <a href="product-detail.html" class="image">
+                                    <img class="lazyload" data-src="images/products/fashion/product-8.jpg"
+                                        src="images/products/fashion/product-8.jpg" alt="">
+                                </a>
+                                <div class="content">
+                                    <div class="text-title">
+                                        <a class="link text-line-clamp-2" href="product-detail.html">Striped T-Shirt</a>
+                                    </div>
+                                    <p class="price-wrap">
+                                        <span class="new-price text-primary">$130.00</span>
+                                        <span class="old-price text-decoration-line-through text-dark-1">$150.00</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tf-compare-item file-delete">
+                                <span class="icon-close remove"></span>
+                                <a href="product-detail.html" class="image">
+                                    <img class="lazyload" data-src="images/products/fashion/product-6.jpg"
+                                        src="images/products/fashion/product-6.jpg" alt="">
+                                </a>
+                                <div class="content">
+                                    <div class="text-title">
+                                        <a class="link text-line-clamp-2" href="product-detail.html">Loose Fit Tee</a>
+                                    </div>
+                                    <p class="price-wrap">
+                                        <span class="new-price text-primary">$115.00</span>
+                                        <span class="old-price text-decoration-line-through text-dark-1">$130.00</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tf-compare-item file-delete">
+                                <span class="icon-close remove"></span>
+                                <a href="product-detail.html" class="image">
+                                    <img class="lazyload" data-src="images/products/fashion/product-15.jpg"
+                                        src="images/products/fashion/product-15.jpg" alt="">
+                                </a>
+                                <div class="content">
+                                    <div class="text-title">
+                                        <a class="link text-line-clamp-2" href="product-detail.html">Oversized Fit
+                                            Tee</a>
+                                    </div>
+                                    <p class="price-wrap">
+                                        <span class="new-price text-primary">$80.00</span>
+                                        <span class="old-price text-decoration-line-through text-dark-1">$100.00</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tf-compare-buttons justify-content-center">
+                        <a href="compare.html" class="tf-btn animate-btn justify-content-center">Compare</a>
+                        <div class="tf-btn btn-out-line-dark justify-content-center clear-file-delete"><span>Clear
+                                All</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /compare  -->
+
+
+    <!-- Javascript -->
+    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/carousel.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/lazysize.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/count-down.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/multiple-modal.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/infinityslide.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+</body>
+
 </html>
