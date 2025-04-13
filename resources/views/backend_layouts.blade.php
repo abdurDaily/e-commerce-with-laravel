@@ -133,8 +133,9 @@
 
             <li class="">
                 <a href="{{ route('backend.category.index') }}" aria-expanded="false">
-                    <div class="icon_menu">
-                        <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt="">
+                    <div class="icon_menu d-flex align-items-center justify-content-center">
+                        <span style="line-height: 10px;"><iconify-icon icon="mingcute:folder-line" width="18" height="18"></iconify-icon></span>
+                        {{-- <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt=""> --}}
                     </div>
                     <span>Category</span>
                 </a>
@@ -143,17 +144,19 @@
 
             <li class="">
                 <a href="{{ route('backend.product.index') }}" aria-expanded="false">
-                    <div class="icon_menu">
-                        <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt="">
+                    <div class="icon_menu d-flex align-items-center justify-content-center">
+                        <span style="line-height: 10px;"><iconify-icon icon="ant-design:product-outlined" width="18" height="18"></iconify-icon></span>
+                        {{-- <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt=""> --}}
                     </div>
                     <span>Product</span>
                 </a>
             </li>
 
             <li class="">
-                <a href="" aria-expanded="false">
-                    <div class="icon_menu">
-                        <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt="">
+                <a href="{{ route('home') }}" aria-expanded="false">
+                    <div class="icon_menu d-flex align-items-center justify-content-center">
+                        <span style="line-height: 10px;"><iconify-icon icon="streamline:web" width="15" height="15"></iconify-icon></span>
+                        {{-- <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt=""> --}}
                     </div>
                     <span>View Website</span>
                 </a>
