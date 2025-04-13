@@ -153,10 +153,9 @@
             </li>
 
             <li class="">
-                <a href="{{ route('home') }}" aria-expanded="false">
+                <a href="{{ route('index.index') }}" aria-expanded="false">
                     <div class="icon_menu d-flex align-items-center justify-content-center">
                         <span style="line-height: 10px;"><iconify-icon icon="streamline:web" width="15" height="15"></iconify-icon></span>
-                        {{-- <img src="{{ asset('backend/assets/img/menu-icon/6.svg') }} " alt=""> --}}
                     </div>
                     <span>View Website</span>
                 </a>

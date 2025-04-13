@@ -15,6 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
             Route::prefix('backend')
                 ->name('backend.')
                 ->group(base_path('routes/backend.php'));
+
+            Route::name('index.')
+            ->group(base_path('routes/frontend.php'));
         }
     )  // Ensure this closing bracket is correctly placed
     ->withMiddleware(function (Middleware $middleware) {
