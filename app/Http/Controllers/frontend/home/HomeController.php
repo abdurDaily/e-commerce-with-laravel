@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend\home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -15,10 +16,21 @@ class HomeController extends Controller
   }
 
   //SUB-CATEGORY 
-  public function subCategory($category_slug)
-  {
-    $sub_category = Category::where('category_slug', $category_slug)->firstOrFail();
-    // dd($sub_category);
-    return view('frontend.sub_category.index', compact('sub_category'));
-  }
+
+  public function subCategory($id)
+{
+    // Get subcategories where parent_id matches the given $id
+    $subCategories = Category::where('parent_id', $id)->get();
+    // Get all the IDs of those subcategories
+    $subCategoryIds = $subCategories->pluck('id')->toArray();
+    // Optionally, also include the parent category itself
+    $subCategoryIds[] = $id;
+
+    // Get all products where category_id is in that list
+    $products = Product::whereIn('category_id', $subCategoryIds)->get();
+
+    // dd($products);
+    return view('frontend.sub_category.index', compact('products'));
+}
+
 }
