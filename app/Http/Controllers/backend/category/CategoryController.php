@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend\category;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -39,6 +40,7 @@ class CategoryController extends Controller
 
         $categoryData = new Category();
         $categoryData->category_title = $request->category_name;
+        $categoryData->category_slug = Str::slug($request->category_name);
 
         if($request->file('category_img')){
             $file = $request->file('category_img');
@@ -71,6 +73,7 @@ class CategoryController extends Controller
 
         $categoryData = Category::find($id);
         $categoryData->category_title = $request->category_name;
+        $categoryData->category_slug = Str::slug($request->category_name);
 
         if($request->file('category_img')){
             $file = $request->file('category_img');

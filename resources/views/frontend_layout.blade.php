@@ -1611,6 +1611,7 @@
     <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/multiple-modal.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/infinityslide.js') }}"></script>
+    @stack('frontend_js')
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
 </body>
 

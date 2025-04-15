@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('category_title')->nullable();
             $table->string('category_img')->nullable();
+            $table->string('category_slug')->nullable();
             $table->string('sub_category_title')->nullable();
             $table->boolean('category_status')->default(0);
             $table->boolean('sub_category_status')->default(0);
