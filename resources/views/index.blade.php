@@ -143,13 +143,13 @@
                 <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6"
                     style="width: 178px; margin-right: 64px;">
                     <div class="wg-cls style-circle hover-img">
-                        <a href="{{ route('index.sub.category', $category->id) }}"
+                        <a href="{{ route('index.sub.category', $category->category_slug) }}"
                             class="image img-style d-block">
                             <img src="{{ $category->category_img }}" data-src="{{ $category->category_img }}"
                                 alt="categories" class=" ls-is-cached lazyloaded">
                         </a>
                         <div class="cls-content text-center">
-                            <a href="{{ route('index.sub.category', $category->id) }}"
+                            <a href="{{ route('index.sub.category', $category->category_slug) }}"
                                 class="link text-xl fw-medium">
                                 {{ Str::limit($category->category_title, 20, '...') }}
                             </a>

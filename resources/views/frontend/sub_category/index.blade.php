@@ -482,7 +482,7 @@
                     <div id="price" class="collapse show">
                         <div class="collapse-body widget-price filter-price">
                             <span class="reset-price">Reset</span>
-                            <div class="price-val-range" id="price-value-range" data-min="0" data-max="500"></div>
+                            <div class="price-val-range" id="price-value-range" data-min="0" data-max="5000"></div>
                             <div class="box-value-price">
                                 <span class="text-sm">Price:</span>
                                 <div class="price-box">
