@@ -758,8 +758,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-top">
-                    <img class="lazyload" data-src="images/section/newsletter-1.jpg"
-                        src="images/section/newsletter-1.jpg" alt="images">
+                    <img class="lazyload" data-src="{{ asset('frontend/assets/images/section/newsletter-1.jpg') }}"
+                        src="{{ asset('frontend/assets/images/section/newsletter-1.jpg') }}" alt="images">
                     <span class="icon icon-close btn-hide-popup" data-bs-dismiss="modal"></span>
                 </div>
                 <div class="modal-bottom text-center">

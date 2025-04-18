@@ -11,6 +11,8 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 // routes/web.php
 Route::get('/sub-categories/{category_slug}', [HomeController::class, 'subCategory'])->name('sub.category');
 
+Route::get('/add-cart', [HomeController::class, 'addCart'])->name('product.add.cart');
+
 
 
 

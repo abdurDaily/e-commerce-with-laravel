@@ -2,8 +2,19 @@
 @section('front_end_contains')
     <div id="wrapper">
 
+
         <section class="flat-spacing-2 pt-0">
             <div class="container">
+                {{-- all relevant categories --}}
+                <ul class="d-flex">
+                    
+                    @foreach ($allSubCategories as $subCategory)
+                        <li class="mb-2 me-2"><a class="tf-btn-filter"
+                                href="?id={{ $subCategory->id }}">{{ $subCategory->sub_category_title }}</a></li>
+                    @endforeach
+                </ul>
+
+                {{-- all relevant categories end --}}
                 <div class="tf-shop-control">
                     <div class="tf-group-filter">
                         <a href="shop-sub-collection.html#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop"
@@ -97,7 +108,7 @@
                                         <p class="desc text-sm text-main ">
                                             {{ $product->product_details }}
                                         </p>
-                                        
+
                                     </div>
                                     <div class="list-product-btn">
                                         <a href="shop-sub-collection.html#shoppingCart" data-bs-toggle="offcanvas"
@@ -142,7 +153,7 @@
                     </div>
 
 
-                    
+
                     <div class="wrapper-shop tf-grid-layout tf-col-4" id="gridLayout">
                         <!-- Card Product 1 -->
 
@@ -150,7 +161,7 @@
                             <div class="card-product grid style-1 card-product-size" data-availability="In stock"
                                 data-brand="Vineta">
                                 <div class="card-product-wrapper">
-                                    <a href="product-detail.html" class="product-img">
+                                    <a href="{{ route('index.product.add.cart') }}" class="product-img">
                                         <img class="img-product ls-is-cached lazyloaded"
                                             data-src="{{ $product->product_img }}" src="{{ $product->product_img }}"
                                             alt="image-product">
@@ -203,23 +214,7 @@
                                         <span class="price-new text-primary">{{ $product->discount_price }} tk</span>
                                         <span class="price-old">{{ $product->product_price }} tk</span>
                                     </p>
-                                    {{-- <ul class="list-color-product">
-                                <li class="list-color-item hover-tooltip tooltip-bot color-swatch active">
-                                    <span class="tooltip color-filter">Grey</span>
-                                    <span class="swatch-value bg-grey-4"></span>
-                                    <img class=" ls-is-cached lazyloaded" data-src="images/products/fashion/product-19.jpg" src="images/products/fashion/product-19.jpg" alt="image-product">
-                                </li>
-                                <li class="list-color-item color-swatch hover-tooltip tooltip-bot">
-                                    <span class="tooltip color-filter">Black</span>
-                                    <span class="swatch-value bg-dark"></span>
-                                    <img class=" ls-is-cached lazyloaded" data-src="images/products/fashion/product-9.jpg" src="images/products/fashion/product-9.jpg" alt="image-product">
-                                </li>
-                                <li class="list-color-item color-swatch hover-tooltip tooltip-bot line">
-                                    <span class="tooltip color-filter">White</span>
-                                    <span class="swatch-value bg-white"></span>
-                                    <img class=" ls-is-cached lazyloaded" data-src="images/products/fashion/product-4.jpg" src="images/products/fashion/product-4.jpg" alt="image-product">
-                                </li>
-                            </ul> --}}
+
                                 </div>
                             </div>
 
